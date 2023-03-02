@@ -81,6 +81,7 @@ pip-delete-this-directory.txt
 
 # Distribution / packaging
 .Python
+.pyproject.user
 build/
 develop-eggs/
 dist/

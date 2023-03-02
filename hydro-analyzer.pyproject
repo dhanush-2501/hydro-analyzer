@@ -1,3 +1,3 @@
 {
-    "files": ["main_window.py","main_window.ui"]
+    "files": ["HyAn/ui/main_window.ui","HyAn/ui/__init__.py","HyAn/main_window.py","HyAn/widgets/__init__.py"]
 }
