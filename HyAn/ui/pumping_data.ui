@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Pumping_test</class>
+ <widget class="QWidget" name="Pumping_test">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>813</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="gb_dicharge">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Discharge[m³/sec]</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lbl_constant">
+        <property name="text">
+         <string>Constant:</string>
+        </property>
+        <property name="buddy">
+         <cstring>l_edit_constant</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="l_edit_constant"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="l_edit_static_wl"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lbl_static_wl">
+        <property name="text">
+         <string>Static WL [m]:</string>
+        </property>
+        <property name="buddy">
+         <cstring>l_edit_static_wl</cstring>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QTableWidget" name="table_dicharge_time">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>0</height>
+        </size>
+       </property>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>11</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>12</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>13</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>14</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>15</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>16</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>17</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>18</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>19</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Time[s]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Discharge[m³/s]</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="table_drawdown">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>0</height>
+        </size>
+       </property>
+       <row>
+        <property name="text">
+         <string/>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>3</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>4</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>5</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>11</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>12</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>13</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>14</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>15</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>16</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>17</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>18</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>19</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Time [s]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Water Level [m]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Drawdown [m]</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_scatter_graph_space_hoder">
+       <property name="text">
+        <string>Space holder</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
