@@ -19,7 +19,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
-     <widget class="QTabWidget" name="tab_analysis_2">
+     <widget class="QTabWidget" name="tab_hydro">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_puming_test">
        <attribute name="icon">
@@ -93,7 +93,7 @@
      <x>0</x>
      <y>0</y>
      <width>880</width>
-     <height>26</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">
