@@ -6,20 +6,83 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>880</width>
+    <height>722</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>HI </string>
+     <widget class="QTabWidget" name="tab_analysis_2">
+      <property name="enabled">
+       <bool>true</bool>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>480</width>
+        <height>512</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_puming_test">
+       <attribute name="icon">
+        <iconset resource="icon/icon.qrc">
+         <normaloff>:/menu_bar_icon/pumping_test.png</normaloff>:/menu_bar_icon/pumping_test.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Pumping Test</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Project info , Units . Aquifer proerty , Pumping Test</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="Ui_PumpingTest" name="wid_pumping_test" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_pumping_data">
+       <attribute name="icon">
+        <iconset resource="icon/icon.qrc">
+         <normaloff>:/menu_bar_icon/water_wiz.png</normaloff>:/menu_bar_icon/water_wiz.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Pumping Data</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Drawdown data , discharge , graph</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="Ui_PumpingData" name="wid_pumping_data" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_analysis">
+       <attribute name="icon">
+        <iconset resource="icon/icon.qrc">
+         <normaloff>:/menu_bar_icon/analysis.png</normaloff>:/menu_bar_icon/analysis.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Analysis</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Solution, Output</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="Ui_Analysis" name="wid_analysis" native="true"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -29,13 +92,399 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>880</width>
+     <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="t_actionnew"/>
+    <addaction name="t_actionopen"/>
+    <addaction name="separator"/>
+    <addaction name="t_actionsave"/>
+    <addaction name="m_actionsave_as"/>
+    <addaction name="separator"/>
+    <addaction name="t_actionprint"/>
+    <addaction name="m_actionexit"/>
+   </widget>
+   <widget class="QMenu" name="menu_edit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="t_actioncopy"/>
+    <addaction name="t_actionpaste"/>
+    <addaction name="m_actiondelete"/>
+   </widget>
+   <widget class="QMenu" name="menu_view">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="m_actionnavigation_panel"/>
+    <addaction name="separator"/>
+    <addaction name="m_actionanalysis_panel"/>
+    <addaction name="m_actionanalysis_status"/>
+    <addaction name="m_actionanalysis_parameter"/>
+    <addaction name="m_actionScatter_diagram"/>
+   </widget>
+   <widget class="QMenu" name="menu_test">
+    <property name="title">
+     <string>Test</string>
+    </property>
+    <addaction name="m_actioncreate_a_pumping_test"/>
+    <addaction name="m_actioncreate_a_pumping_test_predicition"/>
+   </widget>
+   <widget class="QMenu" name="menu_analysis">
+    <property name="title">
+     <string>Analysis</string>
+    </property>
+    <addaction name="m_actioncreate_new_analysis"/>
+    <addaction name="separator"/>
+    <addaction name="m_actionfit"/>
+    <addaction name="m_actioncomments"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_tools">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="m_actioncontent"/>
+    <addaction name="m_actionweb"/>
+    <addaction name="m_actiontutorial"/>
+    <addaction name="separator"/>
+    <addaction name="m_actionabout"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_edit"/>
+   <addaction name="menu_view"/>
+   <addaction name="menu_test"/>
+   <addaction name="menu_analysis"/>
+   <addaction name="menu_tools"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="t_actionnew"/>
+   <addaction name="t_actionopen"/>
+   <addaction name="t_actionsave"/>
+   <addaction name="t_actionprint"/>
+   <addaction name="separator"/>
+   <addaction name="t_actioncopy"/>
+   <addaction name="t_actionpaste"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="t_actionnew">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/create file.png</normaloff>:/menu_bar_icon/create file.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a New File (Ctril+N)</string>
+   </property>
+   <property name="statusTip">
+    <string>Create a new file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="t_actionopen">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/open-folder.png</normaloff>:/menu_bar_icon/open-folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open </string>
+   </property>
+   <property name="toolTip">
+    <string>Open a File(Ctrl+O)</string>
+   </property>
+   <property name="statusTip">
+    <string>Open an existing file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionClose(Ctrl+Q)">
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="t_actionsave">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/save.png</normaloff>:/menu_bar_icon/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the File(Ctrl+S)</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current file </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="m_actionsave_as">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="t_actionprint">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/printer.png</normaloff>:/menu_bar_icon/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="toolTip">
+    <string>Print(Ctrl+P)</string>
+   </property>
+   <property name="statusTip">
+    <string>Print the report </string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="m_actionexit">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/exit.png</normaloff>:/menu_bar_icon/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="t_actioncopy">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/copy.png</normaloff>:/menu_bar_icon/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy </string>
+   </property>
+   <property name="toolTip">
+    <string>Copy(Ctrl+C)</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy selection to clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="t_actionpaste">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/paste.png</normaloff>:/menu_bar_icon/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="toolTip">
+    <string>Paste(Ctrl+V)</string>
+   </property>
+   <property name="statusTip">
+    <string>Paste the data from clipboard</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="m_actiondelete">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/delete.png</normaloff>:/menu_bar_icon/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="m_actionnavigation_panel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Navigation Panel</string>
+   </property>
+  </action>
+  <action name="m_actionanalysis_panel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Analysis Panel</string>
+   </property>
+  </action>
+  <action name="m_actionanalysis_status">
+   <property name="text">
+    <string>Analysis Status</string>
+   </property>
+  </action>
+  <action name="m_actionanalysis_parameter">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/scroll.png</normaloff>:/menu_bar_icon/scroll.png</iconset>
+   </property>
+   <property name="text">
+    <string>Analysis Parameter</string>
+   </property>
+  </action>
+  <action name="m_actionScatter_diagram">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/scatter.png</normaloff>:/menu_bar_icon/scatter.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scatter Diagram</string>
+   </property>
+  </action>
+  <action name="m_actioncreate_a_pumping_test">
+   <property name="text">
+    <string>Create a Pumping Test</string>
+   </property>
+  </action>
+  <action name="m_actioncreate_a_pumping_test_predicition">
+   <property name="text">
+    <string>Create a Pumping Test (Predicition)</string>
+   </property>
+  </action>
+  <action name="m_actioncreate_new_analysis">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/insert.png</normaloff>:/menu_bar_icon/insert.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create New Analysis</string>
+   </property>
+  </action>
+  <action name="m_actionfit">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/settings.png</normaloff>:/menu_bar_icon/settings.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit </string>
+   </property>
+  </action>
+  <action name="m_actioncomments">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/comment.png</normaloff>:/menu_bar_icon/comment.png</iconset>
+   </property>
+   <property name="text">
+    <string>Comments</string>
+   </property>
+  </action>
+  <action name="actionDuplicate">
+   <property name="text">
+    <string>Duplicate</string>
+   </property>
+  </action>
+  <action name="m_actioncontent">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/content.png</normaloff>:/menu_bar_icon/content.png</iconset>
+   </property>
+   <property name="text">
+    <string>Content</string>
+   </property>
+  </action>
+  <action name="m_actionweb">
+   <property name="text">
+    <string>Web Help...</string>
+   </property>
+  </action>
+  <action name="m_actiontutorial">
+   <property name="text">
+    <string>Tutorial...</string>
+   </property>
+  </action>
+  <action name="m_actionabout">
+   <property name="icon">
+    <iconset resource="icon/icon.qrc">
+     <normaloff>:/menu_bar_icon/about.png</normaloff>:/menu_bar_icon/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <customwidgets>
+  <customwidget>
+   <class>Ui_Analysis</class>
+   <extends>QWidget</extends>
+   <header>ui_analysis.py</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Ui_PumpingData</class>
+   <extends>QWidget</extends>
+   <header>ui_pumping_data.py</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Ui_PumpingTest</class>
+   <extends>QWidget</extends>
+   <header>ui_pumping_test.py</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icon/icon.qrc"/>
+ </resources>
  <connections/>
 </ui>
