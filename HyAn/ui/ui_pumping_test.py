@@ -363,6 +363,13 @@ class Ui_Pumping_test(object):
         self.verticalLayout.addLayout(self.vl_tabe_image)
 
 #if QT_CONFIG(shortcut)
+        self.lbl_project_name.setBuddy(self.l_edit_project_name)
+        self.lbl_project_number.setBuddy(self.l_edit_project_number)
+        self.lbl_client.setBuddy(self.l_edit__client)
+        self.lbl_location.setBuddy(self.l_edit_location)
+        self.lbl_pumping_test_name.setBuddy(self.l_edit_pumping_test_name)
+        self.lbl_pumping_test_performed_by.setBuddy(self.l_edit_pumping_test_performed_by)
+        self.lbl_aquifer_thickness.setBuddy(self.l_edit_aquifer_thickness)
 #endif // QT_CONFIG(shortcut)
 
         self.retranslateUi(Pumping_test)
@@ -488,9 +495,3 @@ class Ui_Pumping_test(object):
         self.lbl_image.setText("")
     # retranslateUi
 
-Error: pumping_test.ui: Warning: Buddy assignment: 'lineEdit_2' is not a valid widget.
-pumping_test.ui: Warning: Buddy assignment: 'lineEdit_3' is not a valid widget.
-pumping_test.ui: Warning: Buddy assignment: 'lineEdit_4' is not a valid widget.
-pumping_test.ui: Warning: Buddy assignment: 'lineEdit_5' is not a valid widget.
-
-while executing 'C:\Users\sowba\AppData\Local\Programs\Python\Python311\Lib\site-packages\PySide6\uic -g python pumping_test.ui'
