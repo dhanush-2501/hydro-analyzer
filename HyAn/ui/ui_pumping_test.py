@@ -15,187 +15,354 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFormLayout, QGroupBox, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QSizePolicy,
-    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFormLayout,
+    QGridLayout, QGroupBox, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QSpacerItem, QTableWidget, QTableWidgetItem, QTimeEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_Pumping_test(object):
     def setupUi(self, Pumping_test):
         if not Pumping_test.objectName():
             Pumping_test.setObjectName(u"Pumping_test")
-        Pumping_test.resize(813, 736)
+        Pumping_test.resize(1032, 796)
         self.verticalLayout = QVBoxLayout(Pumping_test)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.gb_dicharge = QGroupBox(Pumping_test)
-        self.gb_dicharge.setObjectName(u"gb_dicharge")
-        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        self.hl_project_info_units = QHBoxLayout()
+        self.hl_project_info_units.setObjectName(u"hl_project_info_units")
+        self.gb_project_informataion = QGroupBox(Pumping_test)
+        self.gb_project_informataion.setObjectName(u"gb_project_informataion")
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.gb_dicharge.sizePolicy().hasHeightForWidth())
-        self.gb_dicharge.setSizePolicy(sizePolicy)
-        self.gb_dicharge.setMaximumSize(QSize(16777215, 100))
-        self.formLayout_4 = QFormLayout(self.gb_dicharge)
-        self.formLayout_4.setObjectName(u"formLayout_4")
-        self.lbl_constant = QLabel(self.gb_dicharge)
-        self.lbl_constant.setObjectName(u"lbl_constant")
+        sizePolicy.setHeightForWidth(self.gb_project_informataion.sizePolicy().hasHeightForWidth())
+        self.gb_project_informataion.setSizePolicy(sizePolicy)
+        self.gb_project_informataion.setMinimumSize(QSize(0, 0))
+        self.gb_project_informataion.setMaximumSize(QSize(320, 16777215))
+        self.formLayout_2 = QFormLayout(self.gb_project_informataion)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.lbl_project_name = QLabel(self.gb_project_informataion)
+        self.lbl_project_name.setObjectName(u"lbl_project_name")
 
-        self.formLayout_4.setWidget(0, QFormLayout.LabelRole, self.lbl_constant)
+        self.formLayout_2.setWidget(0, QFormLayout.LabelRole, self.lbl_project_name)
 
-        self.l_edit_constant = QLineEdit(self.gb_dicharge)
-        self.l_edit_constant.setObjectName(u"l_edit_constant")
+        self.l_edit_project_name = QLineEdit(self.gb_project_informataion)
+        self.l_edit_project_name.setObjectName(u"l_edit_project_name")
 
-        self.formLayout_4.setWidget(0, QFormLayout.FieldRole, self.l_edit_constant)
+        self.formLayout_2.setWidget(0, QFormLayout.FieldRole, self.l_edit_project_name)
 
-        self.l_edit_static_wl = QLineEdit(self.gb_dicharge)
-        self.l_edit_static_wl.setObjectName(u"l_edit_static_wl")
+        self.lbl_project_number = QLabel(self.gb_project_informataion)
+        self.lbl_project_number.setObjectName(u"lbl_project_number")
 
-        self.formLayout_4.setWidget(2, QFormLayout.FieldRole, self.l_edit_static_wl)
+        self.formLayout_2.setWidget(1, QFormLayout.LabelRole, self.lbl_project_number)
 
-        self.lbl_static_wl = QLabel(self.gb_dicharge)
-        self.lbl_static_wl.setObjectName(u"lbl_static_wl")
+        self.l_edit_project_number = QLineEdit(self.gb_project_informataion)
+        self.l_edit_project_number.setObjectName(u"l_edit_project_number")
 
-        self.formLayout_4.setWidget(2, QFormLayout.LabelRole, self.lbl_static_wl)
+        self.formLayout_2.setWidget(1, QFormLayout.FieldRole, self.l_edit_project_number)
+
+        self.lbl_client = QLabel(self.gb_project_informataion)
+        self.lbl_client.setObjectName(u"lbl_client")
+
+        self.formLayout_2.setWidget(2, QFormLayout.LabelRole, self.lbl_client)
+
+        self.l_edit__client = QLineEdit(self.gb_project_informataion)
+        self.l_edit__client.setObjectName(u"l_edit__client")
+
+        self.formLayout_2.setWidget(2, QFormLayout.FieldRole, self.l_edit__client)
+
+        self.lbl_location = QLabel(self.gb_project_informataion)
+        self.lbl_location.setObjectName(u"lbl_location")
+
+        self.formLayout_2.setWidget(3, QFormLayout.LabelRole, self.lbl_location)
+
+        self.l_edit_location = QLineEdit(self.gb_project_informataion)
+        self.l_edit_location.setObjectName(u"l_edit_location")
+
+        self.formLayout_2.setWidget(3, QFormLayout.FieldRole, self.l_edit_location)
 
 
-        self.verticalLayout.addWidget(self.gb_dicharge)
+        self.hl_project_info_units.addWidget(self.gb_project_informataion)
 
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.table_dicharge_time = QTableWidget(Pumping_test)
-        if (self.table_dicharge_time.columnCount() < 2):
-            self.table_dicharge_time.setColumnCount(2)
+        self.gb_units = QGroupBox(Pumping_test)
+        self.gb_units.setObjectName(u"gb_units")
+        self.gb_units.setMaximumSize(QSize(320, 16777215))
+        self.gridLayout_2 = QGridLayout(self.gb_units)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.lbl_site_plan_2 = QLabel(self.gb_units)
+        self.lbl_site_plan_2.setObjectName(u"lbl_site_plan_2")
+
+        self.gridLayout_2.addWidget(self.lbl_site_plan_2, 0, 0, 1, 1)
+
+        self.cb_site_plan_2 = QComboBox(self.gb_units)
+        self.cb_site_plan_2.addItem("")
+        self.cb_site_plan_2.addItem("")
+        self.cb_site_plan_2.addItem("")
+        self.cb_site_plan_2.addItem("")
+        self.cb_site_plan_2.addItem("")
+        self.cb_site_plan_2.addItem("")
+        self.cb_site_plan_2.setObjectName(u"cb_site_plan_2")
+
+        self.gridLayout_2.addWidget(self.cb_site_plan_2, 0, 1, 1, 1)
+
+        self.lbl_dimensions_2 = QLabel(self.gb_units)
+        self.lbl_dimensions_2.setObjectName(u"lbl_dimensions_2")
+
+        self.gridLayout_2.addWidget(self.lbl_dimensions_2, 0, 2, 1, 1)
+
+        self.cb_dimensions_2 = QComboBox(self.gb_units)
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.setObjectName(u"cb_dimensions_2")
+
+        self.gridLayout_2.addWidget(self.cb_dimensions_2, 0, 3, 1, 1)
+
+        self.lbl_time_2 = QLabel(self.gb_units)
+        self.lbl_time_2.setObjectName(u"lbl_time_2")
+
+        self.gridLayout_2.addWidget(self.lbl_time_2, 1, 0, 1, 1)
+
+        self.cb_time_2 = QComboBox(self.gb_units)
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.setObjectName(u"cb_time_2")
+
+        self.gridLayout_2.addWidget(self.cb_time_2, 1, 1, 1, 1)
+
+        self.lbl_discharge_2 = QLabel(self.gb_units)
+        self.lbl_discharge_2.setObjectName(u"lbl_discharge_2")
+
+        self.gridLayout_2.addWidget(self.lbl_discharge_2, 1, 2, 1, 1)
+
+        self.cb_discharge_2 = QComboBox(self.gb_units)
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.addItem("")
+        self.cb_discharge_2.setObjectName(u"cb_discharge_2")
+
+        self.gridLayout_2.addWidget(self.cb_discharge_2, 1, 3, 1, 1)
+
+        self.lbl_transmissivity_2 = QLabel(self.gb_units)
+        self.lbl_transmissivity_2.setObjectName(u"lbl_transmissivity_2")
+
+        self.gridLayout_2.addWidget(self.lbl_transmissivity_2, 2, 0, 1, 1)
+
+        self.cb_transmissivity_2 = QComboBox(self.gb_units)
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.setObjectName(u"cb_transmissivity_2")
+
+        self.gridLayout_2.addWidget(self.cb_transmissivity_2, 2, 1, 1, 1)
+
+        self.lbl_pressure_2 = QLabel(self.gb_units)
+        self.lbl_pressure_2.setObjectName(u"lbl_pressure_2")
+
+        self.gridLayout_2.addWidget(self.lbl_pressure_2, 2, 2, 1, 1)
+
+        self.cb_pressure_2 = QComboBox(self.gb_units)
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.addItem("")
+        self.cb_pressure_2.setObjectName(u"cb_pressure_2")
+
+        self.gridLayout_2.addWidget(self.cb_pressure_2, 2, 3, 1, 1)
+
+
+        self.hl_project_info_units.addWidget(self.gb_units)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hl_project_info_units.addItem(self.horizontalSpacer)
+
+
+        self.verticalLayout.addLayout(self.hl_project_info_units)
+
+        self.hl_pumping_test_aquifer_properties = QHBoxLayout()
+        self.hl_pumping_test_aquifer_properties.setObjectName(u"hl_pumping_test_aquifer_properties")
+        self.gb_pumping_test = QGroupBox(Pumping_test)
+        self.gb_pumping_test.setObjectName(u"gb_pumping_test")
+        self.gb_pumping_test.setMaximumSize(QSize(320, 16777215))
+        self.formLayout_10 = QFormLayout(self.gb_pumping_test)
+        self.formLayout_10.setObjectName(u"formLayout_10")
+        self.lbl_pumping_test_name = QLabel(self.gb_pumping_test)
+        self.lbl_pumping_test_name.setObjectName(u"lbl_pumping_test_name")
+
+        self.formLayout_10.setWidget(0, QFormLayout.LabelRole, self.lbl_pumping_test_name)
+
+        self.lbl_pumping_test_date_time = QLabel(self.gb_pumping_test)
+        self.lbl_pumping_test_date_time.setObjectName(u"lbl_pumping_test_date_time")
+
+        self.formLayout_10.setWidget(4, QFormLayout.LabelRole, self.lbl_pumping_test_date_time)
+
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.time_puming_test = QTimeEdit(self.gb_pumping_test)
+        self.time_puming_test.setObjectName(u"time_puming_test")
+
+        self.horizontalLayout_2.addWidget(self.time_puming_test)
+
+        self.date_pumping_test = QDateEdit(self.gb_pumping_test)
+        self.date_pumping_test.setObjectName(u"date_pumping_test")
+
+        self.horizontalLayout_2.addWidget(self.date_pumping_test)
+
+
+        self.formLayout_10.setLayout(4, QFormLayout.FieldRole, self.horizontalLayout_2)
+
+        self.lbl_pumping_test_performed_by = QLabel(self.gb_pumping_test)
+        self.lbl_pumping_test_performed_by.setObjectName(u"lbl_pumping_test_performed_by")
+
+        self.formLayout_10.setWidget(2, QFormLayout.LabelRole, self.lbl_pumping_test_performed_by)
+
+        self.l_edit_pumping_test_performed_by = QLineEdit(self.gb_pumping_test)
+        self.l_edit_pumping_test_performed_by.setObjectName(u"l_edit_pumping_test_performed_by")
+
+        self.formLayout_10.setWidget(2, QFormLayout.FieldRole, self.l_edit_pumping_test_performed_by)
+
+        self.l_edit_pumping_test_name = QLineEdit(self.gb_pumping_test)
+        self.l_edit_pumping_test_name.setObjectName(u"l_edit_pumping_test_name")
+
+        self.formLayout_10.setWidget(0, QFormLayout.FieldRole, self.l_edit_pumping_test_name)
+
+
+        self.hl_pumping_test_aquifer_properties.addWidget(self.gb_pumping_test)
+
+        self.gb_aquifer_properties = QGroupBox(Pumping_test)
+        self.gb_aquifer_properties.setObjectName(u"gb_aquifer_properties")
+        self.gb_aquifer_properties.setMaximumSize(QSize(280, 16777215))
+        self.formLayout_11 = QFormLayout(self.gb_aquifer_properties)
+        self.formLayout_11.setObjectName(u"formLayout_11")
+        self.lbl_aquifer_thickness = QLabel(self.gb_aquifer_properties)
+        self.lbl_aquifer_thickness.setObjectName(u"lbl_aquifer_thickness")
+
+        self.formLayout_11.setWidget(0, QFormLayout.LabelRole, self.lbl_aquifer_thickness)
+
+        self.l_edit_aquifer_thickness = QLineEdit(self.gb_aquifer_properties)
+        self.l_edit_aquifer_thickness.setObjectName(u"l_edit_aquifer_thickness")
+
+        self.formLayout_11.setWidget(0, QFormLayout.FieldRole, self.l_edit_aquifer_thickness)
+
+        self.lbl_aquifer_type = QLabel(self.gb_aquifer_properties)
+        self.lbl_aquifer_type.setObjectName(u"lbl_aquifer_type")
+        self.lbl_aquifer_type.setLayoutDirection(Qt.LeftToRight)
+
+        self.formLayout_11.setWidget(1, QFormLayout.LabelRole, self.lbl_aquifer_type)
+
+        self.cb_aquifer_type = QComboBox(self.gb_aquifer_properties)
+        self.cb_aquifer_type.addItem("")
+        self.cb_aquifer_type.addItem("")
+        self.cb_aquifer_type.addItem("")
+        self.cb_aquifer_type.addItem("")
+        self.cb_aquifer_type.addItem("")
+        self.cb_aquifer_type.addItem("")
+        self.cb_aquifer_type.setObjectName(u"cb_aquifer_type")
+
+        self.formLayout_11.setWidget(1, QFormLayout.FieldRole, self.cb_aquifer_type)
+
+
+        self.hl_pumping_test_aquifer_properties.addWidget(self.gb_aquifer_properties)
+
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hl_pumping_test_aquifer_properties.addItem(self.horizontalSpacer_5)
+
+
+        self.verticalLayout.addLayout(self.hl_pumping_test_aquifer_properties)
+
+        self.vl_tabe_image = QVBoxLayout()
+        self.vl_tabe_image.setObjectName(u"vl_tabe_image")
+        self.table_well_information = QTableWidget(Pumping_test)
+        if (self.table_well_information.columnCount() < 15):
+            self.table_well_information.setColumnCount(15)
         __qtablewidgetitem = QTableWidgetItem()
-        self.table_dicharge_time.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.table_well_information.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.table_dicharge_time.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        if (self.table_dicharge_time.rowCount() < 21):
-            self.table_dicharge_time.setRowCount(21)
+        self.table_well_information.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(0, __qtablewidgetitem2)
+        self.table_well_information.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(1, __qtablewidgetitem3)
+        self.table_well_information.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(2, __qtablewidgetitem4)
+        self.table_well_information.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(3, __qtablewidgetitem5)
+        self.table_well_information.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(4, __qtablewidgetitem6)
+        self.table_well_information.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(5, __qtablewidgetitem7)
+        self.table_well_information.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(6, __qtablewidgetitem8)
+        self.table_well_information.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(7, __qtablewidgetitem9)
+        self.table_well_information.setHorizontalHeaderItem(9, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(8, __qtablewidgetitem10)
+        self.table_well_information.setHorizontalHeaderItem(10, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(9, __qtablewidgetitem11)
+        self.table_well_information.setHorizontalHeaderItem(11, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(10, __qtablewidgetitem12)
+        self.table_well_information.setHorizontalHeaderItem(12, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(11, __qtablewidgetitem13)
+        self.table_well_information.setHorizontalHeaderItem(13, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(12, __qtablewidgetitem14)
+        self.table_well_information.setHorizontalHeaderItem(14, __qtablewidgetitem14)
+        if (self.table_well_information.rowCount() < 3):
+            self.table_well_information.setRowCount(3)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(13, __qtablewidgetitem15)
+        self.table_well_information.setVerticalHeaderItem(0, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(14, __qtablewidgetitem16)
+        self.table_well_information.setVerticalHeaderItem(1, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(15, __qtablewidgetitem17)
-        __qtablewidgetitem18 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(16, __qtablewidgetitem18)
-        __qtablewidgetitem19 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(17, __qtablewidgetitem19)
-        __qtablewidgetitem20 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(18, __qtablewidgetitem20)
-        __qtablewidgetitem21 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(19, __qtablewidgetitem21)
-        __qtablewidgetitem22 = QTableWidgetItem()
-        self.table_dicharge_time.setVerticalHeaderItem(20, __qtablewidgetitem22)
-        self.table_dicharge_time.setObjectName(u"table_dicharge_time")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.table_dicharge_time.sizePolicy().hasHeightForWidth())
-        self.table_dicharge_time.setSizePolicy(sizePolicy1)
-        self.table_dicharge_time.setMinimumSize(QSize(280, 0))
+        self.table_well_information.setVerticalHeaderItem(2, __qtablewidgetitem17)
+        self.table_well_information.setObjectName(u"table_well_information")
 
-        self.horizontalLayout.addWidget(self.table_dicharge_time)
+        self.vl_tabe_image.addWidget(self.table_well_information)
 
-        self.table_drawdown = QTableWidget(Pumping_test)
-        if (self.table_drawdown.columnCount() < 3):
-            self.table_drawdown.setColumnCount(3)
-        __qtablewidgetitem23 = QTableWidgetItem()
-        self.table_drawdown.setHorizontalHeaderItem(0, __qtablewidgetitem23)
-        __qtablewidgetitem24 = QTableWidgetItem()
-        self.table_drawdown.setHorizontalHeaderItem(1, __qtablewidgetitem24)
-        __qtablewidgetitem25 = QTableWidgetItem()
-        self.table_drawdown.setHorizontalHeaderItem(2, __qtablewidgetitem25)
-        if (self.table_drawdown.rowCount() < 21):
-            self.table_drawdown.setRowCount(21)
-        __qtablewidgetitem26 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(0, __qtablewidgetitem26)
-        __qtablewidgetitem27 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(1, __qtablewidgetitem27)
-        __qtablewidgetitem28 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(2, __qtablewidgetitem28)
-        __qtablewidgetitem29 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(3, __qtablewidgetitem29)
-        __qtablewidgetitem30 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(4, __qtablewidgetitem30)
-        __qtablewidgetitem31 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(5, __qtablewidgetitem31)
-        __qtablewidgetitem32 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(6, __qtablewidgetitem32)
-        __qtablewidgetitem33 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(7, __qtablewidgetitem33)
-        __qtablewidgetitem34 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(8, __qtablewidgetitem34)
-        __qtablewidgetitem35 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(9, __qtablewidgetitem35)
-        __qtablewidgetitem36 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(10, __qtablewidgetitem36)
-        __qtablewidgetitem37 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(11, __qtablewidgetitem37)
-        __qtablewidgetitem38 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(12, __qtablewidgetitem38)
-        __qtablewidgetitem39 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(13, __qtablewidgetitem39)
-        __qtablewidgetitem40 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(14, __qtablewidgetitem40)
-        __qtablewidgetitem41 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(15, __qtablewidgetitem41)
-        __qtablewidgetitem42 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(16, __qtablewidgetitem42)
-        __qtablewidgetitem43 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(17, __qtablewidgetitem43)
-        __qtablewidgetitem44 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(18, __qtablewidgetitem44)
-        __qtablewidgetitem45 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(19, __qtablewidgetitem45)
-        __qtablewidgetitem46 = QTableWidgetItem()
-        self.table_drawdown.setVerticalHeaderItem(20, __qtablewidgetitem46)
-        self.table_drawdown.setObjectName(u"table_drawdown")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.table_drawdown.sizePolicy().hasHeightForWidth())
-        self.table_drawdown.setSizePolicy(sizePolicy2)
-        self.table_drawdown.setMinimumSize(QSize(280, 0))
+        self.btn_create_new_well = QPushButton(Pumping_test)
+        self.btn_create_new_well.setObjectName(u"btn_create_new_well")
 
-        self.horizontalLayout.addWidget(self.table_drawdown)
+        self.vl_tabe_image.addWidget(self.btn_create_new_well)
 
-        self.lbl_scatter_graph_space_hoder = QLabel(Pumping_test)
-        self.lbl_scatter_graph_space_hoder.setObjectName(u"lbl_scatter_graph_space_hoder")
+        self.lbl_image = QLabel(Pumping_test)
+        self.lbl_image.setObjectName(u"lbl_image")
+        self.lbl_image.setPixmap(QPixmap(u"../../../../Desktop/Well type.jpg"))
 
-        self.horizontalLayout.addWidget(self.lbl_scatter_graph_space_hoder)
+        self.vl_tabe_image.addWidget(self.lbl_image)
 
 
-        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.verticalLayout.addLayout(self.vl_tabe_image)
 
 #if QT_CONFIG(shortcut)
-        self.lbl_constant.setBuddy(self.l_edit_constant)
-        self.lbl_static_wl.setBuddy(self.l_edit_static_wl)
 #endif // QT_CONFIG(shortcut)
 
         self.retranslateUi(Pumping_test)
@@ -205,99 +372,125 @@ class Ui_Pumping_test(object):
 
     def retranslateUi(self, Pumping_test):
         Pumping_test.setWindowTitle(QCoreApplication.translate("Pumping_test", u"Form", None))
-        self.gb_dicharge.setTitle(QCoreApplication.translate("Pumping_test", u"Discharge[m\u00b3/sec]", None))
-        self.lbl_constant.setText(QCoreApplication.translate("Pumping_test", u"Constant:", None))
-        self.lbl_static_wl.setText(QCoreApplication.translate("Pumping_test", u"Static WL [m]:", None))
-        ___qtablewidgetitem = self.table_dicharge_time.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("Pumping_test", u"Time[s]", None));
-        ___qtablewidgetitem1 = self.table_dicharge_time.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("Pumping_test", u"Discharge[m\u00b3/s]", None));
-        ___qtablewidgetitem2 = self.table_dicharge_time.verticalHeaderItem(1)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("Pumping_test", u"1", None));
-        ___qtablewidgetitem3 = self.table_dicharge_time.verticalHeaderItem(2)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("Pumping_test", u"2", None));
-        ___qtablewidgetitem4 = self.table_dicharge_time.verticalHeaderItem(3)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("Pumping_test", u"3", None));
-        ___qtablewidgetitem5 = self.table_dicharge_time.verticalHeaderItem(4)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("Pumping_test", u"4", None));
-        ___qtablewidgetitem6 = self.table_dicharge_time.verticalHeaderItem(5)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("Pumping_test", u"5", None));
-        ___qtablewidgetitem7 = self.table_dicharge_time.verticalHeaderItem(6)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("Pumping_test", u"6", None));
-        ___qtablewidgetitem8 = self.table_dicharge_time.verticalHeaderItem(7)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("Pumping_test", u"7", None));
-        ___qtablewidgetitem9 = self.table_dicharge_time.verticalHeaderItem(8)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("Pumping_test", u"8", None));
-        ___qtablewidgetitem10 = self.table_dicharge_time.verticalHeaderItem(9)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("Pumping_test", u"9", None));
-        ___qtablewidgetitem11 = self.table_dicharge_time.verticalHeaderItem(10)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("Pumping_test", u"10", None));
-        ___qtablewidgetitem12 = self.table_dicharge_time.verticalHeaderItem(11)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("Pumping_test", u"11", None));
-        ___qtablewidgetitem13 = self.table_dicharge_time.verticalHeaderItem(12)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("Pumping_test", u"12", None));
-        ___qtablewidgetitem14 = self.table_dicharge_time.verticalHeaderItem(13)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("Pumping_test", u"13", None));
-        ___qtablewidgetitem15 = self.table_dicharge_time.verticalHeaderItem(14)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("Pumping_test", u"14", None));
-        ___qtablewidgetitem16 = self.table_dicharge_time.verticalHeaderItem(15)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("Pumping_test", u"15", None));
-        ___qtablewidgetitem17 = self.table_dicharge_time.verticalHeaderItem(16)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("Pumping_test", u"16", None));
-        ___qtablewidgetitem18 = self.table_dicharge_time.verticalHeaderItem(17)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("Pumping_test", u"17", None));
-        ___qtablewidgetitem19 = self.table_dicharge_time.verticalHeaderItem(18)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("Pumping_test", u"18", None));
-        ___qtablewidgetitem20 = self.table_dicharge_time.verticalHeaderItem(19)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("Pumping_test", u"19", None));
-        ___qtablewidgetitem21 = self.table_dicharge_time.verticalHeaderItem(20)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("Pumping_test", u"20", None));
-        ___qtablewidgetitem22 = self.table_drawdown.horizontalHeaderItem(0)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("Pumping_test", u"Time [s]", None));
-        ___qtablewidgetitem23 = self.table_drawdown.horizontalHeaderItem(1)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("Pumping_test", u"Water Level [m]", None));
-        ___qtablewidgetitem24 = self.table_drawdown.horizontalHeaderItem(2)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("Pumping_test", u"Drawdown [m]", None));
-        ___qtablewidgetitem25 = self.table_drawdown.verticalHeaderItem(1)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("Pumping_test", u"1", None));
-        ___qtablewidgetitem26 = self.table_drawdown.verticalHeaderItem(2)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("Pumping_test", u"2", None));
-        ___qtablewidgetitem27 = self.table_drawdown.verticalHeaderItem(3)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("Pumping_test", u"3", None));
-        ___qtablewidgetitem28 = self.table_drawdown.verticalHeaderItem(4)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("Pumping_test", u"4", None));
-        ___qtablewidgetitem29 = self.table_drawdown.verticalHeaderItem(5)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("Pumping_test", u"5", None));
-        ___qtablewidgetitem30 = self.table_drawdown.verticalHeaderItem(6)
-        ___qtablewidgetitem30.setText(QCoreApplication.translate("Pumping_test", u"6", None));
-        ___qtablewidgetitem31 = self.table_drawdown.verticalHeaderItem(7)
-        ___qtablewidgetitem31.setText(QCoreApplication.translate("Pumping_test", u"7", None));
-        ___qtablewidgetitem32 = self.table_drawdown.verticalHeaderItem(8)
-        ___qtablewidgetitem32.setText(QCoreApplication.translate("Pumping_test", u"8", None));
-        ___qtablewidgetitem33 = self.table_drawdown.verticalHeaderItem(9)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("Pumping_test", u"9", None));
-        ___qtablewidgetitem34 = self.table_drawdown.verticalHeaderItem(10)
-        ___qtablewidgetitem34.setText(QCoreApplication.translate("Pumping_test", u"10", None));
-        ___qtablewidgetitem35 = self.table_drawdown.verticalHeaderItem(11)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("Pumping_test", u"11", None));
-        ___qtablewidgetitem36 = self.table_drawdown.verticalHeaderItem(12)
-        ___qtablewidgetitem36.setText(QCoreApplication.translate("Pumping_test", u"12", None));
-        ___qtablewidgetitem37 = self.table_drawdown.verticalHeaderItem(13)
-        ___qtablewidgetitem37.setText(QCoreApplication.translate("Pumping_test", u"13", None));
-        ___qtablewidgetitem38 = self.table_drawdown.verticalHeaderItem(14)
-        ___qtablewidgetitem38.setText(QCoreApplication.translate("Pumping_test", u"14", None));
-        ___qtablewidgetitem39 = self.table_drawdown.verticalHeaderItem(15)
-        ___qtablewidgetitem39.setText(QCoreApplication.translate("Pumping_test", u"15", None));
-        ___qtablewidgetitem40 = self.table_drawdown.verticalHeaderItem(16)
-        ___qtablewidgetitem40.setText(QCoreApplication.translate("Pumping_test", u"16", None));
-        ___qtablewidgetitem41 = self.table_drawdown.verticalHeaderItem(17)
-        ___qtablewidgetitem41.setText(QCoreApplication.translate("Pumping_test", u"17", None));
-        ___qtablewidgetitem42 = self.table_drawdown.verticalHeaderItem(18)
-        ___qtablewidgetitem42.setText(QCoreApplication.translate("Pumping_test", u"18", None));
-        ___qtablewidgetitem43 = self.table_drawdown.verticalHeaderItem(19)
-        ___qtablewidgetitem43.setText(QCoreApplication.translate("Pumping_test", u"19", None));
-        ___qtablewidgetitem44 = self.table_drawdown.verticalHeaderItem(20)
-        ___qtablewidgetitem44.setText(QCoreApplication.translate("Pumping_test", u"20", None));
-        self.lbl_scatter_graph_space_hoder.setText(QCoreApplication.translate("Pumping_test", u"Space holder", None))
+        self.gb_project_informataion.setTitle(QCoreApplication.translate("Pumping_test", u"Project Information", None))
+        self.lbl_project_name.setText(QCoreApplication.translate("Pumping_test", u"Project Name:", None))
+        self.lbl_project_number.setText(QCoreApplication.translate("Pumping_test", u"Project Number:", None))
+        self.lbl_client.setText(QCoreApplication.translate("Pumping_test", u"Client:", None))
+        self.lbl_location.setText(QCoreApplication.translate("Pumping_test", u"Location:", None))
+        self.gb_units.setTitle(QCoreApplication.translate("Pumping_test", u"Units", None))
+        self.lbl_site_plan_2.setText(QCoreApplication.translate("Pumping_test", u"Site Plan:", None))
+        self.cb_site_plan_2.setItemText(0, "")
+        self.cb_site_plan_2.setItemText(1, QCoreApplication.translate("Pumping_test", u"mm", None))
+        self.cb_site_plan_2.setItemText(2, QCoreApplication.translate("Pumping_test", u"cm", None))
+        self.cb_site_plan_2.setItemText(3, QCoreApplication.translate("Pumping_test", u"m", None))
+        self.cb_site_plan_2.setItemText(4, QCoreApplication.translate("Pumping_test", u"ft", None))
+        self.cb_site_plan_2.setItemText(5, QCoreApplication.translate("Pumping_test", u"in", None))
+
+        self.lbl_dimensions_2.setText(QCoreApplication.translate("Pumping_test", u"Dimensions:", None))
+        self.cb_dimensions_2.setItemText(0, "")
+        self.cb_dimensions_2.setItemText(1, QCoreApplication.translate("Pumping_test", u"m", None))
+        self.cb_dimensions_2.setItemText(2, QCoreApplication.translate("Pumping_test", u"cm", None))
+        self.cb_dimensions_2.setItemText(3, QCoreApplication.translate("Pumping_test", u"mm", None))
+        self.cb_dimensions_2.setItemText(4, QCoreApplication.translate("Pumping_test", u"ft", None))
+        self.cb_dimensions_2.setItemText(5, QCoreApplication.translate("Pumping_test", u"in", None))
+
+        self.lbl_time_2.setText(QCoreApplication.translate("Pumping_test", u"Time:", None))
+        self.cb_time_2.setItemText(0, "")
+        self.cb_time_2.setItemText(1, QCoreApplication.translate("Pumping_test", u"sec", None))
+        self.cb_time_2.setItemText(2, QCoreApplication.translate("Pumping_test", u"min", None))
+        self.cb_time_2.setItemText(3, QCoreApplication.translate("Pumping_test", u"hr", None))
+        self.cb_time_2.setItemText(4, QCoreApplication.translate("Pumping_test", u"day", None))
+
+        self.lbl_discharge_2.setText(QCoreApplication.translate("Pumping_test", u"Discharge:", None))
+        self.cb_discharge_2.setItemText(0, "")
+        self.cb_discharge_2.setItemText(1, QCoreApplication.translate("Pumping_test", u"m\u00b3/sec", None))
+        self.cb_discharge_2.setItemText(2, QCoreApplication.translate("Pumping_test", u"m\u00b3/min", None))
+        self.cb_discharge_2.setItemText(3, QCoreApplication.translate("Pumping_test", u"m\u00b3/hr", None))
+        self.cb_discharge_2.setItemText(4, QCoreApplication.translate("Pumping_test", u"m\u00b3/day", None))
+        self.cb_discharge_2.setItemText(5, QCoreApplication.translate("Pumping_test", u"l/s", None))
+        self.cb_discharge_2.setItemText(6, QCoreApplication.translate("Pumping_test", u"ft\u00b3/sec", None))
+        self.cb_discharge_2.setItemText(7, QCoreApplication.translate("Pumping_test", u"ft\u00b3/min", None))
+        self.cb_discharge_2.setItemText(8, QCoreApplication.translate("Pumping_test", u"ft\u00b3/hr", None))
+        self.cb_discharge_2.setItemText(9, QCoreApplication.translate("Pumping_test", u"ft\u00b3/day", None))
+        self.cb_discharge_2.setItemText(10, QCoreApplication.translate("Pumping_test", u"U.S gal/min", None))
+        self.cb_discharge_2.setItemText(11, QCoreApplication.translate("Pumping_test", u"U.S gal/day", None))
+        self.cb_discharge_2.setItemText(12, QCoreApplication.translate("Pumping_test", u"U.K gal/min", None))
+        self.cb_discharge_2.setItemText(13, QCoreApplication.translate("Pumping_test", u"U.K gal/day", None))
+
+        self.lbl_transmissivity_2.setText(QCoreApplication.translate("Pumping_test", u"Transmissivity:", None))
+        self.cb_transmissivity_2.setItemText(0, "")
+        self.cb_transmissivity_2.setItemText(1, QCoreApplication.translate("Pumping_test", u"m\u00b2/sec", None))
+        self.cb_transmissivity_2.setItemText(2, QCoreApplication.translate("Pumping_test", u"m\u00b2/min", None))
+        self.cb_transmissivity_2.setItemText(3, QCoreApplication.translate("Pumping_test", u"m\u00b2/hr", None))
+        self.cb_transmissivity_2.setItemText(4, QCoreApplication.translate("Pumping_test", u"m\u00b2/day", None))
+        self.cb_transmissivity_2.setItemText(5, QCoreApplication.translate("Pumping_test", u"ft\u00b2/sec", None))
+        self.cb_transmissivity_2.setItemText(6, QCoreApplication.translate("Pumping_test", u"ft\u00b2/min", None))
+        self.cb_transmissivity_2.setItemText(7, QCoreApplication.translate("Pumping_test", u"ft\u00b2/hr", None))
+        self.cb_transmissivity_2.setItemText(8, QCoreApplication.translate("Pumping_test", u"ft\u00b2/day", None))
+        self.cb_transmissivity_2.setItemText(9, QCoreApplication.translate("Pumping_test", u"gal/day-ft", None))
+        self.cb_transmissivity_2.setItemText(10, QCoreApplication.translate("Pumping_test", u"cm\u00b2/sec", None))
+
+        self.lbl_pressure_2.setText(QCoreApplication.translate("Pumping_test", u"Pressure:", None))
+        self.cb_pressure_2.setItemText(0, "")
+        self.cb_pressure_2.setItemText(1, QCoreApplication.translate("Pumping_test", u"Pa", None))
+        self.cb_pressure_2.setItemText(2, QCoreApplication.translate("Pumping_test", u"bar", None))
+        self.cb_pressure_2.setItemText(3, QCoreApplication.translate("Pumping_test", u"mbar", None))
+        self.cb_pressure_2.setItemText(4, QCoreApplication.translate("Pumping_test", u"mm Hg", None))
+        self.cb_pressure_2.setItemText(5, QCoreApplication.translate("Pumping_test", u"atm", None))
+        self.cb_pressure_2.setItemText(6, QCoreApplication.translate("Pumping_test", u"at", None))
+        self.cb_pressure_2.setItemText(7, QCoreApplication.translate("Pumping_test", u"psi", None))
+
+        self.gb_pumping_test.setTitle(QCoreApplication.translate("Pumping_test", u"Pumping Test", None))
+        self.lbl_pumping_test_name.setText(QCoreApplication.translate("Pumping_test", u"Name:", None))
+        self.lbl_pumping_test_date_time.setText(QCoreApplication.translate("Pumping_test", u"Date/Time:", None))
+        self.lbl_pumping_test_performed_by.setText(QCoreApplication.translate("Pumping_test", u"Performed by:", None))
+        self.gb_aquifer_properties.setTitle(QCoreApplication.translate("Pumping_test", u"Aquifer Properties", None))
+        self.lbl_aquifer_thickness.setText(QCoreApplication.translate("Pumping_test", u"Thickness[m]:", None))
+        self.lbl_aquifer_type.setText(QCoreApplication.translate("Pumping_test", u"Type:", None))
+        self.cb_aquifer_type.setItemText(0, "")
+        self.cb_aquifer_type.setItemText(1, QCoreApplication.translate("Pumping_test", u"Unknown", None))
+        self.cb_aquifer_type.setItemText(2, QCoreApplication.translate("Pumping_test", u"Confined", None))
+        self.cb_aquifer_type.setItemText(3, QCoreApplication.translate("Pumping_test", u"Unconfined", None))
+        self.cb_aquifer_type.setItemText(4, QCoreApplication.translate("Pumping_test", u"Leaky", None))
+        self.cb_aquifer_type.setItemText(5, QCoreApplication.translate("Pumping_test", u"Fracture", None))
+
+        ___qtablewidgetitem = self.table_well_information.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("Pumping_test", u"S.No", None));
+        ___qtablewidgetitem1 = self.table_well_information.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("Pumping_test", u"Name", None));
+        ___qtablewidgetitem2 = self.table_well_information.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("Pumping_test", u"Type", None));
+        ___qtablewidgetitem3 = self.table_well_information.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("Pumping_test", u"X[m]", None));
+        ___qtablewidgetitem4 = self.table_well_information.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("Pumping_test", u"Y[m]", None));
+        ___qtablewidgetitem5 = self.table_well_information.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("Pumping_test", u"Elevation", None));
+        ___qtablewidgetitem6 = self.table_well_information.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("Pumping_test", u"Benchmark", None));
+        ___qtablewidgetitem7 = self.table_well_information.horizontalHeaderItem(7)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("Pumping_test", u"Penetration", None));
+        ___qtablewidgetitem8 = self.table_well_information.horizontalHeaderItem(8)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("Pumping_test", u"R[m]", None));
+        ___qtablewidgetitem9 = self.table_well_information.horizontalHeaderItem(9)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("Pumping_test", u"L[m]", None));
+        ___qtablewidgetitem10 = self.table_well_information.horizontalHeaderItem(10)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("Pumping_test", u"b[m]", None));
+        ___qtablewidgetitem11 = self.table_well_information.horizontalHeaderItem(11)
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("Pumping_test", u"r[m]", None));
+        ___qtablewidgetitem12 = self.table_well_information.horizontalHeaderItem(12)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("Pumping_test", u"B[m]", None));
+        ___qtablewidgetitem13 = self.table_well_information.horizontalHeaderItem(13)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("Pumping_test", u"n[%]", None));
+        ___qtablewidgetitem14 = self.table_well_information.horizontalHeaderItem(14)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("Pumping_test", u"use r[w]", None));
+        self.btn_create_new_well.setText(QCoreApplication.translate("Pumping_test", u"Create a New Well", None))
+        self.lbl_image.setText("")
     # retranslateUi
 
+Error: pumping_test.ui: Warning: Buddy assignment: 'lineEdit_2' is not a valid widget.
+pumping_test.ui: Warning: Buddy assignment: 'lineEdit_3' is not a valid widget.
+pumping_test.ui: Warning: Buddy assignment: 'lineEdit_4' is not a valid widget.
+pumping_test.ui: Warning: Buddy assignment: 'lineEdit_5' is not a valid widget.
+
+while executing 'C:\Users\sowba\AppData\Local\Programs\Python\Python311\Lib\site-packages\PySide6\uic -g python pumping_test.ui'
