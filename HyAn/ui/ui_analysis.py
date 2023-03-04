@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'tab_analysis.ui'
+## Form generated from reading UI file 'analysis.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.2
 ##
@@ -21,16 +21,16 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QGridLayout,
     QWidget)
 import icon_rc
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        if not Form.objectName():
-            Form.setObjectName(u"Form")
-        Form.resize(750, 772)
-        self.horizontalLayout = QHBoxLayout(Form)
+class Ui_Analysis(object):
+    def setupUi(self, Analysis):
+        if not Analysis.objectName():
+            Analysis.setObjectName(u"Analysis")
+        Analysis.resize(750, 772)
+        self.horizontalLayout = QHBoxLayout(Analysis)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.gb_analysis = QGroupBox(Form)
+        self.gb_analysis = QGroupBox(Analysis)
         self.gb_analysis.setObjectName(u"gb_analysis")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -73,7 +73,7 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.gb_analysis)
 
-        self.gb_solution = QGroupBox(Form)
+        self.gb_solution = QGroupBox(Analysis)
         self.gb_solution.setObjectName(u"gb_solution")
         sizePolicy.setHeightForWidth(self.gb_solution.sizePolicy().hasHeightForWidth())
         self.gb_solution.setSizePolicy(sizePolicy)
@@ -128,7 +128,7 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.gb_solution)
 
-        self.gb_output = QGroupBox(Form)
+        self.gb_output = QGroupBox(Analysis)
         self.gb_output.setObjectName(u"gb_output")
         sizePolicy3 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy3.setHorizontalStretch(0)
@@ -177,7 +177,7 @@ class Ui_Form(object):
 
         self.horizontalLayout.addLayout(self.verticalLayout)
 
-        self.lbl_output_graph = QLabel(Form)
+        self.lbl_output_graph = QLabel(Analysis)
         self.lbl_output_graph.setObjectName(u"lbl_output_graph")
 
         self.horizontalLayout.addWidget(self.lbl_output_graph)
@@ -187,32 +187,32 @@ class Ui_Form(object):
         self.lbl_analysis_performed_by.setBuddy(self.l_edit_analysis_performed_by)
 #endif // QT_CONFIG(shortcut)
 
-        self.retranslateUi(Form)
+        self.retranslateUi(Analysis)
 
-        QMetaObject.connectSlotsByName(Form)
+        QMetaObject.connectSlotsByName(Analysis)
     # setupUi
 
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.gb_analysis.setTitle(QCoreApplication.translate("Form", u"Analysis", None))
-        self.lbl_analysis_name.setText(QCoreApplication.translate("Form", u"Analysis Name:", None))
-        self.lbl_analysis_performed_by.setText(QCoreApplication.translate("Form", u"Analysis Performed by:", None))
-        self.lbl_analysis_data.setText(QCoreApplication.translate("Form", u"Analysis date:", None))
-        self.gb_solution.setTitle(QCoreApplication.translate("Form", u"Solution", None))
-        self.btn_fit.setText(QCoreApplication.translate("Form", u"Fit", None))
-        self.cb_apply_graph_setting.setItemText(0, QCoreApplication.translate("Form", u"Apply Graph Setting", None))
-        self.cb_apply_graph_setting.setItemText(1, QCoreApplication.translate("Form", u"log - log", None))
+    def retranslateUi(self, Analysis):
+        Analysis.setWindowTitle(QCoreApplication.translate("Analysis", u"Form", None))
+        self.gb_analysis.setTitle(QCoreApplication.translate("Analysis", u"Analysis", None))
+        self.lbl_analysis_name.setText(QCoreApplication.translate("Analysis", u"Analysis Name:", None))
+        self.lbl_analysis_performed_by.setText(QCoreApplication.translate("Analysis", u"Analysis Performed by:", None))
+        self.lbl_analysis_data.setText(QCoreApplication.translate("Analysis", u"Analysis date:", None))
+        self.gb_solution.setTitle(QCoreApplication.translate("Analysis", u"Solution", None))
+        self.btn_fit.setText(QCoreApplication.translate("Analysis", u"Fit", None))
+        self.cb_apply_graph_setting.setItemText(0, QCoreApplication.translate("Analysis", u"Apply Graph Setting", None))
+        self.cb_apply_graph_setting.setItemText(1, QCoreApplication.translate("Analysis", u"log - log", None))
 
-        self.cb_analysis_method.setItemText(0, QCoreApplication.translate("Form", u"Analysis Method", None))
-        self.cb_analysis_method.setItemText(1, QCoreApplication.translate("Form", u"Theis (Confined)", None))
-        self.cb_analysis_method.setItemText(2, QCoreApplication.translate("Form", u"Cooper Jacob (Confined)", None))
-        self.cb_analysis_method.setItemText(3, QCoreApplication.translate("Form", u"Theis  (Unconfined)", None))
-        self.cb_analysis_method.setItemText(4, QCoreApplication.translate("Form", u"Cooper Jacob  (Unconfined)", None))
+        self.cb_analysis_method.setItemText(0, QCoreApplication.translate("Analysis", u"Analysis Method", None))
+        self.cb_analysis_method.setItemText(1, QCoreApplication.translate("Analysis", u"Theis (Confined)", None))
+        self.cb_analysis_method.setItemText(2, QCoreApplication.translate("Analysis", u"Cooper Jacob (Confined)", None))
+        self.cb_analysis_method.setItemText(3, QCoreApplication.translate("Analysis", u"Theis  (Unconfined)", None))
+        self.cb_analysis_method.setItemText(4, QCoreApplication.translate("Analysis", u"Cooper Jacob  (Unconfined)", None))
 
-        self.gb_output.setTitle(QCoreApplication.translate("Form", u"Output", None))
-        self.lbl_output_transmissivity.setText(QCoreApplication.translate("Form", u"Transmissivity:", None))
-        self.lbl_output_storativity.setText(QCoreApplication.translate("Form", u"Storativity:", None))
-        self.btn_generate_report.setText(QCoreApplication.translate("Form", u"Generate Report", None))
-        self.lbl_output_graph.setText(QCoreApplication.translate("Form", u"Graph", None))
+        self.gb_output.setTitle(QCoreApplication.translate("Analysis", u"Output", None))
+        self.lbl_output_transmissivity.setText(QCoreApplication.translate("Analysis", u"Transmissivity:", None))
+        self.lbl_output_storativity.setText(QCoreApplication.translate("Analysis", u"Storativity:", None))
+        self.btn_generate_report.setText(QCoreApplication.translate("Analysis", u"Generate Report", None))
+        self.lbl_output_graph.setText(QCoreApplication.translate("Analysis", u"Graph", None))
     # retranslateUi
 

@@ -19,14 +19,14 @@ from PySide6.QtWidgets import (QApplication, QFormLayout, QGroupBox, QHBoxLayout
     QHeaderView, QLabel, QLineEdit, QSizePolicy,
     QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
 
-class Ui_Pumping_test(object):
-    def setupUi(self, Pumping_test):
-        if not Pumping_test.objectName():
-            Pumping_test.setObjectName(u"Pumping_test")
-        Pumping_test.resize(813, 736)
-        self.verticalLayout = QVBoxLayout(Pumping_test)
+class Ui_PumpingData(object):
+    def setupUi(self, PumpingData):
+        if not PumpingData.objectName():
+            PumpingData.setObjectName(u"PumpingData")
+        PumpingData.resize(813, 736)
+        self.verticalLayout = QVBoxLayout(PumpingData)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.gb_dicharge = QGroupBox(Pumping_test)
+        self.gb_dicharge = QGroupBox(PumpingData)
         self.gb_dicharge.setObjectName(u"gb_dicharge")
         sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -61,7 +61,7 @@ class Ui_Pumping_test(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.table_dicharge_time = QTableWidget(Pumping_test)
+        self.table_dicharge_time = QTableWidget(PumpingData)
         if (self.table_dicharge_time.columnCount() < 2):
             self.table_dicharge_time.setColumnCount(2)
         __qtablewidgetitem = QTableWidgetItem()
@@ -122,7 +122,7 @@ class Ui_Pumping_test(object):
 
         self.horizontalLayout.addWidget(self.table_dicharge_time)
 
-        self.table_drawdown = QTableWidget(Pumping_test)
+        self.table_drawdown = QTableWidget(PumpingData)
         if (self.table_drawdown.columnCount() < 3):
             self.table_drawdown.setColumnCount(3)
         __qtablewidgetitem23 = QTableWidgetItem()
@@ -185,7 +185,7 @@ class Ui_Pumping_test(object):
 
         self.horizontalLayout.addWidget(self.table_drawdown)
 
-        self.lbl_scatter_graph_space_hoder = QLabel(Pumping_test)
+        self.lbl_scatter_graph_space_hoder = QLabel(PumpingData)
         self.lbl_scatter_graph_space_hoder.setObjectName(u"lbl_scatter_graph_space_hoder")
 
         self.horizontalLayout.addWidget(self.lbl_scatter_graph_space_hoder)
@@ -198,106 +198,106 @@ class Ui_Pumping_test(object):
         self.lbl_static_wl.setBuddy(self.l_edit_static_wl)
 #endif // QT_CONFIG(shortcut)
 
-        self.retranslateUi(Pumping_test)
+        self.retranslateUi(PumpingData)
 
-        QMetaObject.connectSlotsByName(Pumping_test)
+        QMetaObject.connectSlotsByName(PumpingData)
     # setupUi
 
-    def retranslateUi(self, Pumping_test):
-        Pumping_test.setWindowTitle(QCoreApplication.translate("Pumping_test", u"Form", None))
-        self.gb_dicharge.setTitle(QCoreApplication.translate("Pumping_test", u"Discharge[m\u00b3/sec]", None))
-        self.lbl_constant.setText(QCoreApplication.translate("Pumping_test", u"Constant:", None))
-        self.lbl_static_wl.setText(QCoreApplication.translate("Pumping_test", u"Static WL [m]:", None))
+    def retranslateUi(self, PumpingData):
+        PumpingData.setWindowTitle(QCoreApplication.translate("PumpingData", u"Form", None))
+        self.gb_dicharge.setTitle(QCoreApplication.translate("PumpingData", u"Discharge[m\u00b3/sec]", None))
+        self.lbl_constant.setText(QCoreApplication.translate("PumpingData", u"Constant:", None))
+        self.lbl_static_wl.setText(QCoreApplication.translate("PumpingData", u"Static WL [m]:", None))
         ___qtablewidgetitem = self.table_dicharge_time.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("Pumping_test", u"Time[s]", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("PumpingData", u"Time[s]", None));
         ___qtablewidgetitem1 = self.table_dicharge_time.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("Pumping_test", u"Discharge[m\u00b3/s]", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("PumpingData", u"Discharge[m\u00b3/s]", None));
         ___qtablewidgetitem2 = self.table_dicharge_time.verticalHeaderItem(1)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("Pumping_test", u"1", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("PumpingData", u"1", None));
         ___qtablewidgetitem3 = self.table_dicharge_time.verticalHeaderItem(2)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("Pumping_test", u"2", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("PumpingData", u"2", None));
         ___qtablewidgetitem4 = self.table_dicharge_time.verticalHeaderItem(3)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("Pumping_test", u"3", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("PumpingData", u"3", None));
         ___qtablewidgetitem5 = self.table_dicharge_time.verticalHeaderItem(4)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("Pumping_test", u"4", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("PumpingData", u"4", None));
         ___qtablewidgetitem6 = self.table_dicharge_time.verticalHeaderItem(5)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("Pumping_test", u"5", None));
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("PumpingData", u"5", None));
         ___qtablewidgetitem7 = self.table_dicharge_time.verticalHeaderItem(6)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("Pumping_test", u"6", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("PumpingData", u"6", None));
         ___qtablewidgetitem8 = self.table_dicharge_time.verticalHeaderItem(7)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("Pumping_test", u"7", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("PumpingData", u"7", None));
         ___qtablewidgetitem9 = self.table_dicharge_time.verticalHeaderItem(8)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("Pumping_test", u"8", None));
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("PumpingData", u"8", None));
         ___qtablewidgetitem10 = self.table_dicharge_time.verticalHeaderItem(9)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("Pumping_test", u"9", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("PumpingData", u"9", None));
         ___qtablewidgetitem11 = self.table_dicharge_time.verticalHeaderItem(10)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("Pumping_test", u"10", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("PumpingData", u"10", None));
         ___qtablewidgetitem12 = self.table_dicharge_time.verticalHeaderItem(11)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("Pumping_test", u"11", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("PumpingData", u"11", None));
         ___qtablewidgetitem13 = self.table_dicharge_time.verticalHeaderItem(12)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("Pumping_test", u"12", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("PumpingData", u"12", None));
         ___qtablewidgetitem14 = self.table_dicharge_time.verticalHeaderItem(13)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("Pumping_test", u"13", None));
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("PumpingData", u"13", None));
         ___qtablewidgetitem15 = self.table_dicharge_time.verticalHeaderItem(14)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("Pumping_test", u"14", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("PumpingData", u"14", None));
         ___qtablewidgetitem16 = self.table_dicharge_time.verticalHeaderItem(15)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("Pumping_test", u"15", None));
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("PumpingData", u"15", None));
         ___qtablewidgetitem17 = self.table_dicharge_time.verticalHeaderItem(16)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("Pumping_test", u"16", None));
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("PumpingData", u"16", None));
         ___qtablewidgetitem18 = self.table_dicharge_time.verticalHeaderItem(17)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("Pumping_test", u"17", None));
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("PumpingData", u"17", None));
         ___qtablewidgetitem19 = self.table_dicharge_time.verticalHeaderItem(18)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("Pumping_test", u"18", None));
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("PumpingData", u"18", None));
         ___qtablewidgetitem20 = self.table_dicharge_time.verticalHeaderItem(19)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("Pumping_test", u"19", None));
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("PumpingData", u"19", None));
         ___qtablewidgetitem21 = self.table_dicharge_time.verticalHeaderItem(20)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("Pumping_test", u"20", None));
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("PumpingData", u"20", None));
         ___qtablewidgetitem22 = self.table_drawdown.horizontalHeaderItem(0)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("Pumping_test", u"Time [s]", None));
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("PumpingData", u"Time [s]", None));
         ___qtablewidgetitem23 = self.table_drawdown.horizontalHeaderItem(1)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("Pumping_test", u"Water Level [m]", None));
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("PumpingData", u"Water Level [m]", None));
         ___qtablewidgetitem24 = self.table_drawdown.horizontalHeaderItem(2)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("Pumping_test", u"Drawdown [m]", None));
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("PumpingData", u"Drawdown [m]", None));
         ___qtablewidgetitem25 = self.table_drawdown.verticalHeaderItem(1)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("Pumping_test", u"1", None));
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("PumpingData", u"1", None));
         ___qtablewidgetitem26 = self.table_drawdown.verticalHeaderItem(2)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("Pumping_test", u"2", None));
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("PumpingData", u"2", None));
         ___qtablewidgetitem27 = self.table_drawdown.verticalHeaderItem(3)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("Pumping_test", u"3", None));
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("PumpingData", u"3", None));
         ___qtablewidgetitem28 = self.table_drawdown.verticalHeaderItem(4)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("Pumping_test", u"4", None));
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("PumpingData", u"4", None));
         ___qtablewidgetitem29 = self.table_drawdown.verticalHeaderItem(5)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("Pumping_test", u"5", None));
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("PumpingData", u"5", None));
         ___qtablewidgetitem30 = self.table_drawdown.verticalHeaderItem(6)
-        ___qtablewidgetitem30.setText(QCoreApplication.translate("Pumping_test", u"6", None));
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("PumpingData", u"6", None));
         ___qtablewidgetitem31 = self.table_drawdown.verticalHeaderItem(7)
-        ___qtablewidgetitem31.setText(QCoreApplication.translate("Pumping_test", u"7", None));
+        ___qtablewidgetitem31.setText(QCoreApplication.translate("PumpingData", u"7", None));
         ___qtablewidgetitem32 = self.table_drawdown.verticalHeaderItem(8)
-        ___qtablewidgetitem32.setText(QCoreApplication.translate("Pumping_test", u"8", None));
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("PumpingData", u"8", None));
         ___qtablewidgetitem33 = self.table_drawdown.verticalHeaderItem(9)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("Pumping_test", u"9", None));
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("PumpingData", u"9", None));
         ___qtablewidgetitem34 = self.table_drawdown.verticalHeaderItem(10)
-        ___qtablewidgetitem34.setText(QCoreApplication.translate("Pumping_test", u"10", None));
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("PumpingData", u"10", None));
         ___qtablewidgetitem35 = self.table_drawdown.verticalHeaderItem(11)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("Pumping_test", u"11", None));
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("PumpingData", u"11", None));
         ___qtablewidgetitem36 = self.table_drawdown.verticalHeaderItem(12)
-        ___qtablewidgetitem36.setText(QCoreApplication.translate("Pumping_test", u"12", None));
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("PumpingData", u"12", None));
         ___qtablewidgetitem37 = self.table_drawdown.verticalHeaderItem(13)
-        ___qtablewidgetitem37.setText(QCoreApplication.translate("Pumping_test", u"13", None));
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("PumpingData", u"13", None));
         ___qtablewidgetitem38 = self.table_drawdown.verticalHeaderItem(14)
-        ___qtablewidgetitem38.setText(QCoreApplication.translate("Pumping_test", u"14", None));
+        ___qtablewidgetitem38.setText(QCoreApplication.translate("PumpingData", u"14", None));
         ___qtablewidgetitem39 = self.table_drawdown.verticalHeaderItem(15)
-        ___qtablewidgetitem39.setText(QCoreApplication.translate("Pumping_test", u"15", None));
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("PumpingData", u"15", None));
         ___qtablewidgetitem40 = self.table_drawdown.verticalHeaderItem(16)
-        ___qtablewidgetitem40.setText(QCoreApplication.translate("Pumping_test", u"16", None));
+        ___qtablewidgetitem40.setText(QCoreApplication.translate("PumpingData", u"16", None));
         ___qtablewidgetitem41 = self.table_drawdown.verticalHeaderItem(17)
-        ___qtablewidgetitem41.setText(QCoreApplication.translate("Pumping_test", u"17", None));
+        ___qtablewidgetitem41.setText(QCoreApplication.translate("PumpingData", u"17", None));
         ___qtablewidgetitem42 = self.table_drawdown.verticalHeaderItem(18)
-        ___qtablewidgetitem42.setText(QCoreApplication.translate("Pumping_test", u"18", None));
+        ___qtablewidgetitem42.setText(QCoreApplication.translate("PumpingData", u"18", None));
         ___qtablewidgetitem43 = self.table_drawdown.verticalHeaderItem(19)
-        ___qtablewidgetitem43.setText(QCoreApplication.translate("Pumping_test", u"19", None));
+        ___qtablewidgetitem43.setText(QCoreApplication.translate("PumpingData", u"19", None));
         ___qtablewidgetitem44 = self.table_drawdown.verticalHeaderItem(20)
-        ___qtablewidgetitem44.setText(QCoreApplication.translate("Pumping_test", u"20", None));
-        self.lbl_scatter_graph_space_hoder.setText(QCoreApplication.translate("Pumping_test", u"Space holder", None))
+        ___qtablewidgetitem44.setText(QCoreApplication.translate("PumpingData", u"20", None));
+        self.lbl_scatter_graph_space_hoder.setText(QCoreApplication.translate("PumpingData", u"Space holder", None))
     # retranslateUi
 
