@@ -21,4 +21,7 @@
     <file>settings.png</file>
     <file>water_wiz.png</file>
   </qresource>
+  <qresource prefix="demo_image">
+    <file>well_demo.png</file>
+  </qresource>
 </RCC>

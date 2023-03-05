@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="hl_project_info_units">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QGroupBox" name="gb_project_informataion">
        <property name="sizePolicy">
@@ -97,6 +97,12 @@
      </item>
      <item>
       <widget class="QGroupBox" name="gb_units">
+       <property name="minimumSize">
+        <size>
+         <width>400</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>320</width>
@@ -697,7 +703,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../../../Desktop/Well type.jpg</pixmap>
+        <pixmap resource="icon/icon.qrc">:/demo_image/well_demo.png</pixmap>
        </property>
       </widget>
      </item>
@@ -705,6 +711,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="icon/icon.qrc"/>
+ </resources>
  <connections/>
 </ui>
