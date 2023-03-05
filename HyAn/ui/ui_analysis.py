@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QGridLayout,
     QGroupBox, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
     QWidget)
-import icon_rc
+import HyAn.ui.icon.rc_icon
 
 class Ui_Analysis(object):
     def setupUi(self, Analysis):

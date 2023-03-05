@@ -16,17 +16,20 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QMainWindow, QMenu, QMenuBar, QSizePolicy,
-    QStatusBar, QTabWidget, QToolBar, QVBoxLayout,
-    QWidget)
-import icon.rc_icon
+from PySide6.QtWidgets import (QApplication, QHBoxLayout, QMainWindow, QMenu,
+    QMenuBar, QSizePolicy, QStatusBar, QTabWidget,
+    QToolBar, QVBoxLayout, QWidget)
+
+from HyAn.widgets.analysis import Analysis
+from HyAn.widgets.pumping_data import PumpingData
+from HyAn.widgets.pumping_test import PumpingTest
+import HyAn.ui.icon.rc_icon
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(906, 668)
+        MainWindow.resize(880, 722)
         MainWindow.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.t_actionnew = QAction(MainWindow)
         self.t_actionnew.setObjectName(u"t_actionnew")
@@ -75,6 +78,7 @@ class Ui_MainWindow(object):
         self.m_actionnavigation_panel = QAction(MainWindow)
         self.m_actionnavigation_panel.setObjectName(u"m_actionnavigation_panel")
         self.m_actionnavigation_panel.setCheckable(True)
+        self.m_actionnavigation_panel.setChecked(True)
         self.m_actionanalysis_panel = QAction(MainWindow)
         self.m_actionanalysis_panel.setObjectName(u"m_actionanalysis_panel")
         self.m_actionanalysis_panel.setCheckable(True)
@@ -130,82 +134,55 @@ class Ui_MainWindow(object):
         self.actionRefresh.setMenuRole(QAction.NoRole)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.horizontalLayout_2 = QHBoxLayout(self.centralwidget)
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.wid_well_details = QWidget(self.centralwidget)
-        self.wid_well_details.setObjectName(u"wid_well_details")
-        self.wid_well_details.setMinimumSize(QSize(212, 340))
-        self.verticalLayout_4 = QVBoxLayout(self.wid_well_details)
+        self.verticalLayout_4 = QVBoxLayout(self.centralwidget)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.label = QLabel(self.wid_well_details)
-        self.label.setObjectName(u"label")
-
-        self.verticalLayout_4.addWidget(self.label)
-
-
-        self.horizontalLayout_2.addWidget(self.wid_well_details)
-
-        self.tab_wid_well_analysis = QTabWidget(self.centralwidget)
-        self.tab_wid_well_analysis.setObjectName(u"tab_wid_well_analysis")
-        self.tab_wid_well_analysis.setEnabled(True)
-        self.tab_wid_well_analysis.setMinimumSize(QSize(480, 512))
+        self.tab_hydro = QTabWidget(self.centralwidget)
+        self.tab_hydro.setObjectName(u"tab_hydro")
+        self.tab_hydro.setEnabled(True)
+        self.tab_hydro.setMinimumSize(QSize(480, 512))
         self.tab_puming_test = QWidget()
         self.tab_puming_test.setObjectName(u"tab_puming_test")
-        self.verticalLayout_3 = QVBoxLayout(self.tab_puming_test)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.frame = QFrame(self.tab_puming_test)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_10 = QVBoxLayout(self.tab_puming_test)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.wid_pumping_test = PumpingTest(self.tab_puming_test)
+        self.wid_pumping_test.setObjectName(u"wid_pumping_test")
 
-        self.verticalLayout_3.addWidget(self.frame)
+        self.verticalLayout_10.addWidget(self.wid_pumping_test)
 
         icon15 = QIcon()
         icon15.addFile(u":/menu_bar_icon/pumping_test.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tab_wid_well_analysis.addTab(self.tab_puming_test, icon15, "")
-        self.tab_waterwiz = QWidget()
-        self.tab_waterwiz.setObjectName(u"tab_waterwiz")
-        self.verticalLayout_2 = QVBoxLayout(self.tab_waterwiz)
+        self.tab_hydro.addTab(self.tab_puming_test, icon15, "")
+        self.tab_pumping_data = QWidget()
+        self.tab_pumping_data.setObjectName(u"tab_pumping_data")
+        self.verticalLayout_2 = QVBoxLayout(self.tab_pumping_data)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.widget_3 = QWidget(self.tab_waterwiz)
-        self.widget_3.setObjectName(u"widget_3")
+        self.wid_pumping_data = PumpingData(self.tab_pumping_data)
+        self.wid_pumping_data.setObjectName(u"wid_pumping_data")
 
-        self.verticalLayout_2.addWidget(self.widget_3)
+        self.verticalLayout_2.addWidget(self.wid_pumping_data)
 
         icon16 = QIcon()
         icon16.addFile(u":/menu_bar_icon/water_wiz.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tab_wid_well_analysis.addTab(self.tab_waterwiz, icon16, "")
+        self.tab_hydro.addTab(self.tab_pumping_data, icon16, "")
         self.tab_analysis = QWidget()
         self.tab_analysis.setObjectName(u"tab_analysis")
-        self.verticalLayout = QVBoxLayout(self.tab_analysis)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.widget_4 = QWidget(self.tab_analysis)
-        self.widget_4.setObjectName(u"widget_4")
+        self.horizontalLayout = QHBoxLayout(self.tab_analysis)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.wid_analysis = Analysis(self.tab_analysis)
+        self.wid_analysis.setObjectName(u"wid_analysis")
 
-        self.verticalLayout.addWidget(self.widget_4)
+        self.horizontalLayout.addWidget(self.wid_analysis)
 
         icon17 = QIcon()
         icon17.addFile(u":/menu_bar_icon/analysis.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tab_wid_well_analysis.addTab(self.tab_analysis, icon17, "")
-        self.tab_report = QWidget()
-        self.tab_report.setObjectName(u"tab_report")
-        self.horizontalLayout = QHBoxLayout(self.tab_report)
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.widget_2 = QWidget(self.tab_report)
-        self.widget_2.setObjectName(u"widget_2")
+        self.tab_hydro.addTab(self.tab_analysis, icon17, "")
 
-        self.horizontalLayout.addWidget(self.widget_2)
-
-        icon18 = QIcon()
-        icon18.addFile(u":/menu_bar_icon/report.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.tab_wid_well_analysis.addTab(self.tab_report, icon18, "")
-
-        self.horizontalLayout_2.addWidget(self.tab_wid_well_analysis)
+        self.verticalLayout_4.addWidget(self.tab_hydro)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 906, 22))
+        self.menubar.setGeometry(QRect(0, 0, 880, 24))
         self.menu_file = QMenu(self.menubar)
         self.menu_file.setObjectName(u"menu_file")
         self.menu_edit = QMenu(self.menubar)
@@ -274,7 +251,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tab_wid_well_analysis.setCurrentIndex(3)
+        self.tab_hydro.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -377,22 +354,17 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(tooltip)
         self.actionRefresh.setToolTip(QCoreApplication.translate("MainWindow", u"Refresh", None))
 #endif // QT_CONFIG(tooltip)
-        self.label.setText(QCoreApplication.translate("MainWindow", u"placeholder", None))
-        self.tab_wid_well_analysis.setTabText(self.tab_wid_well_analysis.indexOf(self.tab_puming_test), QCoreApplication.translate("MainWindow", u"Pumping Test", None))
+        self.tab_hydro.setTabText(self.tab_hydro.indexOf(self.tab_puming_test), QCoreApplication.translate("MainWindow", u"Pumping Test", None))
 #if QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabToolTip(self.tab_wid_well_analysis.indexOf(self.tab_puming_test), QCoreApplication.translate("MainWindow", u"Project info , Units . Aquifer proerty , Pumping Test", None))
+        self.tab_hydro.setTabToolTip(self.tab_hydro.indexOf(self.tab_puming_test), QCoreApplication.translate("MainWindow", u"Project info , Units . Aquifer proerty , Pumping Test", None))
 #endif // QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabText(self.tab_wid_well_analysis.indexOf(self.tab_waterwiz), QCoreApplication.translate("MainWindow", u"WaterWiz", None))
+        self.tab_hydro.setTabText(self.tab_hydro.indexOf(self.tab_pumping_data), QCoreApplication.translate("MainWindow", u"Pumping Data", None))
 #if QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabToolTip(self.tab_wid_well_analysis.indexOf(self.tab_waterwiz), QCoreApplication.translate("MainWindow", u"Drawdown data , discharge , graph", None))
+        self.tab_hydro.setTabToolTip(self.tab_hydro.indexOf(self.tab_pumping_data), QCoreApplication.translate("MainWindow", u"Drawdown data , discharge , graph", None))
 #endif // QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabText(self.tab_wid_well_analysis.indexOf(self.tab_analysis), QCoreApplication.translate("MainWindow", u"Analysis", None))
+        self.tab_hydro.setTabText(self.tab_hydro.indexOf(self.tab_analysis), QCoreApplication.translate("MainWindow", u"Analysis", None))
 #if QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabToolTip(self.tab_wid_well_analysis.indexOf(self.tab_analysis), QCoreApplication.translate("MainWindow", u"Solution, Output", None))
-#endif // QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabText(self.tab_wid_well_analysis.indexOf(self.tab_report), QCoreApplication.translate("MainWindow", u"Report", None))
-#if QT_CONFIG(tooltip)
-        self.tab_wid_well_analysis.setTabToolTip(self.tab_wid_well_analysis.indexOf(self.tab_report), QCoreApplication.translate("MainWindow", u"Download report ", None))
+        self.tab_hydro.setTabToolTip(self.tab_hydro.indexOf(self.tab_analysis), QCoreApplication.translate("MainWindow", u"Solution, Output", None))
 #endif // QT_CONFIG(tooltip)
         self.menu_file.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
         self.menu_edit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
