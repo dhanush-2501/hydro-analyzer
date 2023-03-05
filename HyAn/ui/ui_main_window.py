@@ -20,9 +20,9 @@ from PySide6.QtWidgets import (QApplication, QHBoxLayout, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QStatusBar, QTabWidget,
     QToolBar, QVBoxLayout, QWidget)
 
-from HyAn.ui.ui_analysis import Ui_Analysis
-from HyAn.ui.ui_pumping_data import Ui_PumpingData
-from HyAn.ui.ui_pumping_test import Ui_PumpingTest
+from HyAn.widgets.analysis import Analysis
+from HyAn.widgets.pumping_data import PumpingData
+from HyAn.widgets.pumping_test import PumpingTest
 import HyAn.ui.icon.rc_icon
 
 class Ui_MainWindow(object):
@@ -144,7 +144,7 @@ class Ui_MainWindow(object):
         self.tab_puming_test.setObjectName(u"tab_puming_test")
         self.verticalLayout_10 = QVBoxLayout(self.tab_puming_test)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.wid_pumping_test = Ui_PumpingTest(self.tab_puming_test)
+        self.wid_pumping_test = PumpingTest(self.tab_puming_test)
         self.wid_pumping_test.setObjectName(u"wid_pumping_test")
 
         self.verticalLayout_10.addWidget(self.wid_pumping_test)
@@ -156,7 +156,7 @@ class Ui_MainWindow(object):
         self.tab_pumping_data.setObjectName(u"tab_pumping_data")
         self.verticalLayout_2 = QVBoxLayout(self.tab_pumping_data)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.wid_pumping_data = Ui_PumpingData(self.tab_pumping_data)
+        self.wid_pumping_data = PumpingData(self.tab_pumping_data)
         self.wid_pumping_data.setObjectName(u"wid_pumping_data")
 
         self.verticalLayout_2.addWidget(self.wid_pumping_data)
@@ -168,7 +168,7 @@ class Ui_MainWindow(object):
         self.tab_analysis.setObjectName(u"tab_analysis")
         self.horizontalLayout = QHBoxLayout(self.tab_analysis)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.wid_analysis = Ui_Analysis(self.tab_analysis)
+        self.wid_analysis = Analysis(self.tab_analysis)
         self.wid_analysis.setObjectName(u"wid_analysis")
 
         self.horizontalLayout.addWidget(self.wid_analysis)
@@ -251,7 +251,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tab_hydro.setCurrentIndex(2)
+        self.tab_hydro.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

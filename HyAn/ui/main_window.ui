@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_puming_test">
        <attribute name="icon">
@@ -45,7 +45,7 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
-         <widget class="Ui_PumpingTest" name="wid_pumping_test" native="true"/>
+         <widget class="PumpingTest" name="wid_pumping_test" native="true"/>
         </item>
        </layout>
       </widget>
@@ -62,7 +62,7 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="Ui_PumpingData" name="wid_pumping_data" native="true"/>
+         <widget class="PumpingData" name="wid_pumping_data" native="true"/>
         </item>
        </layout>
       </widget>
@@ -79,7 +79,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="Ui_Analysis" name="wid_analysis" native="true"/>
+         <widget class="Analysis" name="wid_analysis" native="true"/>
         </item>
        </layout>
       </widget>
@@ -465,21 +465,21 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>Ui_Analysis</class>
+   <class>Analysis</class>
    <extends>QWidget</extends>
-   <header>ui_analysis.py</header>
+   <header>analysis.py</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>Ui_PumpingData</class>
+   <class>PumpingTest</class>
    <extends>QWidget</extends>
-   <header>ui_pumping_data.py</header>
+   <header>pumping_test.py</header>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>Ui_PumpingTest</class>
+   <class>PumpingData</class>
    <extends>QWidget</extends>
-   <header>ui_pumping_test.py</header>
+   <header>pumping_data.py</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
