@@ -703,7 +703,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="icon/icon.qrc">:/demo_image/well_demo.png</pixmap>
+        <pixmap resource="icon/icon.qrc">:/menu_bar_icon/well_demo.png</pixmap>
        </property>
       </widget>
      </item>

@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="menu_bar_icon">
+    <file>well_demo.png</file>
     <file>about.png</file>
     <file>analysis.png</file>
     <file>comment.png</file>
@@ -13,15 +14,11 @@
     <file>paste.png</file>
     <file>printer.png</file>
     <file>pumping_test.png</file>
-    <file>rc_icon.py</file>
     <file>report.png</file>
     <file>save.png</file>
     <file>scatter.png</file>
     <file>scroll.png</file>
     <file>settings.png</file>
     <file>water_wiz.png</file>
-  </qresource>
-  <qresource prefix="demo_image">
-    <file>well_demo.png</file>
   </qresource>
 </RCC>
