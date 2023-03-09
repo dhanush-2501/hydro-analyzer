@@ -6,8 +6,8 @@
 
  * To use the hydro analyzer pumping test code, follow these steps:
  * Clone this repository to your local machine. 
- * Navigate to the clone directory.
- * Install the following packages in the project directory by running the code below.
+ * Navigate to the cloned directory.
+ * Install the required packages in the project directory by running the code below.
  ```
  pip install -e .
  ```
