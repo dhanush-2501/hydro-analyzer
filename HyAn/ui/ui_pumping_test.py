@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFormLayout,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QSpacerItem, QTableWidget, QTableWidgetItem, QTimeEdit,
     QVBoxLayout, QWidget)
+import HyAn.ui.icon.rc_icon
 
 class Ui_PumpingTest(object):
     def setupUi(self, PumpingTest):
@@ -355,7 +356,7 @@ class Ui_PumpingTest(object):
 
         self.lbl_image = QLabel(PumpingTest)
         self.lbl_image.setObjectName(u"lbl_image")
-        self.lbl_image.setPixmap(QPixmap(u"../../../../Desktop/Well type.jpg"))
+        self.lbl_image.setPixmap(QPixmap(u":/menu_bar_icon/well_demo.png"))
 
         self.vl_tabe_image.addWidget(self.lbl_image)
 
