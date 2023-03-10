@@ -573,7 +573,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableView" name="table_well_information">
+    <widget class="QTableWidget" name="table_well_information">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
        <horstretch>0</horstretch>

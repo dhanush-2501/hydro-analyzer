@@ -18,8 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFormLayout,
     QGridLayout, QGroupBox, QHBoxLayout, QHeaderView,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QSpacerItem, QTableView, QTimeEdit, QVBoxLayout,
-    QWidget)
+    QSpacerItem, QTableWidget, QTableWidgetItem, QTimeEdit,
+    QVBoxLayout, QWidget)
 from HyAn.ui.icon import rc_icon
 
 class Ui_PumpingTest(object):
@@ -295,7 +295,7 @@ class Ui_PumpingTest(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
-        self.table_well_information = QTableView(PumpingTest)
+        self.table_well_information = QTableWidget(PumpingTest)
         self.table_well_information.setObjectName(u"table_well_information")
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
