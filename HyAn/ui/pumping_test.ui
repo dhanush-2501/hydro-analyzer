@@ -96,6 +96,76 @@
       </widget>
      </item>
      <item>
+      <widget class="QGroupBox" name="gb_pumping_test">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>320</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>320</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="title">
+        <string>Pumping Test</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_10">
+        <item row="0" column="0">
+         <widget class="QLabel" name="lbl_pumping_test_name">
+          <property name="text">
+           <string>Name:</string>
+          </property>
+          <property name="buddy">
+           <cstring>l_edit_pumping_test_name</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="lbl_pumping_test_date_time">
+          <property name="text">
+           <string>Date/Time:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QTimeEdit" name="time_puming_test"/>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="date_pumping_test"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="lbl_pumping_test_performed_by">
+          <property name="text">
+           <string>Performed by:</string>
+          </property>
+          <property name="buddy">
+           <cstring>l_edit_pumping_test_performed_by</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="l_edit_pumping_test_performed_by"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="l_edit_pumping_test_name"/>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
       <widget class="QGroupBox" name="gb_units">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
@@ -404,76 +474,6 @@
            </property>
           </item>
          </widget>
-        </item>
-       </layout>
-      </widget>
-     </item>
-     <item>
-      <widget class="QGroupBox" name="gb_pumping_test">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>320</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>320</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="title">
-        <string>Pumping Test</string>
-       </property>
-       <layout class="QFormLayout" name="formLayout_10">
-        <item row="0" column="0">
-         <widget class="QLabel" name="lbl_pumping_test_name">
-          <property name="text">
-           <string>Name:</string>
-          </property>
-          <property name="buddy">
-           <cstring>l_edit_pumping_test_name</cstring>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="lbl_pumping_test_date_time">
-          <property name="text">
-           <string>Date/Time:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QTimeEdit" name="time_puming_test"/>
-          </item>
-          <item>
-           <widget class="QDateEdit" name="date_pumping_test"/>
-          </item>
-         </layout>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="lbl_pumping_test_performed_by">
-          <property name="text">
-           <string>Performed by:</string>
-          </property>
-          <property name="buddy">
-           <cstring>l_edit_pumping_test_performed_by</cstring>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="l_edit_pumping_test_performed_by"/>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="l_edit_pumping_test_name"/>
         </item>
        </layout>
       </widget>
