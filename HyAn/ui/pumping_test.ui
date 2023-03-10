@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PumpingTest</class>
- <widget class="QWidget" name="PumpingTest">
+ <class>table_well_information</class>
+ <widget class="QWidget" name="table_well_information">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1032</width>
-    <height>796</height>
+    <width>1277</width>
+    <height>750</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -124,11 +136,6 @@
          <widget class="QComboBox" name="cb_site_plan_2">
           <item>
            <property name="text">
-            <string/>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>mm</string>
            </property>
           </item>
@@ -163,11 +170,6 @@
         </item>
         <item row="0" column="3">
          <widget class="QComboBox" name="cb_dimensions_2">
-          <item>
-           <property name="text">
-            <string/>
-           </property>
-          </item>
           <item>
            <property name="text">
             <string>m</string>
@@ -206,11 +208,6 @@
          <widget class="QComboBox" name="cb_time_2">
           <item>
            <property name="text">
-            <string/>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>sec</string>
            </property>
           </item>
@@ -240,11 +237,6 @@
         </item>
         <item row="1" column="3">
          <widget class="QComboBox" name="cb_discharge_2">
-          <item>
-           <property name="text">
-            <string/>
-           </property>
-          </item>
           <item>
            <property name="text">
             <string>m³/sec</string>
@@ -323,11 +315,6 @@
          <widget class="QComboBox" name="cb_transmissivity_2">
           <item>
            <property name="text">
-            <string/>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>m²/sec</string>
            </property>
           </item>
@@ -389,11 +376,6 @@
          <widget class="QComboBox" name="cb_pressure_2">
           <item>
            <property name="text">
-            <string/>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>Pa</string>
            </property>
           </item>
@@ -433,23 +415,6 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="hl_pumping_test_aquifer_properties">
-     <item>
       <widget class="QGroupBox" name="gb_pumping_test">
        <property name="maximumSize">
         <size>
@@ -471,6 +436,22 @@
           </property>
          </widget>
         </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="l_edit_pumping_test_name"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="lbl_pumping_test_performed_by">
+          <property name="text">
+           <string>Performed by:</string>
+          </property>
+          <property name="buddy">
+           <cstring>l_edit_pumping_test_performed_by</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="l_edit_pumping_test_performed_by"/>
+        </item>
         <item row="4" column="0">
          <widget class="QLabel" name="lbl_pumping_test_date_time">
           <property name="text">
@@ -487,22 +468,6 @@
            <widget class="QDateEdit" name="date_pumping_test"/>
           </item>
          </layout>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="lbl_pumping_test_performed_by">
-          <property name="text">
-           <string>Performed by:</string>
-          </property>
-          <property name="buddy">
-           <cstring>l_edit_pumping_test_performed_by</cstring>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="l_edit_pumping_test_performed_by"/>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="l_edit_pumping_test_name"/>
         </item>
        </layout>
       </widget>
@@ -546,11 +511,6 @@
          <widget class="QComboBox" name="cb_aquifer_type">
           <item>
            <property name="text">
-            <string/>
-           </property>
-          </item>
-          <item>
-           <property name="text">
             <string>Unknown</string>
            </property>
           </item>
@@ -580,7 +540,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_5">
+      <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -595,107 +555,67 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="hl_pumping_test_aquifer_properties"/>
+   </item>
+   <item>
     <layout class="QVBoxLayout" name="vl_tabe_image">
      <item>
-      <widget class="QTableWidget" name="table_well_information">
-       <row>
-        <property name="text">
-         <string/>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string/>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string/>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>S.No</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Name</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Type</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>X[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Y[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Elevation</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Benchmark</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Penetration</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>R[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>L[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>b[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>r[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>B[m]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>n[%]</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>use r[w]</string>
-        </property>
-       </column>
-      </widget>
+      <widget class="QTableView" name="table_well_data"/>
      </item>
      <item>
-      <widget class="QPushButton" name="btn_create_new_well">
-       <property name="text">
-        <string>Create a New Well</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="btn_create_new_well">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Create a New Well</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_submit">
+         <property name="minimumSize">
+          <size>
+           <width>400</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>400</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Submit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </item>
      <item>
       <widget class="QLabel" name="lbl_image">
