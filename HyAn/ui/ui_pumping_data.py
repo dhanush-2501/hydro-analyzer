@@ -17,7 +17,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFormLayout, QGroupBox, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QTableView, QVBoxLayout, QWidget)
+    QSizePolicy, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_PumpingData(object):
     def setupUi(self, PumpingData):
@@ -64,17 +65,17 @@ class Ui_PumpingData(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.table_drawdown = QTableView(PumpingData)
-        self.table_drawdown.setObjectName(u"table_drawdown")
+        self.tableWidget = QTableWidget(PumpingData)
+        self.tableWidget.setObjectName(u"tableWidget")
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.table_drawdown.sizePolicy().hasHeightForWidth())
-        self.table_drawdown.setSizePolicy(sizePolicy1)
-        self.table_drawdown.setMinimumSize(QSize(320, 0))
-        self.table_drawdown.setMaximumSize(QSize(320, 16777215))
+        sizePolicy1.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy1)
+        self.tableWidget.setMinimumSize(QSize(320, 0))
+        self.tableWidget.setMaximumSize(QSize(320, 16777215))
 
-        self.verticalLayout.addWidget(self.table_drawdown)
+        self.verticalLayout.addWidget(self.tableWidget)
 
         self.pushButton = QPushButton(PumpingData)
         self.pushButton.setObjectName(u"pushButton")

@@ -18,8 +18,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFormLayout,
     QGridLayout, QGroupBox, QHBoxLayout, QHeaderView,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QSpacerItem, QTableView, QTimeEdit, QVBoxLayout,
-    QWidget)
+    QSpacerItem, QTableWidget, QTableWidgetItem, QTimeEdit,
+    QVBoxLayout, QWidget)
 from HyAn.ui.icon import rc_icon
 
 class Ui_PumpingTest(object):
@@ -84,6 +84,57 @@ class Ui_PumpingTest(object):
 
 
         self.horizontalLayout.addWidget(self.gb_project_informataion)
+
+        self.gb_pumping_test = QGroupBox(PumpingTest)
+        self.gb_pumping_test.setObjectName(u"gb_pumping_test")
+        sizePolicy.setHeightForWidth(self.gb_pumping_test.sizePolicy().hasHeightForWidth())
+        self.gb_pumping_test.setSizePolicy(sizePolicy)
+        self.gb_pumping_test.setMinimumSize(QSize(320, 0))
+        self.gb_pumping_test.setMaximumSize(QSize(320, 16777215))
+        self.formLayout_10 = QFormLayout(self.gb_pumping_test)
+        self.formLayout_10.setObjectName(u"formLayout_10")
+        self.lbl_pumping_test_name = QLabel(self.gb_pumping_test)
+        self.lbl_pumping_test_name.setObjectName(u"lbl_pumping_test_name")
+
+        self.formLayout_10.setWidget(0, QFormLayout.LabelRole, self.lbl_pumping_test_name)
+
+        self.lbl_pumping_test_date_time = QLabel(self.gb_pumping_test)
+        self.lbl_pumping_test_date_time.setObjectName(u"lbl_pumping_test_date_time")
+
+        self.formLayout_10.setWidget(4, QFormLayout.LabelRole, self.lbl_pumping_test_date_time)
+
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.time_puming_test = QTimeEdit(self.gb_pumping_test)
+        self.time_puming_test.setObjectName(u"time_puming_test")
+
+        self.horizontalLayout_2.addWidget(self.time_puming_test)
+
+        self.date_pumping_test = QDateEdit(self.gb_pumping_test)
+        self.date_pumping_test.setObjectName(u"date_pumping_test")
+
+        self.horizontalLayout_2.addWidget(self.date_pumping_test)
+
+
+        self.formLayout_10.setLayout(4, QFormLayout.FieldRole, self.horizontalLayout_2)
+
+        self.lbl_pumping_test_performed_by = QLabel(self.gb_pumping_test)
+        self.lbl_pumping_test_performed_by.setObjectName(u"lbl_pumping_test_performed_by")
+
+        self.formLayout_10.setWidget(2, QFormLayout.LabelRole, self.lbl_pumping_test_performed_by)
+
+        self.l_edit_pumping_test_performed_by = QLineEdit(self.gb_pumping_test)
+        self.l_edit_pumping_test_performed_by.setObjectName(u"l_edit_pumping_test_performed_by")
+
+        self.formLayout_10.setWidget(2, QFormLayout.FieldRole, self.l_edit_pumping_test_performed_by)
+
+        self.l_edit_pumping_test_name = QLineEdit(self.gb_pumping_test)
+        self.l_edit_pumping_test_name.setObjectName(u"l_edit_pumping_test_name")
+
+        self.formLayout_10.setWidget(0, QFormLayout.FieldRole, self.l_edit_pumping_test_name)
+
+
+        self.horizontalLayout.addWidget(self.gb_pumping_test)
 
         self.gb_units = QGroupBox(PumpingTest)
         self.gb_units.setObjectName(u"gb_units")
@@ -200,57 +251,6 @@ class Ui_PumpingTest(object):
 
         self.horizontalLayout.addWidget(self.gb_units)
 
-        self.gb_pumping_test = QGroupBox(PumpingTest)
-        self.gb_pumping_test.setObjectName(u"gb_pumping_test")
-        sizePolicy.setHeightForWidth(self.gb_pumping_test.sizePolicy().hasHeightForWidth())
-        self.gb_pumping_test.setSizePolicy(sizePolicy)
-        self.gb_pumping_test.setMinimumSize(QSize(320, 0))
-        self.gb_pumping_test.setMaximumSize(QSize(320, 16777215))
-        self.formLayout_10 = QFormLayout(self.gb_pumping_test)
-        self.formLayout_10.setObjectName(u"formLayout_10")
-        self.lbl_pumping_test_name = QLabel(self.gb_pumping_test)
-        self.lbl_pumping_test_name.setObjectName(u"lbl_pumping_test_name")
-
-        self.formLayout_10.setWidget(0, QFormLayout.LabelRole, self.lbl_pumping_test_name)
-
-        self.lbl_pumping_test_date_time = QLabel(self.gb_pumping_test)
-        self.lbl_pumping_test_date_time.setObjectName(u"lbl_pumping_test_date_time")
-
-        self.formLayout_10.setWidget(4, QFormLayout.LabelRole, self.lbl_pumping_test_date_time)
-
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.time_puming_test = QTimeEdit(self.gb_pumping_test)
-        self.time_puming_test.setObjectName(u"time_puming_test")
-
-        self.horizontalLayout_2.addWidget(self.time_puming_test)
-
-        self.date_pumping_test = QDateEdit(self.gb_pumping_test)
-        self.date_pumping_test.setObjectName(u"date_pumping_test")
-
-        self.horizontalLayout_2.addWidget(self.date_pumping_test)
-
-
-        self.formLayout_10.setLayout(4, QFormLayout.FieldRole, self.horizontalLayout_2)
-
-        self.lbl_pumping_test_performed_by = QLabel(self.gb_pumping_test)
-        self.lbl_pumping_test_performed_by.setObjectName(u"lbl_pumping_test_performed_by")
-
-        self.formLayout_10.setWidget(2, QFormLayout.LabelRole, self.lbl_pumping_test_performed_by)
-
-        self.l_edit_pumping_test_performed_by = QLineEdit(self.gb_pumping_test)
-        self.l_edit_pumping_test_performed_by.setObjectName(u"l_edit_pumping_test_performed_by")
-
-        self.formLayout_10.setWidget(2, QFormLayout.FieldRole, self.l_edit_pumping_test_performed_by)
-
-        self.l_edit_pumping_test_name = QLineEdit(self.gb_pumping_test)
-        self.l_edit_pumping_test_name.setObjectName(u"l_edit_pumping_test_name")
-
-        self.formLayout_10.setWidget(0, QFormLayout.FieldRole, self.l_edit_pumping_test_name)
-
-
-        self.horizontalLayout.addWidget(self.gb_pumping_test)
-
         self.gb_aquifer_properties = QGroupBox(PumpingTest)
         self.gb_aquifer_properties.setObjectName(u"gb_aquifer_properties")
         sizePolicy.setHeightForWidth(self.gb_aquifer_properties.sizePolicy().hasHeightForWidth())
@@ -295,7 +295,7 @@ class Ui_PumpingTest(object):
 
         self.verticalLayout.addLayout(self.horizontalLayout)
 
-        self.table_well_information = QTableView(PumpingTest)
+        self.table_well_information = QTableWidget(PumpingTest)
         self.table_well_information.setObjectName(u"table_well_information")
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
@@ -358,6 +358,10 @@ class Ui_PumpingTest(object):
         self.lbl_project_number.setText(QCoreApplication.translate("PumpingTest", u"Project Number:", None))
         self.lbl_client.setText(QCoreApplication.translate("PumpingTest", u"Client:", None))
         self.lbl_location.setText(QCoreApplication.translate("PumpingTest", u"Location:", None))
+        self.gb_pumping_test.setTitle(QCoreApplication.translate("PumpingTest", u"Pumping Test", None))
+        self.lbl_pumping_test_name.setText(QCoreApplication.translate("PumpingTest", u"Name:", None))
+        self.lbl_pumping_test_date_time.setText(QCoreApplication.translate("PumpingTest", u"Date/Time:", None))
+        self.lbl_pumping_test_performed_by.setText(QCoreApplication.translate("PumpingTest", u"Performed by:", None))
         self.gb_units.setTitle(QCoreApplication.translate("PumpingTest", u"Units", None))
         self.lbl_site_plan_2.setText(QCoreApplication.translate("PumpingTest", u"Site Plan:", None))
         self.cb_dimensions_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m", None))
@@ -415,10 +419,6 @@ class Ui_PumpingTest(object):
         self.cb_transmissivity_2.setItemText(8, QCoreApplication.translate("PumpingTest", u"gal/day-ft", None))
         self.cb_transmissivity_2.setItemText(9, QCoreApplication.translate("PumpingTest", u"cm\u00b2/sec", None))
 
-        self.gb_pumping_test.setTitle(QCoreApplication.translate("PumpingTest", u"Pumping Test", None))
-        self.lbl_pumping_test_name.setText(QCoreApplication.translate("PumpingTest", u"Name:", None))
-        self.lbl_pumping_test_date_time.setText(QCoreApplication.translate("PumpingTest", u"Date/Time:", None))
-        self.lbl_pumping_test_performed_by.setText(QCoreApplication.translate("PumpingTest", u"Performed by:", None))
         self.gb_aquifer_properties.setTitle(QCoreApplication.translate("PumpingTest", u"Aquifer Properties", None))
         self.lbl_aquifer_thickness.setText(QCoreApplication.translate("PumpingTest", u"Thickness[m]:", None))
         self.lbl_aquifer_type.setText(QCoreApplication.translate("PumpingTest", u"Type:", None))
