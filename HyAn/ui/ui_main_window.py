@@ -23,13 +23,20 @@ from PySide6.QtWidgets import (QApplication, QHBoxLayout, QMainWindow, QMenu,
 from HyAn.widgets.analysis import Analysis
 from HyAn.widgets.pumping_data import PumpingData
 from HyAn.widgets.pumping_test import PumpingTest
-import HyAn.ui.icon.rc_icon
+from HyAn.ui.icon import rc_icon
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(880, 722)
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
+        MainWindow.setMinimumSize(QSize(600, 0))
         MainWindow.setToolButtonStyle(Qt.ToolButtonIconOnly)
         self.t_actionnew = QAction(MainWindow)
         self.t_actionnew.setObjectName(u"t_actionnew")
@@ -182,7 +189,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 880, 24))
+        self.menubar.setGeometry(QRect(0, 0, 880, 26))
         self.menu_file = QMenu(self.menubar)
         self.menu_file.setObjectName(u"menu_file")
         self.menu_edit = QMenu(self.menubar)
