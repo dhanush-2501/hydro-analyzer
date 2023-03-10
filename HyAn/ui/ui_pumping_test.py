@@ -26,19 +26,19 @@ class Ui_PumpingTest(object):
     def setupUi(self, PumpingTest):
         if not PumpingTest.objectName():
             PumpingTest.setObjectName(u"PumpingTest")
-        PumpingTest.resize(1166, 796)
+        PumpingTest.resize(1622, 796)
         self.verticalLayout = QVBoxLayout(PumpingTest)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.gb_project_informataion = QGroupBox(PumpingTest)
         self.gb_project_informataion.setObjectName(u"gb_project_informataion")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.gb_project_informataion.sizePolicy().hasHeightForWidth())
         self.gb_project_informataion.setSizePolicy(sizePolicy)
-        self.gb_project_informataion.setMinimumSize(QSize(0, 0))
+        self.gb_project_informataion.setMinimumSize(QSize(280, 0))
         self.gb_project_informataion.setMaximumSize(QSize(320, 16777215))
         self.formLayout_2 = QFormLayout(self.gb_project_informataion)
         self.formLayout_2.setObjectName(u"formLayout_2")
@@ -87,14 +87,26 @@ class Ui_PumpingTest(object):
 
         self.gb_units = QGroupBox(PumpingTest)
         self.gb_units.setObjectName(u"gb_units")
+        sizePolicy.setHeightForWidth(self.gb_units.sizePolicy().hasHeightForWidth())
+        self.gb_units.setSizePolicy(sizePolicy)
         self.gb_units.setMinimumSize(QSize(400, 0))
-        self.gb_units.setMaximumSize(QSize(320, 16777215))
+        self.gb_units.setMaximumSize(QSize(400, 16777215))
         self.gridLayout_2 = QGridLayout(self.gb_units)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.lbl_site_plan_2 = QLabel(self.gb_units)
         self.lbl_site_plan_2.setObjectName(u"lbl_site_plan_2")
 
         self.gridLayout_2.addWidget(self.lbl_site_plan_2, 0, 0, 1, 1)
+
+        self.cb_dimensions_2 = QComboBox(self.gb_units)
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.addItem("")
+        self.cb_dimensions_2.setObjectName(u"cb_dimensions_2")
+
+        self.gridLayout_2.addWidget(self.cb_dimensions_2, 0, 3, 1, 1)
 
         self.cb_site_plan_2 = QComboBox(self.gb_units)
         self.cb_site_plan_2.addItem("")
@@ -110,30 +122,6 @@ class Ui_PumpingTest(object):
         self.lbl_dimensions_2.setObjectName(u"lbl_dimensions_2")
 
         self.gridLayout_2.addWidget(self.lbl_dimensions_2, 0, 2, 1, 1)
-
-        self.cb_dimensions_2 = QComboBox(self.gb_units)
-        self.cb_dimensions_2.addItem("")
-        self.cb_dimensions_2.addItem("")
-        self.cb_dimensions_2.addItem("")
-        self.cb_dimensions_2.addItem("")
-        self.cb_dimensions_2.addItem("")
-        self.cb_dimensions_2.setObjectName(u"cb_dimensions_2")
-
-        self.gridLayout_2.addWidget(self.cb_dimensions_2, 0, 3, 1, 1)
-
-        self.lbl_time_2 = QLabel(self.gb_units)
-        self.lbl_time_2.setObjectName(u"lbl_time_2")
-
-        self.gridLayout_2.addWidget(self.lbl_time_2, 1, 0, 1, 1)
-
-        self.cb_time_2 = QComboBox(self.gb_units)
-        self.cb_time_2.addItem("")
-        self.cb_time_2.addItem("")
-        self.cb_time_2.addItem("")
-        self.cb_time_2.addItem("")
-        self.cb_time_2.setObjectName(u"cb_time_2")
-
-        self.gridLayout_2.addWidget(self.cb_time_2, 1, 1, 1, 1)
 
         self.lbl_discharge_2 = QLabel(self.gb_units)
         self.lbl_discharge_2.setObjectName(u"lbl_discharge_2")
@@ -158,25 +146,24 @@ class Ui_PumpingTest(object):
 
         self.gridLayout_2.addWidget(self.cb_discharge_2, 1, 3, 1, 1)
 
+        self.lbl_time_2 = QLabel(self.gb_units)
+        self.lbl_time_2.setObjectName(u"lbl_time_2")
+
+        self.gridLayout_2.addWidget(self.lbl_time_2, 1, 0, 1, 1)
+
+        self.cb_time_2 = QComboBox(self.gb_units)
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.addItem("")
+        self.cb_time_2.setObjectName(u"cb_time_2")
+
+        self.gridLayout_2.addWidget(self.cb_time_2, 1, 1, 1, 1)
+
         self.lbl_transmissivity_2 = QLabel(self.gb_units)
         self.lbl_transmissivity_2.setObjectName(u"lbl_transmissivity_2")
 
         self.gridLayout_2.addWidget(self.lbl_transmissivity_2, 2, 0, 1, 1)
-
-        self.cb_transmissivity_2 = QComboBox(self.gb_units)
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.addItem("")
-        self.cb_transmissivity_2.setObjectName(u"cb_transmissivity_2")
-
-        self.gridLayout_2.addWidget(self.cb_transmissivity_2, 2, 1, 1, 1)
 
         self.lbl_pressure_2 = QLabel(self.gb_units)
         self.lbl_pressure_2.setObjectName(u"lbl_pressure_2")
@@ -195,11 +182,28 @@ class Ui_PumpingTest(object):
 
         self.gridLayout_2.addWidget(self.cb_pressure_2, 2, 3, 1, 1)
 
+        self.cb_transmissivity_2 = QComboBox(self.gb_units)
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.addItem("")
+        self.cb_transmissivity_2.setObjectName(u"cb_transmissivity_2")
+
+        self.gridLayout_2.addWidget(self.cb_transmissivity_2, 2, 1, 1, 1)
+
 
         self.horizontalLayout.addWidget(self.gb_units)
 
         self.gb_pumping_test = QGroupBox(PumpingTest)
         self.gb_pumping_test.setObjectName(u"gb_pumping_test")
+        sizePolicy.setHeightForWidth(self.gb_pumping_test.sizePolicy().hasHeightForWidth())
+        self.gb_pumping_test.setSizePolicy(sizePolicy)
         self.gb_pumping_test.setMinimumSize(QSize(320, 0))
         self.gb_pumping_test.setMaximumSize(QSize(320, 16777215))
         self.formLayout_10 = QFormLayout(self.gb_pumping_test)
@@ -249,6 +253,9 @@ class Ui_PumpingTest(object):
 
         self.gb_aquifer_properties = QGroupBox(PumpingTest)
         self.gb_aquifer_properties.setObjectName(u"gb_aquifer_properties")
+        sizePolicy.setHeightForWidth(self.gb_aquifer_properties.sizePolicy().hasHeightForWidth())
+        self.gb_aquifer_properties.setSizePolicy(sizePolicy)
+        self.gb_aquifer_properties.setMinimumSize(QSize(280, 0))
         self.gb_aquifer_properties.setMaximumSize(QSize(280, 16777215))
         self.formLayout_11 = QFormLayout(self.gb_aquifer_properties)
         self.formLayout_11.setObjectName(u"formLayout_11")
@@ -281,7 +288,7 @@ class Ui_PumpingTest(object):
 
         self.horizontalLayout.addWidget(self.gb_aquifer_properties)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacer = QSpacerItem(20, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -290,6 +297,13 @@ class Ui_PumpingTest(object):
 
         self.table_well_information = QTableView(PumpingTest)
         self.table_well_information.setObjectName(u"table_well_information")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.table_well_information.sizePolicy().hasHeightForWidth())
+        self.table_well_information.setSizePolicy(sizePolicy1)
+        self.table_well_information.setMinimumSize(QSize(1600, 0))
+        self.table_well_information.setMaximumSize(QSize(1600, 16777215))
 
         self.verticalLayout.addWidget(self.table_well_information)
 
@@ -302,12 +316,12 @@ class Ui_PumpingTest(object):
 
         self.horizontalLayout_3.addWidget(self.btn_create_new_well)
 
-        self.pushButton = QPushButton(PumpingTest)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(320, 0))
-        self.pushButton.setMaximumSize(QSize(320, 16777215))
+        self.btn_submit = QPushButton(PumpingTest)
+        self.btn_submit.setObjectName(u"btn_submit")
+        self.btn_submit.setMinimumSize(QSize(320, 0))
+        self.btn_submit.setMaximumSize(QSize(320, 16777215))
 
-        self.horizontalLayout_3.addWidget(self.pushButton)
+        self.horizontalLayout_3.addWidget(self.btn_submit)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -346,6 +360,12 @@ class Ui_PumpingTest(object):
         self.lbl_location.setText(QCoreApplication.translate("PumpingTest", u"Location:", None))
         self.gb_units.setTitle(QCoreApplication.translate("PumpingTest", u"Units", None))
         self.lbl_site_plan_2.setText(QCoreApplication.translate("PumpingTest", u"Site Plan:", None))
+        self.cb_dimensions_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m", None))
+        self.cb_dimensions_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"cm", None))
+        self.cb_dimensions_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"mm", None))
+        self.cb_dimensions_2.setItemText(3, QCoreApplication.translate("PumpingTest", u"ft", None))
+        self.cb_dimensions_2.setItemText(4, QCoreApplication.translate("PumpingTest", u"in", None))
+
         self.cb_site_plan_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"mm", None))
         self.cb_site_plan_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"cm", None))
         self.cb_site_plan_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"m", None))
@@ -353,18 +373,6 @@ class Ui_PumpingTest(object):
         self.cb_site_plan_2.setItemText(4, QCoreApplication.translate("PumpingTest", u"in", None))
 
         self.lbl_dimensions_2.setText(QCoreApplication.translate("PumpingTest", u"Dimensions:", None))
-        self.cb_dimensions_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m", None))
-        self.cb_dimensions_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"cm", None))
-        self.cb_dimensions_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"mm", None))
-        self.cb_dimensions_2.setItemText(3, QCoreApplication.translate("PumpingTest", u"ft", None))
-        self.cb_dimensions_2.setItemText(4, QCoreApplication.translate("PumpingTest", u"in", None))
-
-        self.lbl_time_2.setText(QCoreApplication.translate("PumpingTest", u"Time:", None))
-        self.cb_time_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"sec", None))
-        self.cb_time_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"min", None))
-        self.cb_time_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"hr", None))
-        self.cb_time_2.setItemText(3, QCoreApplication.translate("PumpingTest", u"day", None))
-
         self.lbl_discharge_2.setText(QCoreApplication.translate("PumpingTest", u"Discharge:", None))
         self.cb_discharge_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m\u00b3/sec", None))
         self.cb_discharge_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"m\u00b3/min", None))
@@ -380,7 +388,22 @@ class Ui_PumpingTest(object):
         self.cb_discharge_2.setItemText(11, QCoreApplication.translate("PumpingTest", u"U.K gal/min", None))
         self.cb_discharge_2.setItemText(12, QCoreApplication.translate("PumpingTest", u"U.K gal/day", None))
 
+        self.lbl_time_2.setText(QCoreApplication.translate("PumpingTest", u"Time:", None))
+        self.cb_time_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"sec", None))
+        self.cb_time_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"min", None))
+        self.cb_time_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"hr", None))
+        self.cb_time_2.setItemText(3, QCoreApplication.translate("PumpingTest", u"day", None))
+
         self.lbl_transmissivity_2.setText(QCoreApplication.translate("PumpingTest", u"Transmissivity:", None))
+        self.lbl_pressure_2.setText(QCoreApplication.translate("PumpingTest", u"Pressure:", None))
+        self.cb_pressure_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"Pa", None))
+        self.cb_pressure_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"bar", None))
+        self.cb_pressure_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"mbar", None))
+        self.cb_pressure_2.setItemText(3, QCoreApplication.translate("PumpingTest", u"mm Hg", None))
+        self.cb_pressure_2.setItemText(4, QCoreApplication.translate("PumpingTest", u"atm", None))
+        self.cb_pressure_2.setItemText(5, QCoreApplication.translate("PumpingTest", u"at", None))
+        self.cb_pressure_2.setItemText(6, QCoreApplication.translate("PumpingTest", u"psi", None))
+
         self.cb_transmissivity_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m\u00b2/sec", None))
         self.cb_transmissivity_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"m\u00b2/min", None))
         self.cb_transmissivity_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"m\u00b2/hr", None))
@@ -391,15 +414,6 @@ class Ui_PumpingTest(object):
         self.cb_transmissivity_2.setItemText(7, QCoreApplication.translate("PumpingTest", u"ft\u00b2/day", None))
         self.cb_transmissivity_2.setItemText(8, QCoreApplication.translate("PumpingTest", u"gal/day-ft", None))
         self.cb_transmissivity_2.setItemText(9, QCoreApplication.translate("PumpingTest", u"cm\u00b2/sec", None))
-
-        self.lbl_pressure_2.setText(QCoreApplication.translate("PumpingTest", u"Pressure:", None))
-        self.cb_pressure_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"Pa", None))
-        self.cb_pressure_2.setItemText(1, QCoreApplication.translate("PumpingTest", u"bar", None))
-        self.cb_pressure_2.setItemText(2, QCoreApplication.translate("PumpingTest", u"mbar", None))
-        self.cb_pressure_2.setItemText(3, QCoreApplication.translate("PumpingTest", u"mm Hg", None))
-        self.cb_pressure_2.setItemText(4, QCoreApplication.translate("PumpingTest", u"atm", None))
-        self.cb_pressure_2.setItemText(5, QCoreApplication.translate("PumpingTest", u"at", None))
-        self.cb_pressure_2.setItemText(6, QCoreApplication.translate("PumpingTest", u"psi", None))
 
         self.gb_pumping_test.setTitle(QCoreApplication.translate("PumpingTest", u"Pumping Test", None))
         self.lbl_pumping_test_name.setText(QCoreApplication.translate("PumpingTest", u"Name:", None))
@@ -415,7 +429,7 @@ class Ui_PumpingTest(object):
         self.cb_aquifer_type.setItemText(4, QCoreApplication.translate("PumpingTest", u"Fracture", None))
 
         self.btn_create_new_well.setText(QCoreApplication.translate("PumpingTest", u"Create a New Well", None))
-        self.pushButton.setText(QCoreApplication.translate("PumpingTest", u"Submit", None))
+        self.btn_submit.setText(QCoreApplication.translate("PumpingTest", u"Submit", None))
         self.lbl_image.setText("")
     # retranslateUi
 
