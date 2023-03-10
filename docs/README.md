@@ -12,9 +12,9 @@
  pip install -e .
  ```
  
- * Run `main.py` file.
+ * Run `run.py` file.
  ```
- python main.py
+ python run.py
  ```
  
 # Input Data Format
