@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1166</width>
+    <width>1622</width>
     <height>796</height>
    </rect>
   </property>
@@ -19,14 +19,14 @@
      <item>
       <widget class="QGroupBox" name="gb_project_informataion">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>0</width>
+         <width>280</width>
          <height>0</height>
         </size>
        </property>
@@ -97,6 +97,12 @@
      </item>
      <item>
       <widget class="QGroupBox" name="gb_units">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>400</width>
@@ -105,7 +111,7 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>320</width>
+         <width>400</width>
          <height>16777215</height>
         </size>
        </property>
@@ -118,6 +124,35 @@
           <property name="text">
            <string>Site Plan:</string>
           </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QComboBox" name="cb_dimensions_2">
+          <item>
+           <property name="text">
+            <string>m</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>cm</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ft</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>in</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item row="0" column="1">
@@ -154,66 +189,6 @@
           <property name="text">
            <string>Dimensions:</string>
           </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QComboBox" name="cb_dimensions_2">
-          <item>
-           <property name="text">
-            <string>m</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>cm</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>mm</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>in</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="lbl_time_2">
-          <property name="text">
-           <string>Time:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="cb_time_2">
-          <item>
-           <property name="text">
-            <string>sec</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>hr</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>day</string>
-           </property>
-          </item>
          </widget>
         </item>
         <item row="1" column="2">
@@ -292,11 +267,88 @@
           </item>
          </widget>
         </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="lbl_time_2">
+          <property name="text">
+           <string>Time:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cb_time_2">
+          <item>
+           <property name="text">
+            <string>sec</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>min</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>hr</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>day</string>
+           </property>
+          </item>
+         </widget>
+        </item>
         <item row="2" column="0">
          <widget class="QLabel" name="lbl_transmissivity_2">
           <property name="text">
            <string>Transmissivity:</string>
           </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="lbl_pressure_2">
+          <property name="text">
+           <string>Pressure:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QComboBox" name="cb_pressure_2">
+          <item>
+           <property name="text">
+            <string>Pa</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>bar</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mbar</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mm Hg</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>atm</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>at</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>psi</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item row="2" column="1">
@@ -353,57 +405,17 @@
           </item>
          </widget>
         </item>
-        <item row="2" column="2">
-         <widget class="QLabel" name="lbl_pressure_2">
-          <property name="text">
-           <string>Pressure:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="3">
-         <widget class="QComboBox" name="cb_pressure_2">
-          <item>
-           <property name="text">
-            <string>Pa</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>bar</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>mbar</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>mm Hg</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>atm</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>at</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>psi</string>
-           </property>
-          </item>
-         </widget>
-        </item>
        </layout>
       </widget>
      </item>
      <item>
       <widget class="QGroupBox" name="gb_pumping_test">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>320</width>
@@ -468,6 +480,18 @@
      </item>
      <item>
       <widget class="QGroupBox" name="gb_aquifer_properties">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>280</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>280</width>
@@ -540,7 +564,7 @@
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
+         <width>20</width>
          <height>20</height>
         </size>
        </property>
@@ -549,7 +573,26 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableView" name="table_well_information"/>
+    <widget class="QTableView" name="table_well_information">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1600</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1600</width>
+       <height>16777215</height>
+      </size>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -573,7 +616,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btn_submit">
        <property name="minimumSize">
         <size>
          <width>320</width>

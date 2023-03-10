@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>880</width>
+    <width>1400</width>
     <height>722</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>600</width>
+    <width>1400</width>
     <height>0</height>
    </size>
   </property>
@@ -37,8 +37,8 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>480</width>
-        <height>512</height>
+        <width>0</width>
+        <height>0</height>
        </size>
       </property>
       <property name="currentIndex">
@@ -57,7 +57,14 @@
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
-         <widget class="PumpingTest" name="wid_pumping_test" native="true"/>
+         <widget class="PumpingTest" name="wid_pumping_test" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>1000</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -104,7 +111,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>880</width>
+     <width>1400</width>
      <height>26</height>
     </rect>
    </property>
@@ -177,6 +184,12 @@
   <widget class="QToolBar" name="toolBar">
    <property name="enabled">
     <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1200</width>
+     <height>0</height>
+    </size>
    </property>
    <property name="windowTitle">
     <string>toolBar</string>
