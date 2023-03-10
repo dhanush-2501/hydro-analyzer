@@ -77,14 +77,14 @@ class Ui_PumpingData(object):
 
         self.verticalLayout.addWidget(self.table_drawdown)
 
-        self.pushButton = QPushButton(PumpingData)
-        self.pushButton.setObjectName(u"pushButton")
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setMinimumSize(QSize(320, 0))
-        self.pushButton.setMaximumSize(QSize(320, 16777215))
+        self.btn_plt_data = QPushButton(PumpingData)
+        self.btn_plt_data.setObjectName(u"btn_plt_data")
+        sizePolicy.setHeightForWidth(self.btn_plt_data.sizePolicy().hasHeightForWidth())
+        self.btn_plt_data.setSizePolicy(sizePolicy)
+        self.btn_plt_data.setMinimumSize(QSize(320, 0))
+        self.btn_plt_data.setMaximumSize(QSize(320, 16777215))
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.btn_plt_data)
 
 
         self.horizontalLayout.addLayout(self.verticalLayout)
@@ -112,7 +112,7 @@ class Ui_PumpingData(object):
         self.gb_dicharge.setTitle(QCoreApplication.translate("PumpingData", u"Discharge[m\u00b3/sec]", None))
         self.lbl_constant.setText(QCoreApplication.translate("PumpingData", u"Constant:", None))
         self.lbl_static_wl.setText(QCoreApplication.translate("PumpingData", u"Static WL [m]:", None))
-        self.pushButton.setText(QCoreApplication.translate("PumpingData", u"Plot Data", None))
+        self.btn_plt_data.setText(QCoreApplication.translate("PumpingData", u"Plot Data", None))
         self.lbl_scatter_graph_space_hoder.setText(QCoreApplication.translate("PumpingData", u"Space holder", None))
     # retranslateUi
 
