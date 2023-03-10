@@ -10,6 +10,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self, parent)
         self.setupUi(self)
+        self.menubar.hide()
+        self.toolBar.hide()
 
 
 
