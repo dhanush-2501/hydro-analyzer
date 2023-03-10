@@ -20,6 +20,8 @@ from PySide6.QtWidgets import (QApplication, QFormLayout, QGroupBox, QHBoxLayout
     QSizePolicy, QTableWidget, QTableWidgetItem, QVBoxLayout,
     QWidget)
 
+from HyAn.widgets.drawdown_curve import DrawdownCurve
+
 class Ui_PumpingData(object):
     def setupUi(self, PumpingData):
         if not PumpingData.objectName():
@@ -89,10 +91,10 @@ class Ui_PumpingData(object):
 
         self.horizontalLayout.addLayout(self.verticalLayout)
 
-        self.lbl_scatter_graph_space_hoder = QLabel(PumpingData)
-        self.lbl_scatter_graph_space_hoder.setObjectName(u"lbl_scatter_graph_space_hoder")
+        self.wid_plt_graph = DrawdownCurve(PumpingData)
+        self.wid_plt_graph.setObjectName(u"wid_plt_graph")
 
-        self.horizontalLayout.addWidget(self.lbl_scatter_graph_space_hoder)
+        self.horizontalLayout.addWidget(self.wid_plt_graph)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout)
@@ -113,6 +115,5 @@ class Ui_PumpingData(object):
         self.lbl_constant.setText(QCoreApplication.translate("PumpingData", u"Constant:", None))
         self.lbl_static_wl.setText(QCoreApplication.translate("PumpingData", u"Static WL [m]:", None))
         self.btn_plt_data.setText(QCoreApplication.translate("PumpingData", u"Plot Data", None))
-        self.lbl_scatter_graph_space_hoder.setText(QCoreApplication.translate("PumpingData", u"Space holder", None))
     # retranslateUi
 

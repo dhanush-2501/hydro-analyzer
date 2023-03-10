@@ -121,16 +121,20 @@
       </layout>
      </item>
      <item>
-      <widget class="QLabel" name="lbl_scatter_graph_space_hoder">
-       <property name="text">
-        <string>Space holder</string>
-       </property>
-      </widget>
+      <widget class="DrawdownCurve" name="wid_plt_graph" native="true"/>
      </item>
     </layout>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DrawdownCurve</class>
+   <extends>QWidget</extends>
+   <header>drawdown_curve.py</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
