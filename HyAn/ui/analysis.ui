@@ -285,14 +285,18 @@
     </layout>
    </item>
    <item>
-    <widget class="QLabel" name="lbl_output_graph">
-     <property name="text">
-      <string>Graph</string>
-     </property>
-    </widget>
+    <widget class="AnalysisCurve" name="wid_analysis_graph" native="true"/>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>AnalysisCurve</class>
+   <extends>QWidget</extends>
+   <header>analysis_curve.py</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="icon/icon.qrc"/>
  </resources>

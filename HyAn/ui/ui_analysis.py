@@ -19,7 +19,9 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QGridLayout,
     QGroupBox, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
     QWidget)
-import HyAn.ui.icon.rc_icon
+
+from HyAn.widgets.analysis_curve import AnalysisCurve
+from HyAn.ui.icon import rc_icon
 
 class Ui_Analysis(object):
     def setupUi(self, Analysis):
@@ -177,10 +179,10 @@ class Ui_Analysis(object):
 
         self.horizontalLayout.addLayout(self.verticalLayout)
 
-        self.lbl_output_graph = QLabel(Analysis)
-        self.lbl_output_graph.setObjectName(u"lbl_output_graph")
+        self.wid_analysis_graph = AnalysisCurve(Analysis)
+        self.wid_analysis_graph.setObjectName(u"wid_analysis_graph")
 
-        self.horizontalLayout.addWidget(self.lbl_output_graph)
+        self.horizontalLayout.addWidget(self.wid_analysis_graph)
 
 #if QT_CONFIG(shortcut)
         self.lbl_analysis_name.setBuddy(self.l_edit_analysis_name)
@@ -213,6 +215,5 @@ class Ui_Analysis(object):
         self.lbl_output_transmissivity.setText(QCoreApplication.translate("Analysis", u"Transmissivity:", None))
         self.lbl_output_storativity.setText(QCoreApplication.translate("Analysis", u"Storativity:", None))
         self.btn_generate_report.setText(QCoreApplication.translate("Analysis", u"Generate Report", None))
-        self.lbl_output_graph.setText(QCoreApplication.translate("Analysis", u"Graph", None))
     # retranslateUi
 
