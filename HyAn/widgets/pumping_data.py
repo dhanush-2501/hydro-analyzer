@@ -15,8 +15,6 @@ class PumpingData(QWidget, Ui_PumpingData):
 
         self.btn_plt_data.clicked.connect(self.get_data)
 
-        self.data = []
-
     def get_data(self):
         self.data = []
         for row in range(self.table_drawdown.rowCount()):
@@ -29,4 +27,6 @@ class PumpingData(QWidget, Ui_PumpingData):
                     row_data.append('')
             self.data.append(row_data)
         print(self.data)
+        self.wid_plt_graph.plot_data(self.data)
+        
         
