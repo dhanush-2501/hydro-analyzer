@@ -16,6 +16,9 @@ class DrawdownCurve(QWidget):
 
         self.view = FigureCanvas(Figure(figsize=(100, 100)))
         self.axes = self.view.figure.subplots()
+        self.axes.set_xlabel('Time [min]')
+        self.axes.set_ylabel('Drawdown [m]')
+        self.axes.set_title('Drawdown Curve')
     
         vlayout = QVBoxLayout()
         vlayout.addWidget(self.view)
