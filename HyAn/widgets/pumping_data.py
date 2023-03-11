@@ -22,9 +22,9 @@ class PumpingData(QWidget, Ui_PumpingData):
             for col in range(self.table_drawdown.columnCount()):
                 item = self.table_drawdown.item(row, col)
                 if item is not None:
-                    row_data.append(item.text())
+                    row_data.append(float(item.text()))
                 else:
-                    row_data.append('')
+                    row_data.append(float(0))
             self.data.append(row_data)
         print(self.data)
         self.wid_plt_graph.plot_data(self.data)
