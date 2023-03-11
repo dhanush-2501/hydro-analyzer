@@ -9,7 +9,7 @@ class PumpingTest(QWidget, Ui_PumpingTest):
 
         self.labels = ["Name", "Type", "X[m]", "Y[m]", "B[m]", "L[m]", "R[m]", "b[m]", "r[m]"]
 
-        self.table_well_information.setRowCount(1)
+        self.table_well_information.setRowCount(4)
         self.table_well_information.setColumnCount(9)
         self.table_well_information.setHorizontalHeaderLabels(self.labels)
 
