@@ -12,6 +12,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.menubar.hide()
         self.toolBar.hide()
+        self.showFullScreen()
 
 
 
