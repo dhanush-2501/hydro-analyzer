@@ -13,6 +13,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.menubar.hide()
         self.toolBar.hide()
         self.showFullScreen()
-
+        
+        self.wid_pumping_data.data_changed.connect(self.wid_analysis.fit_data)
 
 
