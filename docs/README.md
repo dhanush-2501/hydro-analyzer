@@ -1,6 +1,6 @@
 # Hydro Analyzer
 
-  &emsp;Hydro Analyser is a powerful tool designed for hydrogeologists, engineers, and other professionals in the water resources industry to accurately analyze and optimize groundwater pumping tests. This repository contains code to perform a hydro analyzer pumping test, which is used to find the transmissivity and storativity of a well.This code allows you to input data and calculate the transmissivity and storativity of the well. The code is written in PySide6 and can be run from the command line or in any python interpreter 
+  &emsp;Hydro Analyser is a powerful tool designed for hydrogeologists, engineers, and other professionals in the water resources industry to accurately analyze and optimize groundwater pumping tests. This repository contains code to perform a single well pumping test, which is used to find the transmissivity and storativity of a well.This code allows you to input data and calculate the transmissivity and storativity of the well. The code is written in PySide6 and can be run from the command line or in any python interpreter 
 
 # Getting Started
 
