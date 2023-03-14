@@ -17,13 +17,7 @@
  python run.py
  ```
  
-# Input Data Format
 
- * `time`: The time since pumping began.
- * `pumping_well`: The water level in the pumped well.
- * `well_dimension`s: Radius, Width and other required dimensions of the well.
- * `discharge`: The discharge data.
- * `drawdown`: The drawdown data.
  
 # Output 
 
