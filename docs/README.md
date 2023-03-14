@@ -50,7 +50,7 @@
  
  &emsp;Step 1: Fill in discharge details.  
  &emsp;Step 2: Enter field data in the table.  
- &emsp;Step 3: Click "Plot Data" after entering drawdown data. Click Enter after entering last data.  
+ &emsp;Step 3: Click "Plot Data" after entering drawdown data. Press Enter after entering last data.  
  &emsp;Step 4: The graph will be plotted.  
  
  <img width="1440" alt="Plotted data" src="https://user-images.githubusercontent.com/105580560/224926435-b3a12b6d-64d5-43d2-b00a-66cb1aec1344.png">
