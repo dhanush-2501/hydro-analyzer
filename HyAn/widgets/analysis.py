@@ -10,6 +10,7 @@ class Analysis(QWidget, Ui_Analysis):
         self.setupUi(self)
         self.btn_fit.clicked.connect(self.fit_theis)
 
+    # gets data from pumping test
     @Slot(list)
     def fit_data(self, data):
         print(f"fit_data: {data}")
@@ -17,12 +18,14 @@ class Analysis(QWidget, Ui_Analysis):
         self.btn_fit.setEnabled(True)
         # self.wid_analysis_graph.thies_analysis(self.theis_data)
 
+    # gets r from pumping test
     @Slot(float)
     def set_r(self, data):
         print("set r called")
         self.r = data
         print(f"r : {self.r}")
 
+    # fits theis data to graph and outputs S and T
     def fit_theis(self):
         print("fit_theis : ", [self.theis_data, self.r])
         self.wid_analysis_graph.thies_analysis([self.theis_data, self.r])
