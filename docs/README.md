@@ -66,4 +66,6 @@
  
  <img width="1440" alt="Analysis" src="https://user-images.githubusercontent.com/105580560/224953801-0570bea5-eb41-40db-a1bb-89ccd01f9859.png">
 
+#NOTE  
+&emspThis project is still in development and some features may not be fully functional.
 
