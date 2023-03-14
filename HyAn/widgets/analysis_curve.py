@@ -1,3 +1,4 @@
+import os
 import matplotlib
 
 matplotlib.use("Qt5Agg")
@@ -12,15 +13,20 @@ import numpy as np
 class AnalysisCurve(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent)
+
         self.T, self.S = 0, 0
 
+        # Create a FigureCanvas object and set the size of the figure
         self.view = FigureCanvas(Figure(figsize=(100, 100)))
-        self.axes = self.view.figure.subplots()
+        self.axes = self.view.figure.subplots() # Create axes for the plot
+
         self.axes.set_xlabel("Time [min]")
         self.axes.set_ylabel("Drawdown [m]")
         self.axes.set_title("Analysis Curve")
         fig = self.view.figure
-        fig.savefig("analysis.png")
+
+        output_path = os.path.join("HyAn/img", "analysis.png")
+        fig.savefig(output_path)
 
         vlayout = QVBoxLayout()
         vlayout.addWidget(self.view)
@@ -54,5 +60,7 @@ class AnalysisCurve(QWidget):
         self.axes.plot(self.time, self.model, "r-", label="Theis")
         self.axes.plot(self.time, self.drawdown, "bo", label="Data")
         self.view.draw()
+        output_path = os.path.join("HyAn/img", "analysis.png")
         fig = self.view.figure
-        fig.savefig("analysis.png")
+
+        fig.savefig(output_path)
