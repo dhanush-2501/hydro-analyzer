@@ -17,6 +17,13 @@ setup(
         name='HyAn',
         version=get_version("HyAn/__init__.py"),
         packages=find_packages(),
+        install_requires=[
+                          "matplotlib==3.7.1",
+                          "numpy==1.24.2",
+                          "PySide6==6.4.2",
+                          "scipy==1.10.1",
+                          "setuptools==65.6.3", 
+                        ],
         package_dir={'hydro-analyzer': 'HyAn'}
 )
    
