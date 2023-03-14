@@ -40,5 +40,13 @@ class PumpingData(QWidget, Ui_PumpingData):
 
         self.wid_plt_graph.plot_data(self.data)
         print("get data : ",self.data)
-        self.data_changed.emit(self.data)
+        self.data_changed.emit([self.data, float(self.l_edit_constant.text())])
         return self.data
+
+    def get_report(self):
+        self.report = {
+            "data": self.data,
+            "Q": self.l_edit_constant.text(),
+
+        }
+        return self.report
