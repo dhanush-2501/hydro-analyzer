@@ -20,14 +20,11 @@ class AnalysisCurve(QWidget):
         self.view = FigureCanvas(Figure(figsize=(100, 100)))
         self.axes = self.view.figure.subplots() # Create axes for the plot
 
+        # Set the axes labels and title
         self.axes.set_xlabel("Time [min]")
         self.axes.set_ylabel("Drawdown [m]")
         self.axes.set_title("Analysis Curve")
-        fig = self.view.figure
-
-        output_path = os.path.join("HyAn/img", "analysis.png")
-        fig.savefig(output_path)
-
+ 
         vlayout = QVBoxLayout()
         vlayout.addWidget(self.view)
 
@@ -47,12 +44,14 @@ class AnalysisCurve(QWidget):
         self.r = data[1]  # m
         print("r : ", self.r)
 
+        # pass data to Theis class and get the results
         self.thies = Theis(self.time, self.drawdown, self.Q, self.r)
         self.T, self.S, self.model = self.thies.fit()
         print(f"t : {self.T}")
         print(f"S : {self.S}")
         print(f"model : {self.model}")
 
+        # plot the results
         self.axes.clear()
         self.axes.set_xlabel("Time [min]")
         self.axes.set_ylabel("Drawdown [m]")
@@ -60,6 +59,8 @@ class AnalysisCurve(QWidget):
         self.axes.plot(self.time, self.model, "r-", label="Theis")
         self.axes.plot(self.time, self.drawdown, "bo", label="Data")
         self.view.draw()
+
+        # save the figure
         output_path = os.path.join("HyAn/img", "analysis.png")
         fig = self.view.figure
 

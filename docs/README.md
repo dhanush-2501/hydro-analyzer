@@ -17,17 +17,11 @@
  python run.py
  ```
  
-# Input Data Format
 
- * `time`: The time since pumping began.
- * `pumping_well`: The water level in the pumped well.
- * `well_dimension`s: Radius, Width and other required dimensions of the well.
- * `discharge`: The discharge data.
- * `drawdown`: The drawdown data.
  
 # Output 
 
- * `transmissivity`: The transmissivity of the well in square feet per day.
+ * `transmissivity`: The transmissivity of the well in square metre per day.
  * `storativity`: The storativity of the well, a dimensionless value.  
  
 # Pumping Test Tutorial  

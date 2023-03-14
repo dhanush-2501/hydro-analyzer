@@ -29,13 +29,11 @@ class DrawdownCurve(QWidget):
         time = self.data[:, 0]
         drawdown = self.data[:, 1]
 
-        # to view in console
-        #
-        # print(f"drawdown: {drawdown}")
-
-        self.axes.clear()
+    
+        self.axes.clear() # Clear the axes  before plotting
+        # Set the axes labels and title
         self.axes.set_xlabel("Time [min]")
         self.axes.set_ylabel("Drawdown [m]")
         self.axes.set_title("Drawdown Curve")
-        self.axes.plot(time, drawdown, "-o")
-        self.view.draw()
+        self.axes.plot(time, drawdown, "-o") # plot the data
+        self.view.draw() # update the canvas

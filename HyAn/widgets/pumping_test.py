@@ -14,6 +14,7 @@ class PumpingTest(QWidget, Ui_PumpingTest):
 
         self.btn_create_new_well.hide()
 
+        # labels for table
         self.labels = [
             "Name",
             "Type",
@@ -26,12 +27,13 @@ class PumpingTest(QWidget, Ui_PumpingTest):
             "r[m]",
         ]
 
+        # set table
         self.table_well_information.setRowCount(1)
         self.table_well_information.setColumnCount(9)
         self.table_well_information.setHorizontalHeaderLabels(self.labels)
 
         self.btn_create_new_well.clicked.connect(self.create_new_well)
-        self.btn_submit.clicked.connect(self.get_data)
+        self.btn_submit.clicked.connect(self.get_data) # get data from table
 
         self.data = []
 
