@@ -50,8 +50,8 @@
  ## Pumping Data Tab  
  
  &emsp;Step 1: Fill in discharge details.  
- &emsp;Step 2: Enter field data in the table.  
- &emsp;Step 3: Click "Plot Data" after entering drawdown data. Press Enter after entering last data.  
+ &emsp;Step 2: Enter field data in the table. Press Enter after entering last data.  
+ &emsp;Step 3: Click "Plot Data" after entering drawdown data.  
  &emsp;Step 4: The graph will be plotted.  
  
 <img width="1440" alt="pumping_data" src="https://user-images.githubusercontent.com/105580560/224953658-93d690a2-f3dd-48bb-a45e-492ad02b30b2.png">
