@@ -15,9 +15,16 @@ class Analysis(QWidget, Ui_Analysis):
         self.theis_data = data
         self.btn_fit.setEnabled(True)
         #self.wid_analysis_graph.thies_analysis(self.theis_data)
+
+    @Slot(float)
+    def set_r(self, data):
+        print("set r called")
+        self.r = data
+        print(f"r : {self.r}")
         
     def fit_theis(self):
-        self.wid_analysis_graph.thies_analysis(self.theis_data)
+        print("fit_theis : ", [self.theis_data, self.r])
+        self.wid_analysis_graph.thies_analysis([self.theis_data, self.r])
         S = round(self.wid_analysis_graph.S, 4)
         T = round(self.wid_analysis_graph.T, 4)
         self.l_edit_output_storativity.setText(str(S))

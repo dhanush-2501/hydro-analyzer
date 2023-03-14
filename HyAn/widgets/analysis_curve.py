@@ -18,6 +18,8 @@ class AnalysisCurve(QWidget):
         self.axes.set_xlabel('Time [min]')
         self.axes.set_ylabel('Drawdown [m]')
         self.axes.set_title('Analysis Curve')
+        fig = self.view.figure
+        fig.savefig('analysis.png')
 
     
         vlayout = QVBoxLayout()
@@ -29,14 +31,17 @@ class AnalysisCurve(QWidget):
     def thies_analysis(self, data):
         # self.time = data[:, 0]
         # self.drawdown = data[:, 1]
-        data = np.array(data)
+        obs_data = np.array(data[0][0])
         print(f"data : {data}")
-        print(f"time : {data[:, 0]}")
        
-        self.time = data[:, 0]
-        self.drawdown = data[:, 1]
-        self.Q = 220 #m3/d
-        self.r = 251.155 #m
+        self.time = obs_data[:, 0]
+        self.drawdown = obs_data[:, 1]
+        self.Q = data[0][1] #m3/d
+        print("q : ", self.Q)
+
+        self.r = data[1] #m
+        print("r : ", self.r)
+
         self.thies = Theis(self.time, self.drawdown, self.Q, self.r)
         self.T, self.S, self.model = self.thies.fit()
         print(f"t : {self.T}")
@@ -50,6 +55,8 @@ class AnalysisCurve(QWidget):
         self.axes.plot(self.time, self.model, 'r-', label='Theis')
         self.axes.plot(self.time, self.drawdown, 'bo', label='Data')
         self.view.draw()
+        fig = self.view.figure
+        fig.savefig('analysis.png')
 
 
 
