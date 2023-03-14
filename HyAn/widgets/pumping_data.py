@@ -12,14 +12,13 @@ class PumpingData(QWidget, Ui_PumpingData):
         QWidget.__init__(self, parent)
         self.setupUi(self)
 
-        self.labels = ['Time [min]', 'Drawdown [m]']
+        self.labels = ["Time [min]", "Drawdown [m]"]
 
         self.table_drawdown.setRowCount(20)
         self.table_drawdown.setColumnCount(2)
         self.table_drawdown.setHorizontalHeaderLabels(self.labels)
 
         self.btn_plt_data.clicked.connect(self.get_data)
-
 
     def get_data(self):
         self.data = []
@@ -36,10 +35,8 @@ class PumpingData(QWidget, Ui_PumpingData):
         #              [38, 4.7], [47, 5.1], [50, 5.3], [60, 5.7], [70, 6.1], [80, 6.3], [90, 6.7],
         #              [100, 7.0], [130, 7.5], [160, 8.3], [200, 8.5], [260, 9.2], [320, 9.7], [380, 10.2], [500, 10.9]]
 
-
-
         self.wid_plt_graph.plot_data(self.data)
-        print("get data : ",self.data)
+        print("get data : ", self.data)
         self.data_changed.emit([self.data, float(self.l_edit_constant.text())])
         return self.data
 
@@ -47,6 +44,5 @@ class PumpingData(QWidget, Ui_PumpingData):
         self.report = {
             "data": self.data,
             "Q": self.l_edit_constant.text(),
-
         }
         return self.report
