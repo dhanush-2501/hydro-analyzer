@@ -1,5 +1,6 @@
 import matplotlib
-matplotlib.use('Qt5Agg')
+
+matplotlib.use("Qt5Agg")
 from PySide6.QtWidgets import QWidget, QVBoxLayout
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -15,17 +16,15 @@ class AnalysisCurve(QWidget):
 
         self.view = FigureCanvas(Figure(figsize=(100, 100)))
         self.axes = self.view.figure.subplots()
-        self.axes.set_xlabel('Time [min]')
-        self.axes.set_ylabel('Drawdown [m]')
-        self.axes.set_title('Analysis Curve')
+        self.axes.set_xlabel("Time [min]")
+        self.axes.set_ylabel("Drawdown [m]")
+        self.axes.set_title("Analysis Curve")
         fig = self.view.figure
-        fig.savefig('analysis.png')
+        fig.savefig("analysis.png")
 
-    
         vlayout = QVBoxLayout()
         vlayout.addWidget(self.view)
 
-       
         self.setLayout(vlayout)
 
     def thies_analysis(self, data):
@@ -33,13 +32,13 @@ class AnalysisCurve(QWidget):
         # self.drawdown = data[:, 1]
         obs_data = np.array(data[0][0])
         print(f"data : {data}")
-       
+
         self.time = obs_data[:, 0]
         self.drawdown = obs_data[:, 1]
-        self.Q = data[0][1] #m3/d
+        self.Q = data[0][1]  # m3/d
         print("q : ", self.Q)
 
-        self.r = data[1] #m
+        self.r = data[1]  # m
         print("r : ", self.r)
 
         self.thies = Theis(self.time, self.drawdown, self.Q, self.r)
@@ -49,15 +48,11 @@ class AnalysisCurve(QWidget):
         print(f"model : {self.model}")
 
         self.axes.clear()
-        self.axes.set_xlabel('Time [min]')
-        self.axes.set_ylabel('Drawdown [m]')
-        self.axes.set_title('Analysis Curve')
-        self.axes.plot(self.time, self.model, 'r-', label='Theis')
-        self.axes.plot(self.time, self.drawdown, 'bo', label='Data')
+        self.axes.set_xlabel("Time [min]")
+        self.axes.set_ylabel("Drawdown [m]")
+        self.axes.set_title("Analysis Curve")
+        self.axes.plot(self.time, self.model, "r-", label="Theis")
+        self.axes.plot(self.time, self.drawdown, "bo", label="Data")
         self.view.draw()
         fig = self.view.figure
-        fig.savefig('analysis.png')
-
-
-
-    
+        fig.savefig("analysis.png")
