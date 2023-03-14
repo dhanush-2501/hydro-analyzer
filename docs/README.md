@@ -21,7 +21,7 @@
  
 # Output 
 
- * `transmissivity`: The transmissivity of the well in square metre^2 per day.
+ * `transmissivity`: The transmissivity of the well in square metre per day.
  * `storativity`: The storativity of the well, a dimensionless value.  
  
 # Pumping Test Tutorial  
