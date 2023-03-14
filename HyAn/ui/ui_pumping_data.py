@@ -26,7 +26,7 @@ class Ui_PumpingData(object):
     def setupUi(self, PumpingData):
         if not PumpingData.objectName():
             PumpingData.setObjectName(u"PumpingData")
-        PumpingData.resize(813, 736)
+        PumpingData.resize(813, 734)
         self.verticalLayout_2 = QVBoxLayout(PumpingData)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.gb_dicharge = QGroupBox(PumpingData)
@@ -49,16 +49,6 @@ class Ui_PumpingData(object):
         self.l_edit_constant.setObjectName(u"l_edit_constant")
 
         self.formLayout_4.setWidget(0, QFormLayout.FieldRole, self.l_edit_constant)
-
-        self.l_edit_static_wl = QLineEdit(self.gb_dicharge)
-        self.l_edit_static_wl.setObjectName(u"l_edit_static_wl")
-
-        self.formLayout_4.setWidget(2, QFormLayout.FieldRole, self.l_edit_static_wl)
-
-        self.lbl_static_wl = QLabel(self.gb_dicharge)
-        self.lbl_static_wl.setObjectName(u"lbl_static_wl")
-
-        self.formLayout_4.setWidget(2, QFormLayout.LabelRole, self.lbl_static_wl)
 
 
         self.verticalLayout_2.addWidget(self.gb_dicharge)
@@ -101,7 +91,6 @@ class Ui_PumpingData(object):
 
 #if QT_CONFIG(shortcut)
         self.lbl_constant.setBuddy(self.l_edit_constant)
-        self.lbl_static_wl.setBuddy(self.l_edit_static_wl)
 #endif // QT_CONFIG(shortcut)
 
         self.retranslateUi(PumpingData)
@@ -113,7 +102,6 @@ class Ui_PumpingData(object):
         PumpingData.setWindowTitle(QCoreApplication.translate("PumpingData", u"Form", None))
         self.gb_dicharge.setTitle(QCoreApplication.translate("PumpingData", u"Discharge[m\u00b3/sec]", None))
         self.lbl_constant.setText(QCoreApplication.translate("PumpingData", u"Constant:", None))
-        self.lbl_static_wl.setText(QCoreApplication.translate("PumpingData", u"Static WL [m]:", None))
         self.btn_plt_data.setText(QCoreApplication.translate("PumpingData", u"Plot Data", None))
     # retranslateUi
 
