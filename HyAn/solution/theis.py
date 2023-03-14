@@ -2,8 +2,8 @@ import numpy as np
 import math
 from scipy.optimize import curve_fit
 
-class Theis:
 
+class Theis:
     def __init__(self, time, drawdown, Q, r):
         self.T = 0.0
         self.S = 0.0
@@ -28,15 +28,15 @@ class Theis:
         Returns:
         - float or numpy array, value(s) of the well function at the specified time(s)
         """
-        u = (r ** 2) * S / (4 * T * t)
+        u = (r**2) * S / (4 * T * t)
         Wu = -0.5772 - np.log(u) + u
         n_terms = 30
         for i in range(2, n_terms + 1):
             sign = (-1) ** (i - 1)
             factorial = np.math.factorial(i)
-            Wu += sign * (u ** i) / (i * factorial)
+            Wu += sign * (u**i) / (i * factorial)
         return Wu
-    
+
     def calculate_drawdown(self, t, T, S):
         """
         Calculates the drawdown at different times using the Theis equation.
@@ -58,9 +58,15 @@ class Theis:
             Wu_val = self.calculate_well_function(self.r, S, T, t[i])
             drawdown[i] = self.Q * Wu_val / (4 * pi * T)
         return drawdown
-    
+
     def fit(self):
-        popt, pcov = curve_fit(self.calculate_drawdown, self.time, self.drawdown, p0=self.initial_guess, bounds=self.bounds)
+        popt, pcov = curve_fit(
+            self.calculate_drawdown,
+            self.time,
+            self.drawdown,
+            p0=self.initial_guess,
+            bounds=self.bounds,
+        )
         self.T = popt[0]
         self.S = popt[1]
         self.model = self.calculate_drawdown(self.time, self.T, self.S)
