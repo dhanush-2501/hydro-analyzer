@@ -15,10 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QGridLayout,
-    QGroupBox, QHBoxLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QDateEdit, QGridLayout, QGroupBox,
+    QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 from HyAn.widgets.analysis_curve import AnalysisCurve
 from HyAn.ui.icon import rc_icon
@@ -99,75 +98,48 @@ class Ui_Analysis(object):
 
         self.verticalLayout_3.addWidget(self.btn_fit)
 
-        self.cb_apply_graph_setting = QComboBox(self.gb_solution)
-        self.cb_apply_graph_setting.addItem("")
-        self.cb_apply_graph_setting.addItem("")
-        self.cb_apply_graph_setting.setObjectName(u"cb_apply_graph_setting")
-        sizePolicy1.setHeightForWidth(self.cb_apply_graph_setting.sizePolicy().hasHeightForWidth())
-        self.cb_apply_graph_setting.setSizePolicy(sizePolicy1)
-        self.cb_apply_graph_setting.setMinimumSize(QSize(0, 28))
-        self.cb_apply_graph_setting.setMaximumSize(QSize(280, 40))
-
-        self.verticalLayout_3.addWidget(self.cb_apply_graph_setting)
-
-        self.cb_analysis_method = QComboBox(self.gb_solution)
-        self.cb_analysis_method.addItem("")
-        self.cb_analysis_method.addItem("")
-        self.cb_analysis_method.addItem("")
-        self.cb_analysis_method.addItem("")
-        self.cb_analysis_method.addItem("")
-        self.cb_analysis_method.setObjectName(u"cb_analysis_method")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.cb_analysis_method.sizePolicy().hasHeightForWidth())
-        self.cb_analysis_method.setSizePolicy(sizePolicy2)
-        self.cb_analysis_method.setMinimumSize(QSize(0, 28))
-        self.cb_analysis_method.setMaximumSize(QSize(280, 40))
-
-        self.verticalLayout_3.addWidget(self.cb_analysis_method)
-
 
         self.verticalLayout.addWidget(self.gb_solution)
 
         self.gb_output = QGroupBox(Analysis)
         self.gb_output.setObjectName(u"gb_output")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.gb_output.sizePolicy().hasHeightForWidth())
-        self.gb_output.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.gb_output.sizePolicy().hasHeightForWidth())
+        self.gb_output.setSizePolicy(sizePolicy2)
         self.gb_output.setMinimumSize(QSize(320, 0))
         self.gb_output.setMaximumSize(QSize(280, 120))
         self.gridLayout_2 = QGridLayout(self.gb_output)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.lbl_output_transmissivity = QLabel(self.gb_output)
-        self.lbl_output_transmissivity.setObjectName(u"lbl_output_transmissivity")
+        self.l_edit_output_transmissivity = QLineEdit(self.gb_output)
+        self.l_edit_output_transmissivity.setObjectName(u"l_edit_output_transmissivity")
 
-        self.gridLayout_2.addWidget(self.lbl_output_transmissivity, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.l_edit_output_transmissivity, 0, 1, 1, 1)
 
         self.lbl_output_storativity = QLabel(self.gb_output)
         self.lbl_output_storativity.setObjectName(u"lbl_output_storativity")
 
         self.gridLayout_2.addWidget(self.lbl_output_storativity, 1, 0, 1, 1)
 
-        self.l_edit_output_transmissivity = QLineEdit(self.gb_output)
-        self.l_edit_output_transmissivity.setObjectName(u"l_edit_output_transmissivity")
+        self.l_edit_output_storativity = QLineEdit(self.gb_output)
+        self.l_edit_output_storativity.setObjectName(u"l_edit_output_storativity")
 
-        self.gridLayout_2.addWidget(self.l_edit_output_transmissivity, 0, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.l_edit_output_storativity, 1, 1, 1, 1)
+
+        self.lbl_output_transmissivity = QLabel(self.gb_output)
+        self.lbl_output_transmissivity.setObjectName(u"lbl_output_transmissivity")
+
+        self.gridLayout_2.addWidget(self.lbl_output_transmissivity, 0, 0, 1, 1)
 
         self.btn_generate_report = QPushButton(self.gb_output)
         self.btn_generate_report.setObjectName(u"btn_generate_report")
+        self.btn_generate_report.setStyleSheet(u"")
         icon1 = QIcon()
         icon1.addFile(u":/menu_bar_icon/report.png", QSize(), QIcon.Normal, QIcon.Off)
         self.btn_generate_report.setIcon(icon1)
 
         self.gridLayout_2.addWidget(self.btn_generate_report, 2, 0, 1, 2)
-
-        self.l_edit_output_storativity = QLineEdit(self.gb_output)
-        self.l_edit_output_storativity.setObjectName(u"l_edit_output_storativity")
-
-        self.gridLayout_2.addWidget(self.l_edit_output_storativity, 1, 1, 1, 1)
 
 
         self.verticalLayout.addWidget(self.gb_output)
@@ -201,19 +173,10 @@ class Ui_Analysis(object):
         self.lbl_analysis_performed_by.setText(QCoreApplication.translate("Analysis", u"Analysis Performed by:", None))
         self.lbl_analysis_data.setText(QCoreApplication.translate("Analysis", u"Analysis date:", None))
         self.gb_solution.setTitle(QCoreApplication.translate("Analysis", u"Solution", None))
-        self.btn_fit.setText(QCoreApplication.translate("Analysis", u"Fit", None))
-        self.cb_apply_graph_setting.setItemText(0, QCoreApplication.translate("Analysis", u"Apply Graph Setting", None))
-        self.cb_apply_graph_setting.setItemText(1, QCoreApplication.translate("Analysis", u"log - log", None))
-
-        self.cb_analysis_method.setItemText(0, QCoreApplication.translate("Analysis", u"Analysis Method", None))
-        self.cb_analysis_method.setItemText(1, QCoreApplication.translate("Analysis", u"Theis (Confined)", None))
-        self.cb_analysis_method.setItemText(2, QCoreApplication.translate("Analysis", u"Cooper Jacob (Confined)", None))
-        self.cb_analysis_method.setItemText(3, QCoreApplication.translate("Analysis", u"Theis  (Unconfined)", None))
-        self.cb_analysis_method.setItemText(4, QCoreApplication.translate("Analysis", u"Cooper Jacob  (Unconfined)", None))
-
+        self.btn_fit.setText(QCoreApplication.translate("Analysis", u"Fit Data", None))
         self.gb_output.setTitle(QCoreApplication.translate("Analysis", u"Output", None))
-        self.lbl_output_transmissivity.setText(QCoreApplication.translate("Analysis", u"Transmissivity:", None))
         self.lbl_output_storativity.setText(QCoreApplication.translate("Analysis", u"Storativity:", None))
+        self.lbl_output_transmissivity.setText(QCoreApplication.translate("Analysis", u"Transmissivity:", None))
         self.btn_generate_report.setText(QCoreApplication.translate("Analysis", u"Generate Report", None))
     # retranslateUi
 

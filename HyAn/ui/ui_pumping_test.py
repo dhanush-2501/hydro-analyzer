@@ -26,7 +26,7 @@ class Ui_PumpingTest(object):
     def setupUi(self, PumpingTest):
         if not PumpingTest.objectName():
             PumpingTest.setObjectName(u"PumpingTest")
-        PumpingTest.resize(1622, 796)
+        PumpingTest.resize(1624, 796)
         self.verticalLayout = QVBoxLayout(PumpingTest)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.horizontalLayout = QHBoxLayout()
@@ -302,8 +302,8 @@ class Ui_PumpingTest(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.table_well_information.sizePolicy().hasHeightForWidth())
         self.table_well_information.setSizePolicy(sizePolicy1)
-        self.table_well_information.setMinimumSize(QSize(1600, 0))
-        self.table_well_information.setMaximumSize(QSize(1600, 16777215))
+        self.table_well_information.setMinimumSize(QSize(920, 0))
+        self.table_well_information.setMaximumSize(QSize(920, 16777215))
 
         self.verticalLayout.addWidget(self.table_well_information)
 
