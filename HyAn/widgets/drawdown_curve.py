@@ -32,6 +32,12 @@ class DrawdownCurve(QWidget):
         Args:
         - data: 2-D array, first column contains time (in minutes)
                            second column contains drawdown (in meters)
+        
+        Note:
+        - x axis was labeled as "Time [min]"
+        - y axis was labeled as "Drawdown [m]"
+        - "Drawdown Curve" as graph title
+        - plots drawdown value against time 
         """
         self.data = np.array(data)
         time = self.data[:, 0]

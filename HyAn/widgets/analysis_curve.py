@@ -41,11 +41,9 @@ class AnalysisCurve(QWidget):
         - T: float, Transmissivity 
         - S: float, Storativity
 
-        Returns:
+        Notes:
         - float value of transmissivity and storativity.
         - Generates a plot of the Theis model fit and saves it as 'analysis.png'.
-
-        Notes:
         - The Theis curved is plotted using the Theis class in the theis.py module.
         """
         # self.time = data[:, 0]

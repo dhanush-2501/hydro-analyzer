@@ -29,11 +29,9 @@ class PumpingData(QWidget, Ui_PumpingData):
         Args:
         - data: float, 2-D array, stores the time and drawdown values.
 
-        Returns:
+         Notes:
         - Drawdown and time data as 2-D array
         - Drawdown-time Graph
-
-        Notes:
         - If a table cell is empty, the corresponding time or drawdown value is assumed to be 0.0.
         """ 
         self.data = []
