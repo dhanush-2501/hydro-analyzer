@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # This Python file uses the following encoding: utf-8
 
-from PySide6.QtWidgets import QMainWindow
+from PySide6.QtWidgets import QMainWindow, QFileDialog
 
 
 from HyAn.ui.ui_main_window import Ui_MainWindow
@@ -58,6 +58,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.data = self.pumping_data["data"]
 
+        self.options = QFileDialog.Options()
+        self.file_name, _ =  QFileDialog.getSaveFileName(self, "save analysis report", "", "PDF Files (*.pdf)", options=self.options)
+
+        
+        if not self.file_name.endswith(".pdf"):
+            self.file_name += ".pdf"
+
+        
+        print(f"self.file_name : {self.file_name}")
+
         self.report = Report(self.data)
 
         self.report.project_data(self.project_name, self.project_number,
@@ -67,7 +77,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.report.print_table()
         self.report.display_graph()
         self.report.result(self.T, self.S)
-        self.report.generate_report()
+        self.report.generate_report(self.file_name)
         
 
 
