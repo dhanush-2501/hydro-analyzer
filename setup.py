@@ -26,6 +26,7 @@ setup(
         "PySide6==6.4.2",
         "scipy==1.10.1",
         "setuptools==65.6.3",
+        "fpdf==1.7.2"
     ],
     package_dir={"hydro-analyzer": "HyAn"},
 )
