@@ -31,6 +31,23 @@ class AnalysisCurve(QWidget):
         self.setLayout(vlayout)
 
     def thies_analysis(self, data):
+        """
+        Generates a plot of the Theis model fit.
+
+        Args:
+        - time: Drawdown time 
+        - drawdown: Change in water level after pumping started 
+        - Q: float, pumping rate (in meters^3/day)
+        - T: float, Transmissivity 
+        - S: float, Storativity
+
+        Returns:
+        - float value of transmissivity and storativity.
+        - Generates a plot of the Theis model fit and saves it as 'analysis.png'.
+
+        Notes:
+        - The Theis curved is plotted using the Theis class in the theis.py module.
+        """
         # self.time = data[:, 0]
         # self.drawdown = data[:, 1]
         obs_data = np.array(data[0][0])
