@@ -56,7 +56,7 @@
  &emsp;Step 1: Enter analyzer details.  
  &emsp;Step 2: Click "Fit" after entering required data.  
  &emsp;Step 3: The analysis curve for Theis method will be displayed.  
- &emsp;Step 4: Click "Generate Report" to download the report as a PDF.  
+ &emsp;Step 4: Click "Generate Report" to save the report as a PDF.  
  
  <img width="1440" alt="Analysis" src="https://user-images.githubusercontent.com/105580560/224953801-0570bea5-eb41-40db-a1bb-89ccd01f9859.png">
 
