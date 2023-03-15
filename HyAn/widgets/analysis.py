@@ -9,6 +9,8 @@ class Analysis(QWidget, Ui_Analysis):
         QWidget.__init__(self, parent)
         self.setupUi(self)
         self.btn_fit.clicked.connect(self.fit_theis)
+        self.S = 0
+        self.T = 0
 
     # gets data from pumping test
     @Slot(list)
@@ -29,7 +31,13 @@ class Analysis(QWidget, Ui_Analysis):
     def fit_theis(self):
         print("fit_theis : ", [self.theis_data, self.r])
         self.wid_analysis_graph.thies_analysis([self.theis_data, self.r])
-        S = round(self.wid_analysis_graph.S, 4)
-        T = round(self.wid_analysis_graph.T, 4)
-        self.l_edit_output_storativity.setText(str(S))
-        self.l_edit_output_transmissivity.setText(str(T))
+        self.S = round(self.wid_analysis_graph.S, 4)
+        self.T = round(self.wid_analysis_graph.T, 4)
+        self.l_edit_output_storativity.setText(str(self.S))
+        self.l_edit_output_transmissivity.setText(str(self.T))
+
+    def get_s_t(self):
+        return {
+            "S": self.S,
+            "T": self.T,
+        }
