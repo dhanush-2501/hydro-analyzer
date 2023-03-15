@@ -5,6 +5,7 @@ from PySide6.QtWidgets import QMainWindow
 
 
 from HyAn.ui.ui_main_window import Ui_MainWindow
+from HyAn.report.report import Report
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -24,7 +25,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
         # generate report
-        self.wid_analysis.btn_fit.clicked.connect(self.generate_report)
+        self.wid_analysis.btn_generate_report.clicked.connect(self.generate_report)
 
     def generate_report(self):
         """
@@ -35,6 +36,44 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         self.pumping_data = self.wid_pumping_data.get_report()
         self.pumping_test = self.wid_pumping_test.get_report()
+        self.analysis_data = self.wid_analysis.get_s_t()
 
         print(f"Pumping_data : {self.pumping_data}")
+
+        self.project_name = self.pumping_test["project_name"]
+        self.project_number = self.pumping_test["project_number"]
+        self.project_client = self.pumping_test["project_client"]
+
+        self.project_location = self.pumping_test["project_location"] 
+        self.pumping_test_name = self.pumping_test["pumping_test_name"]
+        self.pumping_well_name = self.pumping_test["well_info"]
+        self.pumping_well_name = self.pumping_well_name[0][0]
+
+        self.performed_by = self.pumping_test["performed_by"]
+        self.date = self.pumping_test["date"]
+        self.discharge_rate = self.pumping_data["Q"]
+
+        self.S = self.analysis_data["S"]
+        self.T = self.analysis_data["T"]
+
+        self.data = self.pumping_data["data"]
+
+        self.report = Report(self.data)
+
+        self.report.project_data(self.project_name, self.project_number,
+                                  self.project_client, self.project_location,
+                                  self.pumping_test_name, self.pumping_well_name,
+                                  self.performed_by, self.date, self.discharge_rate)
+        self.report.print_table()
+        self.report.display_graph()
+        self.report.result(self.T, self.S)
+        self.report.generate_report()
+        
+
+
+
+
+        
+
+
         print(f"pumping_test : {self.pumping_test}")
