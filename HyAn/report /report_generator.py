@@ -14,7 +14,7 @@ class PDF( FPDF ):
         self.cell(0, 20, 'Hydro Analyzer Report', 1, 1, 'C')
 
 
-class report():
+class Report():
     def __init__(self):
         super.__init__()
 
