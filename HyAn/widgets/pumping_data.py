@@ -23,6 +23,19 @@ class PumpingData(QWidget, Ui_PumpingData):
         self.btn_plt_data.clicked.connect(self.get_data)
 
     def get_data(self):
+        """
+        Retrieves the data from the drawdown table and passed to the program.
+
+        Args:
+        - data: float, 2-D array, stores the time and drawdown values.
+
+        Returns:
+        - Drawdown and time data as 2-D array
+        - Drawdown-time Graph
+
+        Notes:
+        - If a table cell is empty, the corresponding time or drawdown value is assumed to be 0.0.
+        """ 
         self.data = []
         for row in range(self.table_drawdown.rowCount()):
             row_data = []
@@ -43,6 +56,9 @@ class PumpingData(QWidget, Ui_PumpingData):
         return self.data
 
     def get_report(self):
+        """
+        When this function is called it pass the data and Q 
+        """
         self.report = {
             "data": self.data,
             "Q": self.l_edit_constant.text(),
