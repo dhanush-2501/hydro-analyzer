@@ -27,6 +27,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.wid_analysis.btn_fit.clicked.connect(self.generate_report)
 
     def generate_report(self):
+        """
+        Generates the report for the pumping test.
+        
+        Notes:
+        -update the parameters "self.pumping data" and "self.pumping test" with the reports obtained from the GUI widgets.
+        """
         self.pumping_data = self.wid_pumping_data.get_report()
         self.pumping_test = self.wid_pumping_test.get_report()
 
