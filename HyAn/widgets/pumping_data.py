@@ -58,7 +58,7 @@ class PumpingData(QWidget, Ui_PumpingData):
         When this function is called it pass the data and Q 
         """
         self.report = {
-            "data": self.data,
+            "data": np.array(self.data),
             "Q": self.l_edit_constant.text(),
         }
         return self.report
