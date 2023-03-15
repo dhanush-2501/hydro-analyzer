@@ -78,15 +78,7 @@ class Report():
         self.pdf.cell(w=self.pw, h=self.ch, txt=f"Transmissivity : {t} ", border=1, ln=1 )
         self.pdf.cell(w=self.pw, h=self.ch, txt=f"Storativity : {s}", border=1, ln=1)
 
-    def generate_report(self):
+    def generate_report(self, output_path):
         
-        # self.options = QFileDialog.Options()
-        # self.options = QFileDialog.DontUseNativeDialog
-
-        # self.file_name, _ =  QFileDialog.getSaveFileName(self, "save analysis report", "", "PDF Files (*.pdf)", options=self.options)
-        
-        # if not self.file_name.endswith(".pdf"):
-        #     self.file_name += ".pdf"
-        output_path = os.path.join("HyAn/report", "analysis.pdf")
-        self.pdf.output("analysis.pdf", 'F')
+        self.pdf.output(f"{output_path}", 'F')
 
