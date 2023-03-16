@@ -33,7 +33,7 @@ class PumpingTest(QWidget, Ui_PumpingTest):
         self.table_well_information.setHorizontalHeaderLabels(self.labels)
 
         self.btn_create_new_well.clicked.connect(self.create_new_well)
-        self.btn_submit.clicked.connect(self.get_data) # get data from table
+        self.btn_submit.clicked.connect(self.get_data)  # get data from table
 
         self.data = []
 

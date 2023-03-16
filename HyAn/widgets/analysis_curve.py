@@ -18,13 +18,13 @@ class AnalysisCurve(QWidget):
 
         # Create a FigureCanvas object and set the size of the figure
         self.view = FigureCanvas(Figure(figsize=(100, 100)))
-        self.axes = self.view.figure.subplots() # Create axes for the plot
+        self.axes = self.view.figure.subplots()  # Create axes for the plot
 
         # Set the axes labels and title
         self.axes.set_xlabel("Time [min]")
         self.axes.set_ylabel("Drawdown [m]")
         self.axes.set_title("Analysis Curve")
- 
+
         vlayout = QVBoxLayout()
         vlayout.addWidget(self.view)
 
@@ -35,10 +35,10 @@ class AnalysisCurve(QWidget):
         Generates a plot of the Theis model fit.
 
         Args:
-        - time: Drawdown time 
-        - drawdown: Change in water level after pumping started 
+        - time: Drawdown time
+        - drawdown: Change in water level after pumping started
         - Q: float, pumping rate (in meters^3/day)
-        - T: float, Transmissivity 
+        - T: float, Transmissivity
         - S: float, Storativity
 
         Notes:

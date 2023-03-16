@@ -29,7 +29,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def generate_report(self):
         """
         Generates the report for the pumping test.
-        
+
         Notes:
         -update the parameters "self.pumping data" and "self.pumping test" with the reports obtained from the GUI widgets.
         """

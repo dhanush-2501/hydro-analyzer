@@ -25,29 +25,27 @@ class DrawdownCurve(QWidget):
         self.setLayout(vlayout)
 
     def plot_data(self, data):
-
         """
         Plots the drawdown data against time.
 
         Args:
         - data: 2-D array, first column contains time (in minutes)
                            second column contains drawdown (in meters)
-        
+
         Note:
         - x axis was labeled as "Time [min]"
         - y axis was labeled as "Drawdown [m]"
         - "Drawdown Curve" as graph title
-        - plots drawdown value against time 
+        - plots drawdown value against time
         """
         self.data = np.array(data)
         time = self.data[:, 0]
         drawdown = self.data[:, 1]
 
-    
-        self.axes.clear() # Clear the axes  before plotting
+        self.axes.clear()  # Clear the axes  before plotting
         # Set the axes labels and title
         self.axes.set_xlabel("Time [min]")
         self.axes.set_ylabel("Drawdown [m]")
         self.axes.set_title("Drawdown Curve")
-        self.axes.plot(time, drawdown, "-o") # plot the data
-        self.view.draw() # update the canvas
+        self.axes.plot(time, drawdown, "-o")  # plot the data
+        self.view.draw()  # update the canvas
