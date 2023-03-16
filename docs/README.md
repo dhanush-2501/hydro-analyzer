@@ -16,7 +16,13 @@
  
  * Run `run.py` file.
  ```
- python run.py
+ python3 run.py
+ ```
+ or alternatively
+ 
+ You can run the below command in terminal to open the app from any directory
+ ```
+ HyAn
  ```
  
 
