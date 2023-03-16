@@ -200,7 +200,7 @@
          <widget class="QComboBox" name="cb_dimensions_2">
           <item>
            <property name="text">
-            <string>cm</string>
+            <string>m</string>
            </property>
           </item>
          </widget>
@@ -209,7 +209,7 @@
          <widget class="QComboBox" name="cb_discharge_2">
           <item>
            <property name="text">
-            <string>m³/sec</string>
+            <string>m³/day</string>
            </property>
           </item>
          </widget>
@@ -225,7 +225,7 @@
          <widget class="QComboBox" name="cb_transmissivity_2">
           <item>
            <property name="text">
-            <string>m²/sec</string>
+            <string>m²/day</string>
            </property>
           </item>
          </widget>
