@@ -35,7 +35,7 @@
       </size>
      </property>
      <property name="title">
-      <string>Discharge[m³/sec]</string>
+      <string>Discharge[m³/day]</string>
      </property>
      <layout class="QFormLayout" name="formLayout_4">
       <item row="0" column="0">
