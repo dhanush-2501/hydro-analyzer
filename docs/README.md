@@ -19,12 +19,6 @@
  python3 run.py
  ```
  
- 
-# Output 
-
- * `transmissivity`: The transmissivity of the well in square metre per day.
- * `storativity`: The storativity of the well, a dimensionless value.  
- 
 # Pumping Test Tutorial  
  &emsp;This tutorial provides step-by-step instructions for entering data and analyzing results using the Hydro-Analyzer.  
  
