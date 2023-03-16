@@ -19,6 +19,10 @@ def get_version(rel_path: str) -> str:
 setup(
     name="HyAn",
     version=get_version("HyAn/__init__.py"),
+    author="dhanush",
+    author_email="coder.dhanush@gmail.com",
+    description="Hydro Analyser - Pumping test analysis tool",
+    long_description=read("HyAn/pypi_description.md"),
     packages=find_packages(),
     install_requires=[
         "matplotlib==3.7.1",
@@ -29,4 +33,7 @@ setup(
         "fpdf==1.7.2"
     ],
     package_dir={"hydro-analyzer": "HyAn"},
+    entry_points={
+        'console_scripts': ['HyAn=HyAn.hyan:main', ],
+    },
 )
