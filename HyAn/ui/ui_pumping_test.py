@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFormLayout,
     QSpacerItem, QTableWidget, QTableWidgetItem, QTimeEdit,
     QVBoxLayout, QWidget)
 from HyAn.ui.icon import rc_icon
+
 class Ui_PumpingTest(object):
     def setupUi(self, PumpingTest):
         if not PumpingTest.objectName():
@@ -303,12 +304,12 @@ class Ui_PumpingTest(object):
         self.lbl_pumping_test_performed_by.setText(QCoreApplication.translate("PumpingTest", u"Performed by:", None))
         self.gb_units.setTitle(QCoreApplication.translate("PumpingTest", u"Units", None))
         self.lbl_dimensions_2.setText(QCoreApplication.translate("PumpingTest", u"Dimensions:", None))
-        self.cb_dimensions_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"cm", None))
+        self.cb_dimensions_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m", None))
 
-        self.cb_discharge_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m\u00b3/sec", None))
+        self.cb_discharge_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m\u00b3/day", None))
 
         self.lbl_discharge_2.setText(QCoreApplication.translate("PumpingTest", u"Discharge:", None))
-        self.cb_transmissivity_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m\u00b2/sec", None))
+        self.cb_transmissivity_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"m\u00b2/day", None))
 
         self.lbl_time_2.setText(QCoreApplication.translate("PumpingTest", u"Time:", None))
         self.cb_time_2.setItemText(0, QCoreApplication.translate("PumpingTest", u"min", None))
