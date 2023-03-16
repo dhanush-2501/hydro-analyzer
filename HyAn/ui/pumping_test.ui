@@ -19,7 +19,7 @@
      <item>
       <widget class="QGroupBox" name="gb_project_informataion">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -27,13 +27,13 @@
        <property name="minimumSize">
         <size>
          <width>280</width>
-         <height>0</height>
+         <height>160</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>320</width>
-         <height>16777215</height>
+         <height>160</height>
         </size>
        </property>
        <property name="title">
@@ -98,7 +98,7 @@
      <item>
       <widget class="QGroupBox" name="gb_pumping_test">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -106,13 +106,13 @@
        <property name="minimumSize">
         <size>
          <width>320</width>
-         <height>0</height>
+         <height>160</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>320</width>
-         <height>16777215</height>
+         <height>160</height>
         </size>
        </property>
        <property name="title">
@@ -128,6 +128,22 @@
            <cstring>l_edit_pumping_test_name</cstring>
           </property>
          </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="l_edit_pumping_test_name"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="lbl_pumping_test_performed_by">
+          <property name="text">
+           <string>Performed by:</string>
+          </property>
+          <property name="buddy">
+           <cstring>l_edit_pumping_test_performed_by</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="l_edit_pumping_test_performed_by"/>
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="lbl_pumping_test_date_time">
@@ -146,29 +162,13 @@
           </item>
          </layout>
         </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="lbl_pumping_test_performed_by">
-          <property name="text">
-           <string>Performed by:</string>
-          </property>
-          <property name="buddy">
-           <cstring>l_edit_pumping_test_performed_by</cstring>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="l_edit_pumping_test_performed_by"/>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="l_edit_pumping_test_name"/>
-        </item>
        </layout>
       </widget>
      </item>
      <item>
       <widget class="QGroupBox" name="gb_units">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -176,23 +176,71 @@
        <property name="minimumSize">
         <size>
          <width>400</width>
-         <height>0</height>
+         <height>160</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>400</width>
-         <height>16777215</height>
+         <height>160</height>
         </size>
        </property>
        <property name="title">
         <string>Units</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <widget class="QLabel" name="lbl_site_plan_2">
+        <item row="1" column="0">
+         <widget class="QLabel" name="lbl_time_2">
           <property name="text">
-           <string>Site Plan:</string>
+           <string>Time:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cb_transmissivity_2">
+          <item>
+           <property name="text">
+            <string>m²/sec</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="cb_time_2">
+          <item>
+           <property name="text">
+            <string>sec</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="lbl_dimensions_2">
+          <property name="text">
+           <string>Dimensions:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="cb_discharge_2">
+          <item>
+           <property name="text">
+            <string>m³/sec</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="lbl_discharge_2">
+          <property name="text">
+           <string>Discharge:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="lbl_transmissivity_2">
+          <property name="text">
+           <string>Transmissivity:</string>
           </property>
          </widget>
         </item>
@@ -225,255 +273,18 @@
           </item>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QComboBox" name="cb_site_plan_2">
-          <item>
-           <property name="text">
-            <string>mm</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>cm</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>in</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QLabel" name="lbl_dimensions_2">
-          <property name="text">
-           <string>Dimensions:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QLabel" name="lbl_discharge_2">
-          <property name="text">
-           <string>Discharge:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
-         <widget class="QComboBox" name="cb_discharge_2">
-          <item>
-           <property name="text">
-            <string>m³/sec</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m³/min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m³/hr</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m³/day</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>l/s</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft³/sec</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft³/min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft³/hr</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft³/day</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U.S gal/min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U.S gal/day</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U.K gal/min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>U.K gal/day</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="lbl_time_2">
-          <property name="text">
-           <string>Time:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QComboBox" name="cb_time_2">
-          <item>
-           <property name="text">
-            <string>sec</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>hr</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>day</string>
-           </property>
-          </item>
-         </widget>
-        </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="lbl_transmissivity_2">
-          <property name="text">
-           <string>Transmissivity:</string>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
           </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
-         <widget class="QLabel" name="lbl_pressure_2">
-          <property name="text">
-           <string>Pressure:</string>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
           </property>
-         </widget>
-        </item>
-        <item row="2" column="3">
-         <widget class="QComboBox" name="cb_pressure_2">
-          <item>
-           <property name="text">
-            <string>Pa</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>bar</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>mbar</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>mm Hg</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>atm</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>at</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>psi</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QComboBox" name="cb_transmissivity_2">
-          <item>
-           <property name="text">
-            <string>m²/sec</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m²/min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m²/hr</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>m²/day</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft²/sec</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft²/min</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft²/hr</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>ft²/day</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>gal/day-ft</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>cm²/sec</string>
-           </property>
-          </item>
-         </widget>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -481,7 +292,7 @@
      <item>
       <widget class="QGroupBox" name="gb_aquifer_properties">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -489,13 +300,13 @@
        <property name="minimumSize">
         <size>
          <width>280</width>
-         <height>0</height>
+         <height>160</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>280</width>
-         <height>16777215</height>
+         <height>160</height>
         </size>
        </property>
        <property name="title">
@@ -575,7 +386,7 @@
    <item>
     <widget class="QTableWidget" name="table_well_information">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -583,7 +394,7 @@
      <property name="minimumSize">
       <size>
        <width>920</width>
-       <height>0</height>
+       <height>150</height>
       </size>
      </property>
      <property name="maximumSize">
@@ -651,6 +462,24 @@
    </item>
    <item>
     <widget class="QLabel" name="lbl_image">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>550</width>
+       <height>300</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>550</width>
+       <height>300</height>
+      </size>
+     </property>
      <property name="text">
       <string/>
      </property>
