@@ -32,7 +32,8 @@
  &emsp;Step 5: Enter well details in the table.  
  &emsp;Step 6: Click "submit".  
  
- <img width="1440" alt="Pumping test" src="https://user-images.githubusercontent.com/105580560/224953529-e79feef8-3da1-4ef1-95bf-ea2344e4d421.png">
+
+<img width="1440" alt="Pumping_test" src="https://user-images.githubusercontent.com/105580560/225606337-5efb0a35-8b24-41f1-8dbd-0423937799c8.png">
 
 
 
