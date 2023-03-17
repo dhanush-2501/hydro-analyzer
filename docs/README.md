@@ -32,9 +32,7 @@
  &emsp;Step 5: Enter well details in the table.  
  &emsp;Step 6: Click "submit".  
  
-
-<img width="1440" alt="Pumping_test" src="https://user-images.githubusercontent.com/105580560/225606337-5efb0a35-8b24-41f1-8dbd-0423937799c8.png">
-
+<img width="1440" alt="pumping_test" src="https://user-images.githubusercontent.com/105580560/225810486-3fa795a2-ba86-470a-ac39-203f642333db.png">
 
 
  ## Pumping Data Tab  
@@ -55,7 +53,43 @@
  &emsp;Step 4: Click "Generate Report" to save the report as a PDF.  
  
  <img width="1440" alt="Analysis" src="https://user-images.githubusercontent.com/105580560/224953801-0570bea5-eb41-40db-a1bb-89ccd01f9859.png">
+ 
+ 
+ ![Hydro_anlayzer](https://user-images.githubusercontent.com/105580560/225863643-b8bf00ef-77bb-4693-b47c-837d6582135b.gif)
+
+ 
+# How to Contribute 
+&emsp;We welcome contributions from anyone who is interested in improving this project. Whether you want to submit a pull request with code changes, we appreciate your help in making this project better.
+
+# Submitting Code Changes   
+&emsp;If you would like to submit a pull request with code changes, please follow these steps:
+1. Fork the repository to your own GitHub account.
+2. Clone the repository to your local machine.
+3. Create a new branch for your every changes.
+4. Make your changes to the code according to code and documentation standards. Like files related to UI must be inside the UI folder, Widgets must be in Widgets folder.
+Hydro analyzer  
+├── HyAn    
+    &emsp;├── ui                    
+        &emsp;&emsp;├── ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;#ui files must be placed in this ui folder             
+    &emsp;├── widget           
+        &emsp;&emsp;├── ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;#widget must be placed in this widget folder            
+    &emsp;├── solution            
+        &emsp;&emsp;└── ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; #Solution files must be placed inside this folder    
+
+          
+5. Test your changes thoroughly.
+6. Commit your changes with a clear and concise commit message.
+7. Push your changes to your forked repository.
+8. Submit a pull request to the original repository, including a clear and concise description of the changes you made.
+
+# Guidelines for Contributing  
+    To ensure a smooth and productive collaboration, please follow these guidelines when contributing to the project:
+1. Be respectful and professional in all interactions.
+2. Use clear and concise language in all communication.
+3. Follow the project's coding and documentation standards.
+4. Test your changes thoroughly before submitting a pull request.
+5. Keep in mind the project's goals and objectives.
+
 
 # NOTE  
 &emsp;This project is still in development and some features may not be fully functional.
-
