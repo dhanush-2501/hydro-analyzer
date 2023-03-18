@@ -65,7 +65,7 @@
 &emsp;If you would like to submit a pull request with code changes, please follow these steps:
 1. Fork the repository to your own GitHub account.
 2. Clone the repository to your local machine.
-3. Create a new branch for your every changes.
+3. Create a new branch for your every feature.
 4. Make your changes to the code according to code and documentation standards. Like files related to UI must be inside the UI folder, Widgets must be in Widgets folder.
 Hydro analyzer  
 ├── HyAn    
