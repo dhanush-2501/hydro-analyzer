@@ -86,7 +86,7 @@ Hydro analyzer
 8. Submit a pull request to the original repository, including a clear and concise description of the changes you made.
 
 # Guidelines for Contributing  
-    To ensure a smooth and productive collaboration, please follow these guidelines when contributing to the project:
+To ensure a smooth and productive collaboration, please follow these guidelines when contributing to the project:
 1. Be respectful and professional in all interactions.
 2. Use clear and concise language in all communication.
 3. Follow the project's coding and documentation standards.
