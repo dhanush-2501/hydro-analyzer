@@ -64,11 +64,11 @@ https://user-images.githubusercontent.com/79148926/226101677-c95751d6-564e-4f5e-
 # How to Contribute 
 &emsp;We welcome contributions from anyone who is interested in improving this project. Whether you want to submit a pull request with code changes, we appreciate your help in making this project better.
 
-# Submitting Code Changes   
+# Guidelines for Contributing  
 &emsp;If you would like to submit a pull request with code changes, please follow these steps:
 1. Fork the repository to your own GitHub account.
 2. Clone the repository to your local machine.
-3. Create a new branch for your every feature.
+3. Create a new branch for your changes.
 4. Make your changes to the code according to code and documentation standards. Like files related to UI must be inside the UI folder, Widgets must be in Widgets folder.
 Hydro analyzer  
 ├── HyAn    
@@ -83,15 +83,7 @@ Hydro analyzer
 5. Test your changes thoroughly.
 6. Commit your changes with a clear and concise commit message.
 7. Push your changes to your forked repository.
-8. Submit a pull request to the original repository, including a clear and concise description of the changes you made.
-
-# Guidelines for Contributing  
-To ensure a smooth and productive collaboration, please follow these guidelines when contributing to the project:
-1. Be respectful and professional in all interactions.
-2. Use clear and concise language in all communication.
-3. Follow the project's coding and documentation standards.
-4. Test your changes thoroughly before submitting a pull request.
-5. Keep in mind the project's goals and objectives.
+8. Submit a pull request to the forked repository, including a clear and concise description of the changes you made.
 
 
 # NOTE  
