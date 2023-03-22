@@ -32,7 +32,8 @@
  &emsp;Step 5: Enter well details in the table.  
  &emsp;Step 6: Click "submit".  
  
-<img width="1440" alt="pumping_test" src="https://user-images.githubusercontent.com/105580560/225810486-3fa795a2-ba86-470a-ac39-203f642333db.png">
+<img width="1440" alt="pumping_test" src="https://user-images.githubusercontent.com/105580560/226807426-757bef2f-31d3-4b2a-a0f4-b052fef0f307.png">
+
 
 
  ## Pumping Data Tab  
@@ -41,7 +42,7 @@
  &emsp;Step 2: Enter field data in the table. Press Enter after entering last data.  
  &emsp;Step 3: Click "Plot Data" after entering drawdown data.  
  &emsp;Step 4: The graph will be plotted.  
- 
+
 <img width="1440" alt="pumping_data" src="https://user-images.githubusercontent.com/105580560/224953658-93d690a2-f3dd-48bb-a45e-492ad02b30b2.png">
 
 
