@@ -32,7 +32,8 @@
  &emsp;Step 5: Enter well details in the table.  
  &emsp;Step 6: Click "submit".  
  
-<img width="1440" alt="pumping_test" src="https://user-images.githubusercontent.com/105580560/225810486-3fa795a2-ba86-470a-ac39-203f642333db.png">
+<img width="1440" alt="pumping_test" src="https://user-images.githubusercontent.com/105580560/226807426-757bef2f-31d3-4b2a-a0f4-b052fef0f307.png">
+
 
 
  ## Pumping Data Tab  
@@ -41,7 +42,7 @@
  &emsp;Step 2: Enter field data in the table. Press Enter after entering last data.  
  &emsp;Step 3: Click "Plot Data" after entering drawdown data.  
  &emsp;Step 4: The graph will be plotted.  
- 
+
 <img width="1440" alt="pumping_data" src="https://user-images.githubusercontent.com/105580560/224953658-93d690a2-f3dd-48bb-a45e-492ad02b30b2.png">
 
 
@@ -69,30 +70,29 @@ https://user-images.githubusercontent.com/79148926/226101677-c95751d6-564e-4f5e-
 1. Fork the repository to your own GitHub account.
 2. Clone the repository to your local machine.
 3. Create a new branch for your changes.
-4. Make your changes to the code according to code and documentation standards. Like files related to UI must be inside the UI folder, Widgets must be in Widgets folder.
- 
-hydro-analyser/  
-|---- HyAn    
-|&emsp;|---- ui                    
-|&emsp;|&emsp;|---- ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;#ui files must be placed in this ui folder             
-|&emsp;|---- widget           
-|&emsp;|&emsp;|---- ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;#widget must be placed in this widget folder            
-|&emsp;|---- solution            
-|&emsp;&emsp; |---- ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; #Solution files must be placed inside this folder    
-|---- Docs  
-|&emsp;|---- README.md  
-|---- Test  
-|&emsp;|---- &emsp; # contains test files  
-|---- run.py  
-|---- setup.py  
-|----- LICENSE  
-
-          
+4. Make your changes to the code according to code and documentation standards. Like files related to UI must be inside the UI folder, Widgets must be in Widgets folder.            
 5. Test your changes thoroughly.
 6. Commit your changes with a clear and concise commit message.
 7. Push your changes to your forked repository.
-8. Submit a pull request to the forked repository, including a clear and concise description of the changes you made.
+8. Submit a pull request to the forked repository, including a clear and concise description of the changes you made.  
 
+```
+Hydro analyzer  
+├── docs    
+    ├── README.md 
+├── HyAn  
+    ├── img    
+        ├── analysis_curve  
+    ├── report    
+        ├── report            # report format must be modified and upadate here.  
+    ├── solution              # folder for modifying and adding solutions
+        ├── pytheis  
+    ├── ui 
+        ├── ...               # ui files must be placed in this ui folder             
+    ├── widget           
+        ├── ...               # widget must be placed in this widget folder            
+                   
+```
 
 # NOTE  
 &emsp;This project is still in development and some features may not be fully functional.
