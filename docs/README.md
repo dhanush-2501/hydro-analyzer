@@ -70,23 +70,24 @@ https://user-images.githubusercontent.com/79148926/226101677-c95751d6-564e-4f5e-
 2. Clone the repository to your local machine.
 3. Create a new branch for your changes.
 4. Make your changes to the code according to code and documentation standards. Like files related to UI must be inside the UI folder, Widgets must be in Widgets folder.
- 
-hydro-analyser/  
-|---- HyAn    
-|&emsp;|---- ui                    
-|&emsp;|&emsp;|---- ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;#ui files must be placed in this ui folder             
-|&emsp;|---- widget           
-|&emsp;|&emsp;|---- ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;#widget must be placed in this widget folder            
-|&emsp;|---- solution            
-|&emsp;&emsp; |---- ...           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; #Solution files must be placed inside this folder    
-|---- Docs  
-|&emsp;|---- README.md  
-|---- Test  
-|&emsp;|---- &emsp; # contains test files  
-|---- run.py  
-|---- setup.py  
-|----- LICENSE  
 
+```
+Hydro analyzer  
+├── docs    
+    ├── README.md 
+├── HyAn  
+    ├── img    
+        ├── analysis_curve  
+    ├── report    
+        ├── report            # report format must be modified and upadate here.  
+    ├── solution              # folder for modifying and adding solutions
+        ├── pytheis  
+    ├── ui 
+        ├── ...               # ui files must be placed in this ui folder             
+    ├── widget           
+        ├── ...               # widget must be placed in this widget folder            
+                   
+```
           
 5. Test your changes thoroughly.
 6. Commit your changes with a clear and concise commit message.
