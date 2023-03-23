@@ -18,9 +18,12 @@ class PDF( FPDF ):
 
 
 class Report():
-    def __init__(self, data):
-        # super.__init__()
+    """
+        Generates report for the pumping test analysis.
+    """
 
+
+    def __init__(self, data):
         self.pdf = PDF()
         self.pdf.add_page()
         self.pdf.set_font('Arial', '', 12)
@@ -32,12 +35,15 @@ class Report():
 
         self.data = data
         print("Time in report" , list(data[:,0]))
+
+        # time and drawdown data frame
         self.df = pd.DataFrame(
             {"Time" : list(data[:,0]),
              "Drawdown" : list(data[:,1])         
             })
     
     def project_data(self,project_name, project_number, client, location, pumping_test, pumping_well, test_conducted_by, test_date, discharge_rate):
+        # datas of the project and analyst
         self.pdf.cell(w=(self.pw/3), h= self.ch, txt= f"Project : {project_name} ", border =1 , ln =0 )
         self.pdf.cell(w=(self.pw/3), h= self.ch, txt= f"Project Number : {project_number} ", border =1 , ln =0)
         self.pdf.cell(w=(self.pw/3), h= self.ch, txt= f"Client : {client} ", border =1 , ln =1 )
@@ -68,9 +74,9 @@ class Report():
                 border=1, ln=1, align='C')
     
     def display_graph(self):
-
+        # embedding graph on report
         output_path = os.path.join("HyAn/img", "analysis.png")
-        self.pdf.image(output_path, x = 75, y = 65, w = 130, h = 125, type = 'PNG')
+        self.pdf.image(output_path, x = 72, y = 65, w = 130, h = 125, type = 'PNG')
 
     def result(self, t, s):
         #Transmissivity and storativity Cell
@@ -79,6 +85,6 @@ class Report():
         self.pdf.cell(w=self.pw, h=self.ch, txt=f"Storativity : {s}", border=1, ln=1)
 
     def generate_report(self, output_path):
-        
+        # generates report pdf
         self.pdf.output(f"{output_path}", 'F')
 
