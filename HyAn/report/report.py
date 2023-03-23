@@ -54,8 +54,8 @@ class Report():
     def print_table(self):
         # Table Header
         self.pdf.set_font('Arial', 'B', 16)
-        self.pdf.cell(w=self.cw, h=10, txt='Feature 1', border=1, ln=0, align='C')
-        self.pdf.cell(w=self.cw, h=10, txt='Feature 2', border=1, ln=1, align='C')
+        self.pdf.cell(w=self.cw, h=10, txt='Time', border=1, ln=0, align='C')
+        self.pdf.cell(w=self.cw, h=10, txt='Drawdown', border=1, ln=1, align='C')
 
         # Table Data
         self.pdf.set_font('Arial', '', 14)
