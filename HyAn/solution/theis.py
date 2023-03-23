@@ -28,6 +28,7 @@ class Theis:
         Returns:
         - float or numpy array, value(s) of the well function at the specified time(s)
         """
+        
         u = (r**2) * S / (4 * T * t)
         Wu = -0.5772 - np.log(u) + u
         n_terms = 30
@@ -35,6 +36,8 @@ class Theis:
             sign = (-1) ** (i - 1)
             factorial = np.math.factorial(i)
             Wu += sign * (u**i) / (i * factorial)
+        print(f"calculate well func : {[r, S, T, t]}")
+        print(f"wu : {Wu}")
         return Wu
 
     def calculate_drawdown(self, t, T, S):
@@ -57,6 +60,7 @@ class Theis:
         for i in range(n):
             Wu_val = self.calculate_well_function(self.r, S, T, t[i])
             drawdown[i] = self.Q * Wu_val / (4 * pi * T)
+        print(f"drawdown : {drawdown}")
         return drawdown
 
     def fit(self):
@@ -69,5 +73,14 @@ class Theis:
         )
         self.T = popt[0]
         self.S = popt[1]
-        self.model = self.calculate_drawdown(self.time, self.T, self.S)
+        self.model = list(self.calculate_drawdown(self.time, self.T, self.S))
+        print(f"fit : {[self.T, self.S, self.model]}")
         return [self.T, self.S, self.model]
+
+time = [3, 5, 8, 12, 20, 24, 30, 38, 47, 50, 60, 70, 80, 90, 100, 130, 160, 200, 260, 320, 380, 500]
+drawdown = [0.3, 0.7, 1.3, 2.1, 3.2, 3.6, 4.1, 4.7, 5.1, 5.3, 5.7, 6.1, 6.3, 6.7, 7.0, 7.5, 8.3, 8.5, 9.2, 9.7, 10.2, 10.9]
+Q = 220
+r = 40
+
+theis = Theis(time=time, drawdown=drawdown, Q=Q, r=r)
+theis.fit()
