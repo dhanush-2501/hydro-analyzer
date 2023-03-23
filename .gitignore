@@ -105,3 +105,6 @@ MANIFEST
 *.dll
 *.exe
 
+#img
+#----
+*.png
