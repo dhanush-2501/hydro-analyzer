@@ -19,6 +19,7 @@ jobs:
       - name: Auto-format with Black
         run: black .
       - name: Commit changes
+        if: steps.git-check.outputs.changed == 'true'
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'github-actions@users.noreply.github.com'
