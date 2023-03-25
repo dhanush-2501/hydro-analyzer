@@ -19,6 +19,16 @@ def test_fit(theis):
     assert res[1] == data[1]
     assert np.array_equal(res[2], data[2])
 
+# # testing function calculate_drawdown
+# def test_calculate_drawdown(theis):
+#     theis.fit()
+
+#     data = [ 0.35080799,  0.82982904,  1.4773683, 2.17152348,  3.18212591,  3.57088749,
+#             4.06232454,  4.59856936,  5.09203072,  5.2373902, 5.66961492,  6.03908454,
+#             6.36170783,  6.64802617,  6.90538332,  7.55059507,  8.06488922,  8.62046495,
+#             9.27673827,  9.79798354, 10.23039087, 10.92244817]
+    
+#     assert np.array_equal(theis.calculate_drawdown(theis.time, theis.S, theis.T), data)
 
 
 
