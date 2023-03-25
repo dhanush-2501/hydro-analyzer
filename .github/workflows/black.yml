@@ -17,7 +17,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x' # replace with the version of Python you are using in your project
+        python-version: '3.9' # replace with the version of Python you are using in your project
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -31,5 +31,5 @@ jobs:
         git add -A
         git commit -m "Auto-format code with Black"
         git push origin ${{ github.ref }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
