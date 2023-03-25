@@ -3,6 +3,8 @@ name: Auto-format with Black
 on:
   push:
     branches: [ main ]
+  pull_request_target: 
+    types: [opened]
 
 jobs:
   auto-format:
