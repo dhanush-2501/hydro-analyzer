@@ -13,7 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          repository: HydroAnalyser/hydro-analyzer
           token: ${{ secrets.TOKEN }}
+          ref: ${{ github.ref }}
       - name: Install Black
         run: pip install black
       - name: Auto-format with Black
