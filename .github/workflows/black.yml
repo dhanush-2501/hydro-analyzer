@@ -1,10 +1,6 @@
 name: Auto-format with Black
 
-on:
-  push:
-    branches: [ main ]
-  pull_request_target: 
-    types: [opened]
+on: [ pull_request_target ]
 
 jobs:
   auto-format:
