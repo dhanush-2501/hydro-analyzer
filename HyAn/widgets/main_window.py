@@ -38,7 +38,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pumping_test = self.wid_pumping_test.get_report()
         self.analysis_data = self.wid_analysis.get_s_t()
 
-
         self.project_name = self.pumping_test["project_name"]
         self.project_number = self.pumping_test["project_number"]
         self.project_client = self.pumping_test["project_client"]
