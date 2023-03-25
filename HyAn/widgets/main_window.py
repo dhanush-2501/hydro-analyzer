@@ -38,7 +38,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.pumping_test = self.wid_pumping_test.get_report()
         self.analysis_data = self.wid_analysis.get_s_t()
 
-        print(f"Pumping_data : {self.pumping_data}")
 
         self.project_name = self.pumping_test["project_name"]
         self.project_number = self.pumping_test["project_number"]
@@ -66,8 +65,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if not self.file_name.endswith(".pdf"):
             self.file_name += ".pdf"
 
-        print(f"self.file_name : {self.file_name}")
-
         self.report = Report(self.data)
 
         self.report.project_data(
@@ -85,5 +82,3 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.report.display_graph()
         self.report.result(self.T, self.S)
         self.report.generate_report(self.file_name)
-
-        print(f"pumping_test : {self.pumping_test}")
