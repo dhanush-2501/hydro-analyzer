@@ -7,10 +7,11 @@ on:
   pull_request:
     branches:
       - main
-permissions: read-all|write-all
 jobs:
   format-code:
     runs-on: ubuntu-latest
+    permissions: 
+      pull-requests: write
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python
