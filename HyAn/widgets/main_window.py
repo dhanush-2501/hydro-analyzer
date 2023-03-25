@@ -44,7 +44,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.project_number = self.pumping_test["project_number"]
         self.project_client = self.pumping_test["project_client"]
 
-        self.project_location = self.pumping_test["project_location"] 
+        self.project_location = self.pumping_test["project_location"]
         self.pumping_test_name = self.pumping_test["pumping_test_name"]
         self.pumping_well_name = self.pumping_test["well_info"]
         self.pumping_well_name = self.pumping_well_name[0][0]
@@ -59,31 +59,31 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.data = self.pumping_data["data"]
 
         self.options = QFileDialog.Options()
-        self.file_name, _ =  QFileDialog.getSaveFileName(self, "save analysis report", "", "PDF Files (*.pdf)", options=self.options)
+        self.file_name, _ = QFileDialog.getSaveFileName(
+            self, "save analysis report", "", "PDF Files (*.pdf)", options=self.options
+        )
 
-        
         if not self.file_name.endswith(".pdf"):
             self.file_name += ".pdf"
 
-        
         print(f"self.file_name : {self.file_name}")
 
         self.report = Report(self.data)
 
-        self.report.project_data(self.project_name, self.project_number,
-                                  self.project_client, self.project_location,
-                                  self.pumping_test_name, self.pumping_well_name,
-                                  self.performed_by, self.date, self.discharge_rate)
+        self.report.project_data(
+            self.project_name,
+            self.project_number,
+            self.project_client,
+            self.project_location,
+            self.pumping_test_name,
+            self.pumping_well_name,
+            self.performed_by,
+            self.date,
+            self.discharge_rate,
+        )
         self.report.print_table()
         self.report.display_graph()
         self.report.result(self.T, self.S)
         self.report.generate_report(self.file_name)
-        
-
-
-
-
-        
-
 
         print(f"pumping_test : {self.pumping_test}")
