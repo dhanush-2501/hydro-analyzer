@@ -1,19 +1,15 @@
 name: autopep8
-on:
-  pull_request:
-  push:
-    branches:
-      - main
+on: push
 jobs:
   autopep8:
-    # Check if the event is either a pull request or direct push to the main branch
-    if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    # Check if the PR is not from a fork
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          ref: ${{ github.head_ref || github.ref }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          ref: ${{ github.head_ref }}
       - name: autopep8
         id: autopep8
         uses: peter-evans/autopep8@v2
@@ -22,7 +18,7 @@ jobs:
       - name: Commit autopep8 changes
         if: steps.autopep8.outputs.exit-code == 2
         run: |
-          git config --global user.name 'Dhanush'
+          git config --global user.name 'dhanush'
           git config --global user.email 'ibg2501@gmail.com'
           git commit -am "Automated autopep8 fixes"
           git push
