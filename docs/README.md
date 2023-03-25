@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Development Status](https://img.shields.io/badge/status-development-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Development Status](https://img.shields.io/badge/status-development-blue) [![Auto-format with Black](https://github.com/HydroAnalyser/hydro-analyzer/actions/workflows/black.yml/badge.svg)](https://github.com/HydroAnalyser/hydro-analyzer/actions/workflows/black.yml)
 
 # Hydro Analyzer
 
