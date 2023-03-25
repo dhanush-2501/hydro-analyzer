@@ -54,8 +54,6 @@ class PumpingTest(QWidget, Ui_PumpingTest):
             self.data.append(row_data)
         self.pumping_test_data_changed.emit(self.data)
         self.pumping_test_data_r_changed.emit(float(self.data[0][-1]))
-        print(f"self.data[0][-1] : {self.data[0][-1]}")
-        print(self.data)
 
     def get_report(self):
         self.report = {

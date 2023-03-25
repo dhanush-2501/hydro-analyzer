@@ -46,25 +46,17 @@ class AnalysisCurve(QWidget):
         - Generates a plot of the Theis model fit and saves it as 'analysis.png'.
         - The Theis curved is plotted using the Theis class in the theis.py module.
         """
-        # self.time = data[:, 0]
-        # self.drawdown = data[:, 1]
         obs_data = np.array(data[0][0])
-        print(f"data : {data}")
 
         self.time = obs_data[:, 0]
         self.drawdown = obs_data[:, 1]
         self.Q = data[0][1]  # m3/d
-        print("q : ", self.Q)
 
         self.r = data[1]  # m
-        print("r : ", self.r)
 
         # pass data to Theis class and get the results
         self.thies = Theis(self.time, self.drawdown, self.Q, self.r)
         self.T, self.S, self.model = self.thies.fit()
-        print(f"t : {self.T}")
-        print(f"S : {self.S}")
-        print(f"model : {self.model}")
 
         # plot the results
         self.axes.clear()

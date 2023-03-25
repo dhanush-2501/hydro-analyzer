@@ -44,12 +44,8 @@ class PumpingData(QWidget, Ui_PumpingData):
                 else:
                     row_data.append(0.0)
             self.data.append(row_data)
-        # self.data = [[3, 0.3], [5, 0.7], [8, 1.3], [12, 2.1], [20, 3.2], [24, 3.6], [30, 4.1],
-        #              [38, 4.7], [47, 5.1], [50, 5.3], [60, 5.7], [70, 6.1], [80, 6.3], [90, 6.7],
-        #              [100, 7.0], [130, 7.5], [160, 8.3], [200, 8.5], [260, 9.2], [320, 9.7], [380, 10.2], [500, 10.9]]
 
         self.wid_plt_graph.plot_data(self.data)  # plot data
-        print("get data : ", self.data)
         self.data_changed.emit(
             [self.data, float(self.l_edit_constant.text())]
         )  # send data
