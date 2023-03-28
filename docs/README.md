@@ -12,7 +12,7 @@
  * Navigate to the cloned directory 📂.
  * Install the required packages in the project directory by running the code below.
  ```
- pip install -e .
+ pip install . -U
  ```
  
  * Run `run.py` file.
