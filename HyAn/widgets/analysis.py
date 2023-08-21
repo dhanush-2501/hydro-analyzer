@@ -12,7 +12,7 @@ class Analysis(QWidget, Ui_Analysis):
         self.S = 0
         self.T = 0
 
-    # gets data from pumping test
+    # gets data from pumping data
     @Slot(list)
     def fit_data(self, data):
         self.theis_data = data
